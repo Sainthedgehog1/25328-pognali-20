@@ -1,0 +1,80 @@
+.socials {
+  display: flex;
+  list-style: none;
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.socials__link {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 45px;
+  height: 44px;
+
+  border-radius: 50%;
+
+  font-size: 0;
+  outline: none;
+
+  @media (min-width: $tablet-width) {
+    width: 64px;
+    height: 62px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--fb::before {
+    background-image: url("../img/facebook.svg");
+    background-size: 11px 21px;
+
+    @media (min-width: $tablet-width) {
+      background-size: 14px 28px;
+    }
+  }
+
+  &--vk::before {
+    background-image: url("../img/vk.svg");
+    background-size: 23px 12px;
+    background-position: 10px 16px;
+
+    @media (min-width: $tablet-width) {
+      background-size: 32px 16px;
+      background-position: 11px 25px;
+    }
+  }
+
+  &--inst::before {
+    background-image: url("../img/instagram.svg");
+    background-size: 16px 16px;
+    background-position: 15px 14px;
+
+    @media (min-width: $tablet-width) {
+      background-size: 22px 24px;
+      background-position: 13px 20px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

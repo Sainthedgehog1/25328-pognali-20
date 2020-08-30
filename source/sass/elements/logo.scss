@@ -1,0 +1,31 @@
+.logo {
+  align-self: center;
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.logo:not([href]) {
+  pointer-events: none;
+}
+
+.logo__img {
+  display: block;
+  width: 100px;
+  height: 19px;
+
+  @media (min-width: $tablet-width) {
+    width: 166px;
+    height: 42px;
+    margin-top: 1px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 200px;
+    height: 52px;
+  }
+}

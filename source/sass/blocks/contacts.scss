@@ -1,0 +1,127 @@
+.contacts {
+  display: flex;
+  justify-self: flex-end;
+  list-style: none;
+  align-self: end;/*если что убрать*/
+
+   @media (max-width: $mobile-width-only) {
+    margin-right: -1px;
+    padding-left: 1px;
+  }
+}
+
+.contacts__tel,
+.contacts__email {
+  font-size: 0;
+
+  display: block;
+  width: 40px;
+  height: 40px;
+
+  position: relative;
+  border-radius: 50%;
+  outline: none;
+
+  @media (min-width: $desktop-width) {
+    width: 50px;
+    height: 50px;
+  }
+
+  &::before {
+    content: "";
+
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-repeat: no-repeat;
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
+}
+
+.contacts__tel {
+  background-color: $special-orange;
+
+  &::before {
+    background-image: url("../img/topmenu-phone.svg");
+    background-size: 18px 18px;
+    background-position: 16px 16px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $special-orange--dark;
+  }
+}
+
+.contacts__email {
+  background-color: $basic-yellow--dark;
+
+  &::before {
+    background-image: url("../img/topmenu-mail.svg");
+    background-size: 18px 14px;
+    background-position: 16px 18px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $special-orange;
+  }
+}
+
+.promo .contacts__tel::before {
+  background-position: 11px 12px;
+}
+
+.promo .contacts__email::before {
+  background-size: 18px 16px;
+  background-position: center;
+}
+
+.contacts__auth {
+  display: block;
+  width: 190px;
+  padding: 10px 0;
+
+  border-radius: 25px;
+
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
+
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  color: $basic-blue;
+  background-color: $basic-yellow;
+  outline: none;
+
+  @media (min-width: $tablet-width) {
+    width: 188px;
+    padding: 14px 10px 16px 10px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $basic-yellow--dark;
+  }
+
+  &:active {
+    color: rgba($basic-blue, 0.3);
+    background-color: $basic-yellow--dark;
+  }
+}
+
+.promo .contacts__auth {
+  padding: 11px 1px 9px 0;
+}

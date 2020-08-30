@@ -1,0 +1,85 @@
+.flags {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  list-style: none;
+}
+
+.flags__item {
+  position: relative;
+  width: 35px;
+  height: 25px;
+  margin-right: 20px;
+
+  background-repeat: no-repeat;
+  background-size: 35px 25px;
+
+  &--shri-lanka {
+    background-image: url("../img/flag-sri-lanka.svg");
+  }
+
+  &--tai {
+    background-image: url("../img/flag-thailand.svg");
+  }
+
+  &--sey {
+    background-image: url("../img/flag-seychelles.svg");
+  }
+
+  &--bel {
+    background-image: url("../img/flag-belgium.svg");
+  }
+
+  &--che {
+    background-image: url("../img/flag-czech.svg");
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover .flags__name {
+    display: block;
+  }
+}
+
+.flags__name {
+  display: none;
+  width: max-content;
+  padding: 18px 25px;
+
+  position: absolute;
+  z-index: 1;
+  bottom: -65px;
+  left: 50%;
+  transform: translate(-50%);
+
+  border-radius: 4px;
+
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+
+  background-color: $special-blue--pop-up;
+  color: $basic-white;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 8px;
+
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translate(-50%);
+
+    border: 7px solid transparent;
+    border-top: 0;
+    border-bottom: 8px solid $special-blue--pop-up;
+  }
+}

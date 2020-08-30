@@ -1,0 +1,137 @@
+.main {
+  background-color: $basic-blue--light;
+
+//   &--active {
+//     margin-top: 65px;
+
+//     @media (min-width: $tablet-width) {
+//       margin-top: 132px;
+//     }
+
+//     @media (min-width: $desktop-width) {
+//       margin-top: 110px;
+//     }
+//   }
+}
+
+// .main--main-page.main--active {
+//   @media (max-width: $mobile-width-only) {
+//     margin-top: 73px;
+//   }
+// }
+
+.main__title-wrapper {
+  position: relative;
+  z-index: 8;
+
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+
+  background-color: $special-blue--dark;
+
+  @media (min-width: $tablet-width) {
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    border-bottom-left-radius: 56px;
+    border-bottom-right-radius: 56px;
+  }
+}
+
+.main__title-container {
+  width: 320px;
+  padding: 27px 25px 15px 25px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    padding: 88px 74px 72px 74px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    padding: 108px 125px 72px 125px;
+  }
+}
+
+.main__catalog-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 76px;
+  margin-bottom: 143px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 182px;
+    margin-bottom: 129px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 949px 285px;
+    grid-column-gap: 84px;
+    // margin-top: 215px;
+    margin: 48px 0 172px -2px;
+  }
+
+  &--no-js {
+    margin-top: 21px;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 43px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 77px;
+    }
+  }
+}
+
+.main__button {
+  float: right;
+  margin-top: 25px;
+
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  color: $basic-white;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+    height: 21px;
+    margin-left: 30px;
+
+    background-image: url("../img/return.svg");
+    background-repeat: no-repeat;
+    background-size: 30px 19px;
+
+    @media (min-width: $desktop-width) {
+      margin-left: 28px;
+    }
+  }
+
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

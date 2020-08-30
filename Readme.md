@@ -1,9 +1,16 @@
 # Личный проект «Погнали» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Вадим Корецкий](https://up.htmlacademy.ru/adaptive/20/user/25328).
-* Наставник: `Неизвестно`.
+Наставник: [Виктория Коваленко](https://up.htmlacademy.ru/adaptive/20/user/42638).
 
 ---
+
+**Обратите внимание, для запуска проекта, необходимо склонировать или сохранить (git@github.com:Sainthedgehog1/25328-mishka-20.git).**
+
+- Установить Node Modules с проверкой последних обновлений с помощью команды <strong>npm i -g npm-check-updates</strong>
+- Проверить наличие обновлений модулей <strong>ncu</strong>
+- При необходимости установить их <strong>ncu -u</strong>, <strong>npm install</strong>
+- Запуск сборки <strong>gulp</strong>
 
 **Обратите внимание, что папка с вашими исходными файлами — `source/`.**
 

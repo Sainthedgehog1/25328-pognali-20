@@ -1,0 +1,122 @@
+.show-all-button {
+  position: relative;
+  display: block;
+  width: 270px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  padding-left: 23px;
+  padding-right: 60px;
+
+  border-radius: 10px;
+
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: left;
+
+  text-decoration: none;
+
+  background-color: $basic-yellow;
+  color: $basic-blue--dark;
+  outline: none;
+
+  @media (min-width: $tablet-width) {
+    width: 616px;
+    padding: 27px 60px 29px 33px;
+
+    border-radius: 20px;
+
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 275px;
+    padding-left: 33px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 25px;
+    right: 23px;
+
+    border: 6px solid transparent;
+    border-right: 0;
+    border-left: 10px solid #1d2e5b;
+
+    @media (min-width: $tablet-width) {
+      top: 37px;
+      right: 32px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 34px;
+      right: 36px;
+    }
+  }
+
+  &--bordered {
+    padding: 17px 60px 21px 19px;
+
+    border: 3px solid $special-blue--dark;
+
+    @media (min-width: $tablet-width) {
+      width: 618px;
+      padding-top: 24px;
+      padding-bottom: 26px;
+      padding-left: 34px;
+      padding-right: 60px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 324px;
+    }
+  }
+
+  &--bordered::after {
+    top: 22px;
+    right: 19px;
+
+    border: 6px solid transparent;
+    border-right: 0;
+    border-left: 12px solid #1d2e5b;
+
+    @media (min-width: $tablet-width) {
+      top: 31px;
+      right: 30px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $basic-yellow--dark;
+  }
+
+  &:active {
+    color: rgba($basic-blue--dark, 0.3);
+  }
+
+  &:active::after {
+    opacity: 0.3;
+  }
+
+  &--bordered:hover,
+  &--bordered:focus {
+    background-color: $special-blue--dark;
+    color: $basic-white;
+  }
+
+  &--bordered:hover::after,
+  &--bordered:focus::after {
+    border-left-color: $basic-white;
+  }
+
+  &--bordered:active {
+    background-color: $special-blue--dark;
+    color: rgba($basic-white, 0.3);
+  }
+}

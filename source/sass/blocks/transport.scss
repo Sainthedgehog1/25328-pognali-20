@@ -1,0 +1,244 @@
+.transport {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  list-style: none;
+}
+
+.transport__item {
+  position: relative;
+  display: block;
+  width: 32px;
+  height: 32px;
+
+  border-radius: 50%;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    width: 34px;
+    height: 32px;
+  }
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    background-repeat: no-repeat;
+    background-position: center;
+
+    opacity: 0.1;
+  }
+
+  &--active::before {
+    opacity: 1;
+  }
+
+  &--plane::before {
+    background-image: url("../img/plane.svg");
+    background-size: 21px 23px;
+    background-position: 4px 5px;
+
+    @media (min-width: $tablet-width) {
+      background-size: 24px 24px;
+      background-position: 5px 6px;
+    }
+
+    @media (min-width: $desktop-width) {
+      background-position: 5px 4px;
+    }
+  }
+
+  &--bus::before {
+    background-image: url("../img/bus.svg");
+    background-size: 18px 21px;
+    background-position: 8px 7px;
+
+    @media (min-width: $tablet-width) {
+      background-size: 23px 23px;
+      background-position: 6px 7px;
+    }
+
+    @media (min-width: $desktop-width) {
+      background-position: 6px 5px;
+    }
+  }
+
+  &--bicycle::before {
+    background-image: url("../img/bike.svg");
+    background-size: 25px 24px;
+    background-position: 6px 6px;
+
+    @media (min-width: $tablet-width) {
+      background-size: 25px 25px;
+      background-position: 6px 3px;
+    }
+
+    @media (min-width: $desktop-width) {
+      background-position: 3px 4px;
+    }
+  }
+
+  &--foot::before {
+    background-image: url("../img/run.svg");
+    background-size: 21px 24px;
+    background-position: 7px 5px;
+
+    @media (min-width: $tablet-width) {
+      background-size: 22px 24px;
+      background-position: 6px 6px;
+    }
+
+    @media (min-width: $desktop-width) {
+      background-position: 2px 5px;
+    }
+  }
+
+  &--input {
+    background-color: $basic-white;
+    width: 31px;
+    height: 31px;
+    margin-left: 1px;
+
+    @media (min-width: $tablet-width) {
+      width: 43px;
+      height: 43px;
+      margin-left: 0;
+    }
+
+    &:hover,
+    &:focus {
+      filter: drop-shadow(0 2px 6px rgba($basic-blue, 0.17));
+    }
+
+    &:hover::before,
+    &:focus::before {
+      opacity: 0.3;
+    }
+
+    &:active {
+      background-color: $special-grey--filter;
+    }
+
+    &:active::before {
+      opacity: 0.1;
+    }
+  }
+
+  &--input:last-of-type {
+    margin-left: 2px;
+
+    @media (min-width: $tablet-width) {
+      margin-left: 0;
+    }
+  }
+
+  &--input::before {
+    background-size: 17px 16px;
+    background-position: center;
+
+    @media (min-width: $tablet-width) {
+      background-size: 23px 22px;
+    }
+  }
+
+  &:hover .transport__name {
+    display: block;
+  }
+}
+
+.filter .transport__item--plane {
+  @media (min-width: $desktop-width) {
+    margin-left: -3px;
+    margin-right: 1px;
+  }
+
+  &::before {
+    @media (min-width: $desktop-width) {
+      background-position: 9px 10px;
+      background-size: 25px 24px;
+
+    }
+  }
+}
+
+.filter .transport__item--bus {
+  @media (min-width: $desktop-width) {
+    margin-right: 1px;
+  }
+
+  &::before {
+    @media (min-width: $desktop-width) {
+      background-position: 9px 10px;
+      background-size: 25px 24px;
+
+    }
+  }
+}
+
+.filter .transport__item--bicycle {
+  @media (min-width: $desktop-width) {
+    margin-right: 1px;
+  }
+}
+
+.transport__checkbox:focus + .transport__item {
+  outline: 2px solid $special-blue--dark;
+}
+
+
+.transport__name {
+  display: none;
+  width: max-content;
+  padding: 18px 25px;
+
+  position: absolute;
+  z-index: 1;
+  bottom: -65px;
+  left: 50%;
+  transform: translate(-50%);
+
+  border-radius: 4px;
+
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+
+  background-color: $special-blue--pop-up;
+  color: $basic-white;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 8px;
+
+    position: absolute;
+    top: -7px;
+    left: 50%;
+    transform: translate(-50%);
+
+    border: 7px solid transparent;
+    border-top: 0;
+    border-bottom: 8px solid $special-blue--pop-up;
+  }
+}
+
+.transport__checkbox:checked + .transport__item--input::before {
+  opacity: 1;
+}
+
+.transport__checkbox:checked + .transport__item--input:hover::before,
+.transport__checkbox:checked + .transport__item--input:focus::before {
+  opacity: 0.7;
+}
+
+.transport__checkbox:checked + .transport__item--input:active::before {
+  opacity: 0.3;
+}

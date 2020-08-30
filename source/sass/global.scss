@@ -1,0 +1,44 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  height: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.svg-template {
+  display: none;
+}
+
+.container {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 25px;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    padding: 0 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    padding: 0 60px;
+  }
+}

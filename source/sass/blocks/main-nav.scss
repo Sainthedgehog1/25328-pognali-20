@@ -1,0 +1,256 @@
+.main-nav {
+  position: relative;
+  z-index: 11;
+
+  background-color: $basic-white;
+
+  @media (min-width: $desktop-width) {
+    display: contents;
+    background-color: transparent;
+  }
+
+  &--active {
+    width: 100%;
+    // position: fixed;
+    // position: relative;
+    // top: 73px;
+
+    @media (min-width: $tablet-width) {
+      // top: 132px;
+    }
+  }
+
+  &--no-js {
+    display: flex;
+    // position: relative;
+    // top: 0;
+  }
+}
+
+.main-nav .container {
+  display: none;
+  flex-direction: column;
+  padding-top: 43px;
+  padding-bottom: 29px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 49px;
+    padding-bottom: 74px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+    order: 1;
+    display: block;
+    width: 100%;
+    height: 20px;
+    padding: 2px 0 0 105px;
+    margin-left: 40px;
+
+    background-color: transparent;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 2px;
+      position: absolute;
+      top: 55%;
+      left: 0;
+
+      background-color: $basic-white;
+    }
+  }
+}
+
+.main-nav--active .container {
+  display: flex;
+}
+
+.main-nav__list {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+
+  list-style: none;
+
+  @media (max-width: $mobile-width-only) {
+    align-items: center;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-left: 57px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+
+    flex-direction: row;
+  }
+}
+
+.main-nav__item {
+  overflow: hidden;
+}
+
+.main-nav__link {
+  position: relative;
+  // display: flex;
+  // flex-direction: column;
+  display: block;
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 35px;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  color: $special-blue--dark;
+  outline: none;
+
+  transition: transform 0.3s;
+
+  @media (max-width: $mobile-width-only) {
+    align-items: center;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 71px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 34px;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    color: $basic-white;
+  }
+
+  &::before {
+    content: attr(data-hover);
+    position: absolute;
+    top: 100%;
+
+    color: $basic-yellow;
+
+    transform: translate3d(0, 0, 0);
+  }
+
+  &::after {
+    content: attr(data-active);
+    position: absolute;
+    top: 200%;
+    left: 0;
+
+    color: rgba($basic-yellow, 0.3);
+
+    transform: translate3d(0, 0, 0);
+  }
+
+  &:hover,
+  &:focus {
+    transform: translateY(-100%);
+  }
+
+  &:active {
+    transform: translateY(-200%);
+  }
+}
+
+.main-nav__auth {
+  display: block;
+  width: 270px;
+  padding: 10px 13px 10px 10px;
+  margin-top: 54px;
+  border-radius: 25px;
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
+
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  color: $basic-blue;
+  background-color: $basic-yellow;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    background-color: $basic-yellow--dark;
+  }
+
+  &:active {
+    color: rgba($basic-blue, 0.3);
+    background-color: $basic-yellow--dark;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav__tel {
+  margin-top: 64px;
+  margin-bottom: 27px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 154px;
+    margin-bottom: 38px;
+  }
+}
+
+.main-nav__tel,
+.main-nav__email {
+  color: $special-blue--dark;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    color: $basic-yellow--dark;
+  }
+
+  &:active {
+    color: rgba($basic-yellow, 0.3);
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-left: 57px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.main-nav__tel:hover .tel__svg,
+.main-nav__email:hover .email__svg,
+.main-nav__tel:focus .tel__svg,
+.main-nav__email:focus .email__svg,
+.main-nav__tel:active .tel__svg,
+.main-nav__email:active .email__svg {
+  fill: currentColor;
+}
+
+.main-nav__socials {
+  margin-top: 44px;
+
+  @media (max-width: $mobile-width-only) {
+    align-self: center;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: 132px;
+    margin-left: 58px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}

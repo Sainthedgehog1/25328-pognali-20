@@ -1,0 +1,63 @@
+.tel {
+  position: relative;
+  // min-height: 68px;
+  padding-left: 61px;
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 91px;
+    font-size: 28px;
+    line-height: 28px;
+  }
+}
+
+.tel__svg-wrapper {
+  position: absolute;
+  top: -13px;
+  left: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  width: 45px;
+  height: 45px;
+  margin-right: 11px;
+
+  border-radius: 50%;
+
+  background-color: $special-blue--buble;
+
+  @media (min-width: $tablet-width) {
+    top: -22px;
+    width: 68px;
+    height: 68px;
+    margin-right: 14px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 90px;
+    height: 90px;
+    margin-right: 23px;
+  }
+}
+
+.tel__svg {
+  width: 19px;
+  height: 17px;
+
+  @media (min-width: $tablet-width) {
+    width: 28px;
+    height: 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 36px;
+    height: 34px;
+  }
+}

@@ -1,0 +1,39 @@
+.desc {
+  padding-left: 24px;
+
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+
+  @media (max-width: $mobile-width-only) {
+    max-width: 245px;
+
+    line-height: 22px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-left: 35px;
+
+    font-size: 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 70px;
+  }
+
+  &--important {
+    padding-left: 24px;
+    font-weight: bold;
+
+    @media (min-width: $tablet-width) {
+      padding-left: 34px;
+      font-size: 21px;
+      line-height: 24px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-left: 70px;
+    }
+  }
+}

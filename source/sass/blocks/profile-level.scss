@@ -1,0 +1,92 @@
+.profile-level {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+
+  color: $basic-blue;
+
+  background-repeat: no-repeat;
+  background-size: 100px 100px;
+
+  &--80 {
+    background-image: url("../img/profile-level-80.svg");
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 94px;
+    height: 94px;
+
+    background-size: 94px 94px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 95px;
+    height: 95px;
+
+    color: $basic-white;
+    background-size: 95px 95px;
+  }
+}
+
+.profile-level__value {
+  position: relative;
+  margin-top: 16px;
+
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 38px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 20px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 51px;
+    height: 1px;
+    position: absolute;
+    bottom: -3px;
+    left: -5px;
+
+    background-color: rgba($special-grey, 0.3);
+
+    @media (min-width: $tablet-width) {
+      width: 48px;
+
+      bottom: -1px;
+      left: -3px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 49px;
+      height: 2px;
+
+      bottom: 0;
+      left: -4px;
+
+      background-color: rgba($basic-white, 0.3);
+    }
+  }
+}
+
+.profile-level__text {
+  margin-top: 9px;
+
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 18px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 6px;
+  }
+}
