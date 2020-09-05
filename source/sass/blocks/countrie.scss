@@ -164,12 +164,23 @@
   }
 }
 
+.countrie:nth-of-type(3) .countrie__name {
+  @media (min-width: $tablet-width) {
+    margin-left: 1px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+  }
+}
+
 .countrie__slogan {
   max-width: 160px;
-  margin-top: 1px;
+  margin-top: 2px;
 
   font-size: 16px;
   line-height: 18px;
+  letter-spacing: -0.3px;
 
   @media (max-width: $mobile-width-only) {
     grid-column: 1 / -1;
@@ -187,6 +198,21 @@
   @media (min-width: $desktop-width) {
     max-width: 280px;
     margin-top: 4px;
+    letter-spacing: -0.4px;
+  }
+}
+
+.countrie:nth-of-type(2) .countrie__slogan {
+  @media (max-width: $mobile-width-only) {
+    letter-spacing: -0.2px;
+  }
+
+  @media (min-width: $tablet-width) {
+    letter-spacing: -0.4px;
+  }
+
+  @media (min-width: $desktop-width) {
+    letter-spacing: -0.3px;
   }
 }
 

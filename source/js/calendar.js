@@ -76,7 +76,7 @@ var renderCalendar = function (year, month) {
 }
 
 var lengthOf = function () {
-  return new Date(checks.out - checks.in).getTime() / 86400000 + 1;
+  return Math.round(new Date(checks.out - checks.in).getTime() / 86400000 + 1);
 }
 
 var dateOf = function (element) {

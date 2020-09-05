@@ -1,6 +1,9 @@
 .logo {
   align-self: center;
-  &:hover {
+  outline-offset: 3px;
+
+  &:hover,
+  &:focus {
     opacity: 0.6;
   }
 

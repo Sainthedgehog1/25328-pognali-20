@@ -36,6 +36,7 @@
     }
 
     @media (min-width: $desktop-width) {
+      top: 26px;
       right: -52px;
     }
   }
@@ -48,7 +49,7 @@
     top: -45px;
     right: -27px;
 
-    background-image: linear-gradient($special-grey--underline, rgba($special-grey--underline, 0));
+    background-image: linear-gradient(to bottom, $special-grey--underline 60%, $basic-white 100%);
 
     @media (min-width: $tablet-width) {
       content: "";
@@ -84,6 +85,8 @@
 
   @media (min-width: $desktop-width) {
     width: 730px;
+    margin-left: 1px;
+    padding-left: 25px;
   }
 }
 
@@ -121,13 +124,16 @@
   background-position: center;
 
   opacity: 0.2;
+  outline-offset: 3px;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     width: 21px;
     height: 21px;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 0.3;
   }
 

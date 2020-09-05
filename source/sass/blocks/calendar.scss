@@ -1,5 +1,8 @@
 .calendar__control {
   position: relative;
+  display: grid;
+  grid-template-columns: min-content 1fr min-content;
+  align-items: center;
   width: 220px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -27,9 +30,7 @@
 
   @media (min-width: $tablet-width) {
     width: 532px;
-    padding-left: 17px;
-    padding-top: 21px;
-    padding-bottom: 23px;
+    padding: 21px 17px 23px;
     margin-bottom: 39px;
   }
 
@@ -53,6 +54,8 @@
   background-position: center;
 
   opacity: 0.3;
+  outline-offset: 3px;
+  cursor: pointer;
 
   &--prev {
     background-image: url("../img/month-arrow-left.svg");
@@ -76,7 +79,8 @@
     background-size: 16px 28px;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 0.5;
   }
 
@@ -88,7 +92,7 @@
 .calendar__date {
   vertical-align: bottom;
   width: 194px;
-
+  margin-left: 4px;
   border: none;
 
   font-family: "Blogger Sans", "Arial", sans-serif;
@@ -111,6 +115,10 @@
 
   @media (min-width: $desktop-width) {
     width: 959px;
+  }
+
+  &:focus {
+    outline: none;
   }
 }
 
@@ -148,6 +156,14 @@
 
 .calendar__table {
   border-collapse: collapse;
+
+  @media (max-width: $mobile-width-only) {
+    margin-left: 1px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 1px;
+  }
 }
 
 .calendar__number {

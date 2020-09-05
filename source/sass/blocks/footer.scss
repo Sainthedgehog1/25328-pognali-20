@@ -66,6 +66,7 @@
   @media (min-width: $tablet-width) {
     justify-self: center;
     margin-top: 1px;
+    margin-left: 2px;
   }
 
   @media (min-width: $desktop-width) {
@@ -145,7 +146,8 @@
   text-decoration: none;
 
   color: $special-grey;
-  outline: none;
+  outline-offset: 3px;
+  // outline: none;
 
   @media (max-width: $mobile-width-only) {
     margin-top: 47px;
@@ -154,8 +156,8 @@
   @media (min-width: $tablet-width) {
     justify-self: end;
     width: 154px;
-    padding-bottom: 4px;
-
+    padding-bottom: 5px;
+    padding-left: 1px;
     font-size: 20px;
     line-height: 20px;
   }

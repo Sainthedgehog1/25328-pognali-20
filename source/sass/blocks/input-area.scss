@@ -32,16 +32,24 @@
   letter-spacing: 0.09em;
 
   @media (min-width: $tablet-width) {
+    margin-left: -2px;
     letter-spacing: 0.1em;
   }
 
   @media (min-width: $desktop-width) {
     width: 185px;
     margin-right: 36px;
+    margin-left: 0;
 
     letter-spacing: unset;
   }
 }
+
+// .step__input-area--duration .input-area__title {
+//   @media (min-width: $desktop-width) {
+//     width: 185px;
+//   }
+// }
 
 .input-area__unit {
   letter-spacing: 0.07em;
@@ -61,12 +69,25 @@
   }
 }
 
+.step__input-area--companions .input-area__unit {
+  @media (min-width: $tablet-width) {
+    margin-right: 2px;
+  }
+}
+
+.step__input-area--duration .input-area__unit {
+  @media (min-width: $tablet-width) {
+    margin-right: 0;
+    letter-spacing: normal;
+  }
+}
+
 .input-area__control {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin-top: 9px;
+  margin-top: 10px;
   padding-top: 12px;
   padding-bottom: 11px;
 
@@ -74,7 +95,9 @@
   border-radius: 4px;
 
   @media (min-width: $tablet-width) {
+    justify-content: start;
     margin-top: 26px;
+    margin-left: -1px;
     padding-top: 22px;
     padding-bottom: 22px;
   }
@@ -83,6 +106,7 @@
     width: 180px;
     margin-top: 0;
     margin-right: 35px;
+    margin-left: 0;
   }
 
   &--invalid {
@@ -95,6 +119,16 @@
 
   &:focus-within {
     border-color: $basic-blue;
+  }
+}
+
+.step__input-area--duration .input-area__control {
+  @media (min-width: $tablet-width) {
+    width: 532px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 180px;
   }
 }
 
@@ -113,20 +147,25 @@
 
   color: $basic-blue--dark;
   background-color: transparent;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
-    width: 451px;
+    width: 445px;
 
     font-size: 20px;
     line-height: 18px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 100px;
+    width: 95px;
   }
 
   &--invalid {
     color: $basic-red;
+  }
+
+  &:focus {
+    outline: none;
   }
 }
 
@@ -143,6 +182,8 @@
   background-repeat: no-repeat;
 
   opacity: 0.2;
+  outline-offset: 3px;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     width: 20px;
@@ -156,8 +197,13 @@
     }
 
     @media (min-width: $tablet-width) {
+      margin-left: 22px;
       background-image: url("../img/qty-minus.svg");
       background-size: 20px 2px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-left: 19px;
     }
   }
 
@@ -168,25 +214,39 @@
     }
 
     @media (min-width: $tablet-width) {
+      margin-left: 3px;
       background-image: url("../img/qty-plus.svg");
       background-size: 20px 20px;
     }
+
+    @media (min-width: $desktop-width) {
+      margin-left: 5px;
+    }
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 0.4;
-  }
-
-  &:active {
-    opacity: 0.1;
   }
 
   &:focus {
     border: none;
   }
 
+  &:active {
+    opacity: 0.1;
+  }
+
   &--inactive {
     pointer-events: none;
     opacity: 0.1;
   }
+}
+
+.input-area__value:focus+.input-area__button {
+  opacity: 1;
+}
+
+.input-area__value:focus+.input-area__button+.input-area__button {
+  opacity: 1;
 }

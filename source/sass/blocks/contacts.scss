@@ -2,11 +2,22 @@
   display: flex;
   justify-self: flex-end;
   list-style: none;
-  align-self: end;/*если что убрать*/
+  align-self: end;
+  /*если что убрать*/
 
-   @media (max-width: $mobile-width-only) {
+  @media (max-width: $mobile-width-only) {
     margin-right: -1px;
     padding-left: 1px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: 1px;
+    margin-bottom: -1px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 3px;
+    margin-bottom: 0;
   }
 }
 
@@ -20,7 +31,7 @@
 
   position: relative;
   border-radius: 50%;
-  outline: none;
+  // outline: none;
 
   @media (min-width: $desktop-width) {
     width: 50px;
@@ -104,10 +115,12 @@
 
   color: $basic-blue;
   background-color: $basic-yellow;
-  outline: none;
+  // outline: none;
 
   @media (min-width: $tablet-width) {
     width: 188px;
+    margin-top: -1px;
+    margin-bottom: 1px;
     padding: 14px 10px 16px 10px;
   }
 

@@ -37,7 +37,7 @@
   @media (min-width: $desktop-width) {
     width: 1440px;
     margin: 0 auto;
-    padding: 46px 60px 11px 60px;
+    padding: 46px 60px 12px 60px;
 
     flex-direction: row;
     justify-content: space-between;
@@ -120,6 +120,7 @@
 
   border: none;
   background-color: transparent;
+  outline-offset: 3px;
   cursor: pointer;
 
   &::before,
@@ -173,7 +174,7 @@
   &:hover,
   &:focus {
     opacity: 0.6;
-    outline: none;
+    // outline: none;
   }
 
   &:active {
@@ -182,6 +183,7 @@
 
   @media (min-width: $tablet-width) {
     margin-top: 2px;
+    margin-left: 2px;
     justify-self: center;
     align-self: center;
   }
@@ -215,9 +217,10 @@
 }
 
 
-// Страница попутчики
+// Страница попутчики, направления
 
-.header__wrapper .container--catalog-header {
+.header__wrapper .container--catalog-header,
+.header__wrapper .container--form-header {
   padding-top: 16px;
   padding-bottom: 24px;
 
@@ -226,6 +229,5 @@
     padding-bottom: 40px;
   }
 
-  @media (min-width: $desktop-width) {
-  }
+  @media (min-width: $desktop-width) {}
 }

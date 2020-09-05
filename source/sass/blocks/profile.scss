@@ -12,17 +12,12 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding-left: 75px;
-    padding-right: 75px;
-    padding-top: 65px;
-    padding-bottom: 58px;
+    padding: 64px 75px 59px 75px;
   }
 
   @media (min-width: $desktop-width) {
     justify-content: flex-end;
-    padding-right: 60px;
-    padding-top: 74px;
-    padding-bottom: 65px;
+    padding: 73px 60px 66px 75px;
   }
 }
 
@@ -42,6 +37,7 @@
 .profile__img-wrapper {
   @media (min-width: $tablet-width) {
     order: 2;
+    margin-top: -2px;
   }
 
   @media (min-width: $desktop-width) {
@@ -50,10 +46,14 @@
     z-index: 9;
     top: -190px;
     right: 155px;
+    margin-top: 0;
   }
 }
 
 .profile__avatar {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
   vertical-align: top;
 
   border-radius: 50%;
@@ -94,17 +94,21 @@
 
   color: $basic-blue;
   background-color: $special-blue--light;
+  cursor: pointer;
 
   @media (min-width: $desktop-width) {
     display: block;
+    padding-right: 4px;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $special-grey--photo-button;
   }
 
   &:active {
     color: rgba($basic-blue, 0.3);
+    background-color: $special-blue--light;
   }
 }
 
@@ -161,7 +165,7 @@
   justify-content: center;
   width: 270px;
 
-  border: 1px solid rgba($special-grey--light, 0.3);
+  border: 1px solid $special-grey--light;
   border-radius: 10px;
 
   &--tags {
@@ -174,7 +178,7 @@
     @media (min-width: $tablet-width) {
       order: 4;
       width: 618px;
-      margin-top: 53px;
+      margin-top: 52px;
       padding-top: 32px;
       padding-bottom: 16px;
     }
@@ -186,42 +190,46 @@
       margin-top: 0;
       justify-content: left;
     }
-
-    .profile__subtitle {
-      @media (min-width: $desktop-width) {
-        left: 21px;
-      }
-    }
   }
 
   &--transport {
     @media (max-width: $mobile-width-only) {
-      padding-top: 15px;
-      padding-bottom: 14px;
       margin-top: 25px;
+      padding-top: 15px;
+      padding-bottom: 15px;
     }
 
     @media (min-width: $tablet-width) {
       order: 1;
       width: 308px;
-
+      margin-right: 3px;
       padding-top: 23px;
-      padding-bottom: 26px;
+      padding-bottom: 25px;
     }
 
     @media (min-width: $desktop-width) {
       order: 1;
       width: 384px;
       margin-left: 140px;
+      margin-right: 0;
+      padding-left: 4px;
     }
   }
 
   &:hover {
-    border-color: rgba($special-grey--light, 0.6);
+    border-color: $special-grey--border-hover;
   }
 
   &:focus-within {
-    border-color: $special-grey--light;
+    border-color: $basic-blue;
+  }
+}
+
+
+.profile__field--tags .profile__subtitle {
+  @media (min-width: $desktop-width) {
+    left: 21px;
+    bottom: -11px;
   }
 }
 
@@ -255,6 +263,7 @@
 
   &:focus {
     color: $special-grey;
+    outline: none;
   }
 }
 
@@ -284,6 +293,17 @@
     font-size: 20px;
     line-height: 20px;
 
-    letter-spacing: 0.08em;
+    letter-spacing: 0.1em;
+  }
+
+  @media (min-width: $desktop-width) {
+    bottom: -10px;
+    letter-spacing: 0.07em;
+  }
+}
+
+.profile__field--transport .profile__subtitle {
+  @media (max-width: $mobile-width-only) {
+    top: -9px;
   }
 }

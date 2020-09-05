@@ -14,15 +14,17 @@
   @media (min-width: $tablet-width) {
     background-color: $special-blue--bg;
     background-size: 1479px 612px;
-    background-position: center 250px;
     background-image: url("../img/globe-back-tablet@1x.jpg");
+    background-position: center 250px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/globe-back-tablet@2x.jpg");
+      background-position: -358px 247px;
     }
   }
 
   @media (min-width: $desktop-width) {
+    margin-top: -1px;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
 

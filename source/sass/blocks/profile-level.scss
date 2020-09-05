@@ -4,6 +4,7 @@
   align-items: center;
   width: 100px;
   height: 100px;
+  margin-left: -1px;
 
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
@@ -20,6 +21,7 @@
   @media (min-width: $tablet-width) {
     width: 94px;
     height: 94px;
+    margin-top: 1px;
 
     background-size: 94px 94px;
   }
@@ -27,7 +29,7 @@
   @media (min-width: $desktop-width) {
     width: 95px;
     height: 95px;
-
+    margin-top: 0;
     color: $basic-white;
     background-size: 95px 95px;
   }

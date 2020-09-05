@@ -37,7 +37,7 @@
   display: grid;
   grid-template-columns: 1fr;
   padding-top: 81px;
-  padding-bottom: 40px;
+  padding-bottom: 39px;
 
   &::before {
     content: "";
@@ -101,7 +101,7 @@
 
 .regular-service__table {
   position: relative;
-  margin-top: 56px;
+  margin-top: 57px;
 
   &::after {
     display: block;
@@ -153,10 +153,11 @@
   text-decoration: none;
 
   color: $dark-blue;
-  outline: none;
+  // outline: none;
 
   @media (max-width: $mobile-width-only) {
     justify-self: center;
+    padding-right: 1px;
   }
 
   @media (min-width: $tablet-width) {

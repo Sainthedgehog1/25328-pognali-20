@@ -36,7 +36,7 @@
     }
 
     @media (min-width: $desktop-width) {
-      right: 212px;
+      right: 211px;
     }
   }
 
@@ -57,19 +57,24 @@
 
     @media (min-width: $tablet-width) {
       width: 1px;
-      height: 71px;
-      top: -45px;
+      height: 85px;
+      top: -59px;
       right: 139px;
 
       background-color: $special-grey--underline;
     }
 
     @media (min-width: $desktop-width) {
-      right: 219px;
+      right: 218px;
     }
   }
 
   &--empty {
+    @media (min-width: $tablet-width) {
+      margin-top: 15px;
+      margin-bottom: 13px;
+    }
+
     .input-countrie__flag {
       display: none;
     }
@@ -107,7 +112,18 @@
   }
 }
 
+.input-countrie:nth-of-type(2)::after {
+  @media (min-width: $tablet-width) {
+    top: 25px
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 26px
+  }
+}
+
 .input-countrie__input {
+  width: 168px;
   height: 100%;
   padding-right: 30px;
   padding-left: 9px;
@@ -123,7 +139,7 @@
   color: $basic-blue--dark;
 
   border: 1px solid $special-grey--light;
-  border-radius: 5px;
+  border-radius: 4px;
 
   @media (min-width: $tablet-width) {
     width: 369px;
@@ -139,6 +155,7 @@
 
   @media (min-width: $desktop-width) {
     width: 730px;
+    margin-left: 1px;
   }
 
   &:hover {
@@ -156,6 +173,7 @@
   border: none;
 
   background-color: transparent;
+  cursor: pointer;
 
   @media (max-width: $mobile-width-only) {
     background-image: linear-gradient(90deg, transparent, #ffffff 35%);
@@ -253,6 +271,7 @@
   border: none;
 
   background-color: transparent;
+  cursor: pointer;
 
   @media (max-width: $mobile-width-only) {
     border-radius: 50%;
@@ -279,7 +298,7 @@
     background-repeat: no-repeat;
     background-position: center;
 
-    opacity: 0.45;
+    opacity: 0.1;
 
     @media (max-width: $mobile-width-only) {
       background-size: 7px 7px;
@@ -290,11 +309,12 @@
     }
   }
 
-  &:hover::before {
-    opacity: 1;
+  &:hover::before,
+  &:focus::before {
+    opacity: 0.3;
   }
 
   &:active::before {
-    opacity: 0.3;
+    opacity: 0.05;
   }
 }

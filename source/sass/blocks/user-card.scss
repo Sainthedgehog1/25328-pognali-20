@@ -105,7 +105,7 @@
   text-decoration: none;
 
   color: $basic-blue--dark;
-  outline: none;
+  // outline: none;
 
   @media (min-width: $tablet-width) {
     align-self: start;
@@ -121,7 +121,7 @@
     height: 6px;
     position: absolute;
     top: 9px;
-    left: -17px;
+    left: -16px;
 
     border-radius: 50%;
 
@@ -151,7 +151,7 @@
 
 .user-card__tags {
   max-width: 190px;
-  margin-top: 15px;
+  margin-top: 16px;
 
   font-weight: normal;
   font-size: 16px;
@@ -162,17 +162,17 @@
 
   @media (min-width: $tablet-width) {
     max-width: 225px;
-    margin-top: 23px;
+    margin-top: 24px;
 
     font-size: 20px;
     line-height: 23px;
   }
 
   &--crutch {
-    margin-left: -6px;
+    margin-left: -7px;
 
     @media (min-width: $tablet-width) {
-      margin-left: 0;
+      margin-left: -1px;
     }
   }
 }
@@ -185,7 +185,7 @@
   }
 }
 
-.user-card__tags--crutch > .user-card__tags-add {
+.user-card__tags--crutch>.user-card__tags-add {
   margin-left: 17px;
 
   @media (min-width: $tablet-width) {
@@ -194,16 +194,16 @@
 }
 
 .user-card__transport {
-  margin-top: 11px;
+  margin-top: 10px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 24px;
+    margin-top: 23px;
   }
 }
 
 .users__link {
   margin-top: 20px;
-  padding: 20px 60px 23px 23px;
+  padding: 21px 60px 22px 23px;
 
   @media (min-width: $tablet-width) {
     justify-self: center;
@@ -218,7 +218,7 @@
 
   @media (min-width: $desktop-width) {
     justify-self: start;
-    margin-top: 88px;
+    margin-top: 87px;
     margin-left: 71px;
     padding: 27px 60px 29px 33px;
 

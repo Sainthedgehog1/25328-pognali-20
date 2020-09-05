@@ -27,7 +27,7 @@
 
 .about .container {
   padding-top: 31px;
-  padding-bottom: 84px;
+  padding-bottom: 83px;
 
   background-repeat: no-repeat;
   background-size: 292px 353px, 132px 132px;
@@ -97,7 +97,7 @@
   @media (min-width: $desktop-width) {
     width: 274px;
 
-    margin-top: 88px;
+    margin-top: 87px;
     margin-left: 71px;
   }
 }
@@ -105,7 +105,7 @@
 .about__desc {
   color: $basic-white;
 
-  margin-top: 19px;
+  margin-top: 20px;
 
   @media (min-width: $tablet-width) {
     max-width: 345px;
@@ -118,11 +118,13 @@
 
     line-height: 34px;
 
-    margin-top: 58px;
+    margin-top: 59px;
   }
 }
 
 .about__desc.desc--important {
+  margin-top: 19px;
+
   @media (min-width: $tablet-width) {
     margin-top: 31px;
 

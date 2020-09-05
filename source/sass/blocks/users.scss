@@ -92,7 +92,7 @@
 }
 
 .users__desc {
-  margin-top: 19px;
+  margin-top: 20px;
 
   color: $basic-white;
 
@@ -102,7 +102,7 @@
 
   @media (min-width: $tablet-width) {
     max-width: 465px;
-    margin-top: 56px;
+    margin-top: 57px;
 
     align-self: flex-start;
 
@@ -135,7 +135,7 @@
 .users__list {
   justify-self: center;
   display: flex;
-  margin-top: 56px;
+  margin-top: 55px;
 
   list-style: none;
 
@@ -145,7 +145,7 @@
 
   @media (min-width: $tablet-width) {
     width: 620px;
-    margin-top: 62px;
+    margin-top: 61px;
     flex-wrap: wrap;
     justify-content: space-between;
   }

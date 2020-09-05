@@ -7,8 +7,8 @@
   background-color: $special-blue--light;
 
   @media (min-width: $desktop-width) {
-    border-top-left-radius: 60px;
-    border-top-right-radius: 60px;
+    border-top-left-radius: 56px;
+    border-top-right-radius: 56px;
   }
 }
 
@@ -52,12 +52,8 @@
   position: relative;
   display: flex;
   align-items: flex-start;
-  padding-top: 23px;
-  padding-bottom: 24px;
-  padding-left: 24px;
-  padding-right: 24px;
   margin-top: 10px;
-
+  padding: 23px 25px 24px;
   counter-increment: countrie-iterator;
 
   border-radius: 10px;
@@ -70,24 +66,26 @@
 
   @media (min-width: $tablet-width) {
     width: 618px;
-    padding-top: 38px;
-    padding-bottom: 17px;
-    padding-left: 33px;
-    padding-right: 33px;
+    padding: 38px 33px 17px;
     margin-top: 11px;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    &:nth-of-type(2) {
+      padding: 37px 33px 17px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     width: 1258px;
-    padding-top: 35px;
-    padding-bottom: 38px;
-    padding-left: 41px;
-    padding-right: 42px;
+    padding: 35px 43px 38px 41px;
     margin-top: 15px;
     flex-wrap: nowrap;
     align-items: baseline;
+
+    &:nth-of-type(2) {
+      padding: 35px 44px 39px 33px;
+    }
   }
 
   &:first-child {
@@ -141,9 +139,23 @@
   }
 }
 
+.plans__item:nth-of-type(2) .plans__info {
+  @media (min-width: $tablet-width) {
+    margin-left: -1px;
+
+    &::before {
+      top: -19px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 65px;
+  }
+}
+
 .plans__date {
   @media (max-width: $mobile-width-only) {
-    margin-top: 6px;
+    margin-top: 5px;
   }
 
   @media (min-width: $desktop-width) {
@@ -162,6 +174,16 @@
   @media (min-width: $desktop-width) {
     min-width: 160px;
     margin-right: 18px;
+  }
+}
+
+.plans__item:nth-of-type(2) .plans__companions {
+  @media (min-width: $tablet-width) {
+    margin-right: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 17px;
   }
 }
 
@@ -208,6 +230,25 @@
   }
 }
 
+.plans__item:nth-of-type(2) .plans__countries {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 54px;
+
+    &::before {
+      top: 40px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+    margin-left: 9px;
+
+    &::before {
+      margin-right: 31px;
+    }
+  }
+}
+
 .plans__change-button {
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
@@ -223,7 +264,7 @@
   opacity: 0.3;
 
   @media (max-width: $mobile-width-only) {
-    margin-top: 23px;
+    margin-top: 24px;
   }
 
   @media (min-width: $tablet-width) {
@@ -238,7 +279,8 @@
     letter-spacing: 0.08em;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 0.6;
   }
 

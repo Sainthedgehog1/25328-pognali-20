@@ -77,12 +77,13 @@
       width: 2px;
       height: 248px;
       top: -235px;
-      right: -27px;
+      right: -28px;
     }
 
     @media (min-width: $desktop-width) {
       top: -237px;
-      right: 342px;
+      right: 227px;
+      height: 246px;
     }
   }
 
@@ -112,6 +113,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    margin-left: -1px;
     letter-spacing: 0.5px;
   }
 
@@ -140,7 +142,7 @@
 
     @media (min-width: $desktop-width) {
       top: 11px;
-      right: 336px;
+      right: 221px;
     }
   }
 
@@ -169,7 +171,7 @@
 
     @media (min-width: $desktop-width) {
       top: -3px;
-      right: 232px;
+      right: 117px;
     }
   }
 
@@ -190,6 +192,31 @@
 
     @media (min-width: $tablet-width) {
       background-image: url("../img/flag-czech.svg");
+    }
+  }
+}
+
+.step__countrie-plan:nth-of-type(2) .countrie-plan__countrie {
+  &::before {
+    @media (min-width: $tablet-width) {
+      top: 11px;
+      right: -34px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 9px;
+      right: 221px;
+    }
+  }
+
+  &::after {
+    @media (min-width: $tablet-width) {
+      right: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: -3px;
+      right: 117px;
     }
   }
 }
@@ -218,6 +245,7 @@
     height: 142px;
     padding: 15px 17px;
     margin-top: 41px;
+    margin-left: 2px;
 
     font-size: 20px;
     line-height: 23px;
@@ -225,9 +253,9 @@
 
   @media (min-width: $desktop-width) {
     width: 730px;
-    height: 142px;
-    padding: 22px 24px;
     margin-top: 39px;
+    margin-left: 1px;
+    padding: 22px 24px;
   }
 
   &::placeholder {
@@ -236,5 +264,12 @@
 
   &--invalid {
     border-color: $special-red;
+  }
+}
+
+.step__countrie-plan:nth-of-type(2) .countrie-plan__plan {
+  @media (min-width: $desktop-width) {
+    height: 141px;
+    margin-left: 1px;
   }
 }

@@ -20,7 +20,8 @@
 
   background-color: $basic-yellow;
   color: $basic-blue--dark;
-  outline: none;
+  outline-offset: 3px;
+  // outline: none;
 
   @media (min-width: $tablet-width) {
     width: 616px;
@@ -60,7 +61,7 @@
   }
 
   &--bordered {
-    padding: 17px 60px 21px 19px;
+    padding: 18px 60px 20px 19px;
 
     border: 3px solid $special-blue--dark;
 

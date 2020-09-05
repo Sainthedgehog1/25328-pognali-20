@@ -18,10 +18,7 @@
 
   @media (min-width: $tablet-width) {
     width: 688px;
-    padding-top: 34px;
-    padding-bottom: 37px;
-    padding-left: 34px;
-    padding-right: 34px;
+    padding: 35px 34px 37px;
   }
 
   @media (min-width: $desktop-width) {
@@ -55,7 +52,7 @@
       width: 617px;
       height: 1px;
       position: absolute;
-      bottom: -41px;
+      bottom: -40px;
       left: 0;
 
       pointer-events: none;
@@ -84,7 +81,7 @@
     grid-template-columns: 112px 1fr;
     grid-column-gap: 10px;
     row-gap: 26px;
-    margin-top: 75px;
+    margin-top: 74px;
 
     &::before {
       content: "";
@@ -118,7 +115,7 @@
 .filter__item {
   display: contents;
   border: none;
-  padding: 9px 0 10px 0;
+  padding: 10px 0 9px;
   border-top: 1px solid $special-yellow;
 
   @media (max-width: $mobile-width-only) {
@@ -143,6 +140,7 @@
   }
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+
     &:last-of-type .filter__subtitle,
     &:last-of-type .filter__category,
     &:last-of-type .filter__toggle {
@@ -178,7 +176,7 @@
     display: block;
     width: 10px;
     height: 5px;
-
+    margin-right: -1px;
     border: 5px solid transparent;
     border-top: 5px solid $special-blue--dark;
     border-bottom: 0;
@@ -215,7 +213,7 @@
   }
 
   &--active {
-    margin-bottom: 14px;
+    margin-bottom: 13px;
 
     @media (min-width: $tablet-width) {
       margin-top: 0;
@@ -253,7 +251,7 @@
 
 .filter__item:last-of-type .filter__toggle--active {
   @media (max-width: $mobile-width-only) and (max-width: $desktop-width - 1) {
-    margin-bottom: 12px;
+    margin-bottom: 11px;
   }
 }
 
@@ -274,7 +272,7 @@
 
   @media (max-width: $mobile-width-only) {
     flex-direction: column;
-    margin-bottom: 9px;
+    margin-bottom: 10px;
   }
 
   @media (min-width: $tablet-width) {
@@ -300,8 +298,8 @@
   flex-direction: row;
 
   @media (max-width: $mobile-width-only) {
-    margin-top: 2px;
-    margin-bottom: 10px;
+    margin-top: 15px;
+    margin-bottom: 11px;
   }
 
   @media (min-width: $tablet-width) {
@@ -422,7 +420,7 @@
   }
 }
 
-.filter__checkbox:checked + .filter__label {
+.filter__checkbox:checked+.filter__label {
   &::before {
     background-image: url("../img/tick.svg");
   }
@@ -438,7 +436,7 @@
   }
 }
 
-.filter__checkbox:focus + .filter__label::before {
+.filter__checkbox:focus+.filter__label::before {
   outline: 2px solid $special-blue--dark;
 }
 
@@ -447,7 +445,8 @@
   width: 230px;
   padding-top: 13px;
   padding-bottom: 11px;
-  margin-top: 15px;
+  padding-right: 1px;
+  margin-top: 16px;
 
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;

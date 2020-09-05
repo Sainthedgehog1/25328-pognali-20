@@ -16,6 +16,10 @@
     border-bottom-left-radius: 56px;
     border-bottom-right-radius: 56px;
   }
+
+  @media (min-width: $desktop-width) {
+    border-bottom-left-radius: 60px;
+  }
 }
 
 .map .container {
@@ -33,8 +37,8 @@
 
   @media (min-width: $desktop-width) {
     flex-direction: row;
-    padding-top: 115px;
-    padding-bottom: 56px;
+    padding-top: 114px;
+    padding-bottom: 57px;
   }
 }
 
@@ -92,7 +96,8 @@
     @media (min-width: $desktop-width) {
       width: 90px;
       height: 90px;
-
+      margin-top: 1px;
+      margin-bottom: -1px;
       background-size: 42px 42px;
     }
   }
@@ -106,7 +111,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 0;
+    margin-top: 1px;
   }
 
   &::after {

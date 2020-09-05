@@ -21,7 +21,7 @@
     width: 200px;
     height: 1px;
     position: absolute;
-    top: -12px;
+    top: -13px;
     left: 0;
 
     background-color: $special-grey--underline;
@@ -89,7 +89,7 @@
     width: 34px;
     height: 34px;
     position: absolute;
-    top: -9px;
+    top: -10px;
 
     border-radius: 50%;
 
@@ -114,7 +114,7 @@
     width: 200px;
     height: 1px;
     position: absolute;
-    bottom: -16px;
+    bottom: -15px;
     left: 0;
 
     background-color: $special-grey--underline;
@@ -132,7 +132,7 @@
   }
 
   &:nth-of-type(3n + 2)::before {
-    bottom: -17px;
+    bottom: -16px;
 
     @media (min-width: $tablet-width) {
       bottom: 1px;
@@ -154,7 +154,7 @@
   }
 
   &:nth-of-type(3n + 1)::after {
-    top: -8px;
+    top: -9px;
     right: 1px;
     background-color: $special-orange;
 
@@ -168,7 +168,7 @@
   }
 
   &:nth-of-type(3n + 3)::after {
-    top: -8px;
+    top: -9px;
     background-color: $basic-yellow;
 
     @media (min-width: $tablet-width) {
@@ -192,5 +192,25 @@
 .services__price {
   @media (max-width: $mobile-width-only) {
     margin-top: 6px;
+  }
+}
+
+.services__wrapper:nth-of-type(1) .services__price {
+  @media (min-width: $tablet-width) {
+    padding-bottom: 2px;
+  }
+}
+
+.services__wrapper:nth-of-type(2) .services__price {
+  @media (min-width: $tablet-width) {
+    padding-top: 2px;
+  }
+}
+
+.services__wrapper:nth-of-type(3) .services__price {
+  @media (min-width: $desktop-width) {
+    // margin-right: -1px;
+    padding-top: 2px;
+    padding-right: 1px;
   }
 }

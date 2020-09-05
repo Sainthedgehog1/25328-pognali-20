@@ -1,6 +1,8 @@
 "use strict";
 
-var title =document.querySelector(".add-plan__title");
+// document.getElementById("test").value = "Пить пиво и лазить по\u00A0старым замкам, наслаждаться архитектурой и вот это все.";
+
+var title = document.querySelector(".add-plan__title");
 var form = document.querySelector(".add-plan__form");
 var steps = form.querySelectorAll(".add-plan__step");
 var companions = form.querySelector(".step__input-area--companions");
@@ -33,18 +35,18 @@ var isValidTextarea = function (textarea) {
   var textareaInvalidClass = textarea.classList[0] + "--invalid";
   var parentInvalidClass = textarea.parentNode.classList[1] + "--invalid";
 
-    if (textarea.checkValidity() === false) {
-      textarea.classList.add(textareaInvalidClass);
-      textarea.parentNode.classList.add(parentInvalidClass);
+  if (textarea.checkValidity() === false) {
+    textarea.classList.add(textareaInvalidClass);
+    textarea.parentNode.classList.add(parentInvalidClass);
 
-      return false;
-    }
-    else {
-      textarea.classList.remove(textareaInvalidClass);
-      textarea.parentNode.classList.remove(parentInvalidClass);
+    return false;
+  }
+  else {
+    textarea.classList.remove(textareaInvalidClass);
+    textarea.parentNode.classList.remove(parentInvalidClass);
 
-      return true
-    }
+    return true
+  }
 }
 
 var isValidFieldset = function (fieldset) {
@@ -128,7 +130,7 @@ form.querySelectorAll("input").forEach(function (input) {
   })
 })
 
-companionsElements.plusButton.addEventListener("click",  function (evt) {
+companionsElements.plusButton.addEventListener("click", function (evt) {
   evt.preventDefault();
 
   if (companionsElements.input.value == 0) {
@@ -138,7 +140,7 @@ companionsElements.plusButton.addEventListener("click",  function (evt) {
   companionsElements.input.value = parseInt(companionsElements.input.value) + 1;
 })
 
-companionsElements.minusButton.addEventListener("click",  function (evt) {
+companionsElements.minusButton.addEventListener("click", function (evt) {
   evt.preventDefault();
 
   if (companionsElements.input.value > 0) {
