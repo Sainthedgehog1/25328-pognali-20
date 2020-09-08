@@ -28,7 +28,7 @@
     width: 285px;
     margin-top: 1px;
     margin-left: 1px;
-    padding: 43px 47px 48px 47px;
+    padding: 44px 47px 48px;
   }
 }
 
@@ -104,7 +104,7 @@
     display: flex;
     flex-direction: column;
     row-gap: 0;
-    margin-top: 36px;
+    margin-top: 35px;
 
     &::before {
       content: none;
@@ -140,7 +140,6 @@
   }
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
-
     &:last-of-type .filter__subtitle,
     &:last-of-type .filter__category,
     &:last-of-type .filter__toggle {
@@ -169,6 +168,7 @@
   border: none;
 
   background-color: transparent;
+  outline-offset: 3px;
   cursor: pointer;
 
   &::after {
@@ -231,7 +231,7 @@
 
   &:hover,
   &:focus {
-    @media (max-width: $mobile-width-only) and (min-width:$desktop-width) {
+    @media (max-width: $mobile-width-only) and (min-width: $desktop-width) {
       opacity: 0.6;
     }
   }
@@ -243,7 +243,7 @@
   // }
 
   &:active {
-    @media (max-width: $mobile-width-only) and (min-width:$desktop-width) {
+    @media (max-width: $mobile-width-only) and (min-width: $desktop-width) {
       opacity: 0.3;
     }
   }
@@ -420,7 +420,7 @@
   }
 }
 
-.filter__checkbox:checked+.filter__label {
+.filter__checkbox:checked + .filter__label {
   &::before {
     background-image: url("../img/tick.svg");
   }
@@ -436,7 +436,7 @@
   }
 }
 
-.filter__checkbox:focus+.filter__label::before {
+.filter__checkbox:focus + .filter__label::before {
   outline: 2px solid $special-blue--dark;
 }
 
@@ -483,7 +483,7 @@
     width: 194px;
     padding-bottom: 13px;
     margin-top: 43px;
-    margin-left: 1.5px;
+    margin-left: 2px;
 
     &::before {
       content: none;

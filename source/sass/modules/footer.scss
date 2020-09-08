@@ -34,16 +34,26 @@
   @media (min-width: $tablet-width) {
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: start;
-    padding: 45px 40px 31px 38px;
+    padding: 45px 41px 31px 37px; //главная страница
+    // padding: 45px 40px 31px 38px;
   }
 
   @media (min-width: $desktop-width) {
     padding: 46px 60px 43px 58px;
   }
+
+  &--form-page {
+    @media (min-width: $tablet-width) {
+      padding: 45px 41px 31px 37px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 46px 60px 43px 58px;
+    }
+  }
 }
 
 .footer__socials {
-
   @media (max-width: $mobile-width-only) {
     position: relative;
     margin-top: 37px;
@@ -71,7 +81,7 @@
 
   @media (min-width: $desktop-width) {
     display: flex;
-    padding-right: 1px;
+    padding-right: 2px;
   }
 }
 
@@ -116,7 +126,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    background-size: 31px 16px
+    background-size: 31px 16px;
   }
 }
 
@@ -164,6 +174,7 @@
 
   @media (min-width: $desktop-width) {
     width: 155px;
+    padding-left: 0;
   }
 
   &:hover,
@@ -185,14 +196,18 @@
 // }
 
 .footer__in-link-logo {
+  width: 27px;
+  height: 34px;
   margin-top: 3px;
   margin-left: auto;
 
   @media (min-width: $tablet-width) {
     margin-top: 9px;
+    margin-right: -1px;
   }
 
   @media (min-width: $desktop-width) {
     margin-top: 7px;
+    margin-right: 0;
   }
 }

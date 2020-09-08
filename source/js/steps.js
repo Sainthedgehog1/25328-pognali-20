@@ -1,7 +1,5 @@
 "use strict";
 
-// document.getElementById("test").value = "Пить пиво и лазить по\u00A0старым замкам, наслаждаться архитектурой и вот это все.";
-
 var title = document.querySelector(".add-plan__title");
 var form = document.querySelector(".add-plan__form");
 var steps = form.querySelectorAll(".add-plan__step");

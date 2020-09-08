@@ -29,6 +29,7 @@
     color: $basic-blue--dark;
 
     @media (min-width: $tablet-width) {
+      margin-left: -1px;
       font-size: 36px;
       line-height: 36px;
     }
@@ -77,8 +78,8 @@
     }
 
     @media (min-width: $desktop-width) {
-      bottom: -77px;
-      left: 1px;
+      bottom: -76px;
+      left: 0;
     }
   }
 
@@ -86,25 +87,28 @@
     padding-right: 0;
 
     @media (min-width: $tablet-width) {
-      padding-right: 2px;
+      padding-right: 0;
     }
 
     @media (min-width: $desktop-width) {
       padding-right: 1px;
+      margin-left: -1px;
     }
   }
 
   &--form-page::before {
+    bottom: -17px;
+
     @media (min-width: $tablet-width) {
-      width: 98.4%;
+      width: 99%;
       bottom: -75px;
-      left: 2px;
+      left: 1px;
     }
 
     @media (min-width: $desktop-width) {
       width: 100%;
-      bottom: -77px;
-      left: 1px;
+      bottom: -76px;
+      left: 2px;
     }
   }
 }

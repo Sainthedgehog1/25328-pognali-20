@@ -19,7 +19,7 @@ var getCurrentDevice = function () {
   }
   return "tablet";
 }
-// открытие бургера
+
 var checkHeader = function () {
   var mainHeader = document.querySelector(".header");
   var secondaryHeader = document.querySelector(".header__wrapper");
@@ -86,7 +86,7 @@ var initMenu = function () {
 
   currentDevice = getCurrentDevice();
 
-  headerClass = checkHeader ();
+  headerClass = checkHeader();
 }
 
 var closeMenu = function () {

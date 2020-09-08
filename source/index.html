@@ -40,12 +40,15 @@
                 srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
               <source class="logo__source" media="(min-width: 768px)"
                 srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
-              <img class="logo__img" srcset="img/logo-mobile-blue@1x.png 1x, img/logo-mobile-blue@2x.png 2x"
+              <img class="logo__img logo__img--header"
+                srcset="img/logo-mobile-blue@1x.png 1x, img/logo-mobile-blue@2x.png 2x"
                 src="img/logo-mobile-blue@1x.png" alt="Логотип погнали" width="96" height="15">
             </picture>
           </a>
           <!-- Бургер меню-->
-          <button type="button" class="header__toggle" aria-label="Открыть меню"></button>
+          <button type="button" class="header__toggle">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
           <!--  -->
           <ul class="header__list contacts">
             <li class="contacts__item">
@@ -290,7 +293,7 @@
         <!--  -->
         <ul class="users__list">
           <li class="users__item user-card">
-            <a href="#" class="user-card__img" aria-label="Переход на страницу пользователя">
+            <a href="#" class="user-card__img" aria-label="Переход на страницу попутчика">
               <picture>
                 <source type="image/webp" srcset="img/firsova-desktop@1x.webp 1x, img/firsova-desktop@2x.webp 2x">
                 <img class="user-card__avatar" srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-desktop@2x.jpg 2x"
@@ -317,36 +320,37 @@
               </li>
             </ul>
             <!--  -->
-            <a href="#" class="user-card__name" aria-label="Переход на страницу пользователя">Таня Фирсова</a>
+            <a href="#" class="user-card__name" aria-label="Переход на страницу попутчика">Таня Фирсова</a>
             <!--  -->
             <p class="user-card__tags">#ЗОЖ #ПП #Фитнес #пляж <span class="user-card__tags-add">#авокадо #смузи</span>
             </p>
             <!--  -->
             <ul class="user-card__transport transport">
-              <li class="transport__item transport__item--plane transport__item--active">
+              <li
+                class="transport__item transport__item--plane transport__item--plane-index-page transport__item--active">
                 <span class="transport__name">Авиаперелет</span>
               </li>
               <!--  -->
-              <li class="transport__item transport__item--bus">
+              <li class="transport__item transport__item--bus transport__item--bus-index-page">
                 <span class="transport__name">Автотранспорт</span>
               </li>
               <!--  -->
-              <li class="transport__item transport__item--bicycle">
+              <li class="transport__item transport__item--bicycle transport__item--bicycle-index-page">
                 <span class="transport__name">Велосипед</span>
               </li>
               <!--  -->
-              <li class="transport__item transport__item--foot">
+              <li class="transport__item transport__item--foot transport__item--foot-index-page">
                 <span class="transport__name">Пешком</span>
               </li>
             </ul>
           </li>
           <!--  -->
           <li class="users__item user-card user-card--crutch">
-            <a href="#" class="user-card__img" aria-label="Переход на страницу пользователя">
+            <a href="#" class="user-card__img" aria-label="Переход на страницу попутчика">
               <picture>
                 <source type="image/webp" srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x">
                 <img class="user-card__avatar" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x"
-                  src="img/demin-desktop@1x.jpg" alt="Таня Фирсова" width="270" height="270">
+                  src="img/demin-desktop@1x.jpg" alt="Петя Демин" width="270" height="270">
               </picture>
             </a>
             <!--  -->
@@ -365,26 +369,28 @@
               </li>
             </ul>
             <!--  -->
-            <a href="#" class="user-card__name user-card__name--online"
-              aria-label="Переход на страницу пользователя">Петя Демин</a>
+            <a href="#" class="user-card__name user-card__name--online" aria-label="Переход на страницу попутчика">Петя
+              Демин</a>
             <!--  -->
             <p class="user-card__tags user-card__tags--crutch"> #бургер #бар #футбол <span
                 class="user-card__tags-add">#концерт #крафт</span></p>
             <!--  -->
             <ul class="user-card__transport transport">
-              <li class="transport__item transport__item--plane transport__item--active">
+              <li
+                class="transport__item transport__item--plane transport__item--plane-index-page transport__item--active">
                 <span class="transport__name">Авиаперелет</span>
               </li>
               <!--  -->
-              <li class="transport__item transport__item--bus transport__item--active">
+              <li class="transport__item transport__item--bus transport__item--bus-index-page transport__item--active">
                 <span class="transport__name">Автотранспорт</span>
               </li>
               <!--  -->
-              <li class="transport__item transport__item--bicycle">
+              <li class="transport__item transport__item--bicycle transport__item--bicycle-index-page">
                 <span class="transport__name">Велосипед</span>
               </li>
               <!--  -->
-              <li class="transport__item transport__item--foot transport__item--active">
+              <li
+                class="transport__item transport__item--foot transport__item--foot-index-page transport__item--active">
                 <span class="transport__name">Пешком</span>
               </li>
             </ul>
@@ -434,11 +440,11 @@
         </p>
         <!--  -->
         <form class="feedback__form" action="https://echo.htmlacademy.ru" method="POST" target="_blank">
-          <input type="email" class="feedback__input-email" name="feedback-email" id="feedback-email-1"
-            placeholder="E-mail">
+          <input class="feedback__input-email" type="email" name="feedback-email" id="feedback-email-1"
+            placeholder="E-mail" required>
           <label class="visually-hidden" for="feedback-email-1">Поле ввода E-mail</label>
           <!--  -->
-          <button type="submit" class="feedback__submit" aria-label="Регистрация">Регистрация</button>
+          <button class="feedback__submit" type="submit" aria-label="Регистрация">Регистрация</button>
         </form>
         <!--  -->
         <p class="feedback__desc desc">
@@ -569,7 +575,7 @@
         <dd class="busines-service__price">Индивидуально</dd>
       </div>
     </dl>
-    <button type="button" class="busines-service__close-button" aria-label="Закрыть окно">Закрыть окно</button>
+    <button class="busines-service__close-button" type="button" aria-label="Закрыть окно">Закрыть окно</button>
   </section>
 
   <script src="js/busines-service.js"></script>

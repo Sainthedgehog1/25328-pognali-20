@@ -141,7 +141,7 @@ addButton.addEventListener("click", function (evt) {
   isLonely();
 })
 
-dropdownElements.countriesList.addEventListener("click",  function (evt) {
+dropdownElements.countriesList.addEventListener("click", function (evt) {
   evt.preventDefault();
   evt.stopPropagation();
 
@@ -177,3 +177,12 @@ dropdownElements.countriesList.addEventListener("click",  function (evt) {
 })
 
 initCountrie();
+
+// фокус активной буквы
+
+var letterForm = document.querySelectorAll(".countrie-dropdown__letter--active");
+
+function actLetTabindex(letterForm) {
+  letterForm.setAttribute("tabindex", "-1");
+};
+letterForm.forEach(actLetTabindex)

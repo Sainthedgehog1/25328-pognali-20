@@ -38,6 +38,7 @@
 
   @media (min-width: $desktop-width) {
     width: 185px;
+    margin-top: -2px;
     margin-right: 36px;
     margin-left: 0;
 
@@ -53,8 +54,12 @@
 
 .input-area__unit {
   letter-spacing: 0.07em;
-
   opacity: 0.3;
+
+  @media (max-width: $mobile-width-only) {
+    margin-top: -1px;
+    margin-right: -1px;
+  }
 
   @media (min-width: $tablet-width) {
     letter-spacing: 0.08em;
@@ -73,12 +78,20 @@
   @media (min-width: $tablet-width) {
     margin-right: 2px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-top: -2px;
+  }
 }
 
 .step__input-area--duration .input-area__unit {
   @media (min-width: $tablet-width) {
     margin-right: 0;
     letter-spacing: normal;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: -2px;
   }
 }
 
@@ -87,7 +100,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin-top: 10px;
+  margin-top: 9px;
   padding-top: 12px;
   padding-bottom: 11px;
 
@@ -98,8 +111,8 @@
     justify-content: start;
     margin-top: 26px;
     margin-left: -1px;
-    padding-top: 22px;
-    padding-bottom: 22px;
+    padding-top: 20px;
+    padding-bottom: 24px;
   }
 
   @media (min-width: $desktop-width) {
@@ -147,6 +160,7 @@
 
   color: $basic-blue--dark;
   background-color: transparent;
+  order: 2;
   cursor: pointer;
 
   @media (min-width: $tablet-width) {
@@ -186,6 +200,7 @@
   cursor: pointer;
 
   @media (min-width: $tablet-width) {
+    margin-top: 3px;
     width: 20px;
     height: 20px;
   }
@@ -208,6 +223,8 @@
   }
 
   &--plus {
+    order: 2;
+
     @media (max-width: $mobile-width-only) {
       background-image: url("../img/qty-plus-mobile.svg");
       background-size: 14px 14px;
@@ -243,10 +260,10 @@
   }
 }
 
-.input-area__value:focus+.input-area__button {
+.input-area__value:focus + .input-area__button {
   opacity: 1;
 }
 
-.input-area__value:focus+.input-area__button+.input-area__button {
+.input-area__value:focus + .input-area__button + .input-area__button {
   opacity: 1;
 }

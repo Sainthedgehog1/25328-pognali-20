@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="page-catalog" lang="ru">
+<html lang="ru">
 
 <head>
   <meta charset="utf-8">
@@ -28,7 +28,7 @@
       <div class="header__wrapper header__wrapper--active header__wrapper--no-js">
         <div class="container container--catalog-header">
           <!-- Логотип -->
-          <a href="index.html" class="header__logo logo">
+          <a href="index.html" class="header__logo logo" aria-label="Переход на главную страницу">
             <picture>
               <source class="logo__source" type="image/webp" media="(min-width: 1440px)"
                 srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x">
@@ -40,12 +40,15 @@
                 srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
               <source class="logo__source" media="(min-width: 768px)"
                 srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
-              <img class="logo__img" srcset="img/logo-mobile-blue@1x.png 1x, img/logo-mobile-blue@2x.png 2x"
+              <img class="logo__img logo__img--header"
+                srcset="img/logo-mobile-blue@1x.png 1x, img/logo-mobile-blue@2x.png 2x"
                 src="img/logo-mobile-blue@1x.png" alt="Логотип Погнали" width="100" height="19">
             </picture>
           </a>
           <!-- Бургер меню-->
-          <button type="button" class="header__toggle" aria-label="Открыть меню"></button>
+          <button class="header__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
           <!--  -->
           <ul class="header__list contacts">
             <li class="contacts__item">
@@ -61,7 +64,7 @@
             </li>
             <!--  -->
             <li class="contacts__item">
-              <a href="#" class="contacts__link contacts__auth">
+              <a href="#" class="contacts__link contacts__auth" aria-label="Авторизация">
                 Авторизация
               </a>
             </li>
@@ -69,30 +72,34 @@
         </div>
       </div>
       <!-- Навигация сайта -->
-      <nav class="main-nav main-nav--active main-nav--no-js">
+      <nav class="main-nav main-nav--active main-nav--catalog-active main-nav--no-js">
         <div class="container">
           <ul class="main-nav__list">
             <li class="main-nav__item">
-              <a href="" class="main-nav__link" data-hover="О сервисе" data-active="О сервисе">
+              <a href="#about" class="main-nav__link" data-hover="О сервисе" data-active="О сервисе"
+                aria-label="О сервисе ">
                 О сервисе
               </a>
             </li>
             <!--  -->
             <li class="main-nav__item">
-              <a href="form.html" class="main-nav__link" data-hover="Направления" data-active="Направления">
+              <a href="form.html" class="main-nav__link" data-hover="Направления" data-active="Направления"
+                aria-label="Переход на страницу направления">
                 Направления
               </a>
             </li>
             <!--  -->
             <li class="main-nav__item">
-              <a href="" class="main-nav__link" data-hover="Попутчики" data-active="Попутчики">
+              <a href="#" class="main-nav__link" data-hover="Попутчики" data-active="Попутчики"
+                aria-label="Переход на страницу попутчики">
                 Попутчики
               </a>
             </li>
           </ul>
           <!--  -->
-          <a href="#" class="main-nav__auth">Авторизация</a>
-          <a href="tel:+78005558628" class="main-nav__tel tel">
+          <a href="#" class="main-nav__auth" aria-label="Авторизация">Авторизация</a>
+          <!--  -->
+          <a href="tel:+78005558628" class="main-nav__tel tel" aria-label="Позвоните нам">
             <div class="tel__svg-wrapper">
               <svg class="tel__svg" width="18" height="17" fill="#ffd74b">
                 <use xlink:href="#contacts-phone"></use>
@@ -100,7 +107,8 @@
             </div>
             8 800 555-86-28
           </a>
-          <a href="mailto:mail@htmlacademy.ru" class="main-nav__email email">
+          <!-- -->
+          <a href="mailto:mail@htmlacademy.ru" class="main-nav__email email" aria-label="Напишите нам">
             <div class="email__svg-wrapper">
               <svg class="email__svg" width="18" height="13" fill="#ffd74b">
                 <use xlink:href="#contacts-mail"></use>
@@ -142,38 +150,37 @@
     <div class="main__title-wrapper">
       <div class="main__title-container">
         <h1 class="main__title title title--page">Попутчики</h1>
-        <a href="index.html" class="main__button">На главную</a>
+        <a href="index.html" class="main__button" aria-label="Переход на главную страницу">На главную</a>
       </div>
     </div>
     <!-- Фильтрация по странам -->
-    <section class="countries-filter countries-filter--no-js">
+    <section class="countries-filter countries-filter--catalog-page countries-filter--no-js">
       <div class="container">
         <h2 class="countries-filter__title">Фильтрация по странам:</h2>
-        <button type="button"
-          class="countries-filter__toggle countries-filter__toggle--active countries-filter__toggle--no-js"
-          aria-label="Открыть фильтр по странам">Показать все</button>
+        <button class="countries-filter__toggle countries-filter__toggle--active countries-filter__toggle--no-js"
+          type="button" aria-label="Открыть фильтр по странам">Показать все</button>
         <!--  -->
         <ul class="countries-filter__list countries-filter__list--active">
           <li class="countries-filter__item">
-            <a href="" class="countries-filter__link countries-filter__link--active">
+            <a href="#" class="countries-filter__link countries-filter__link--active" aria-label="Страны европы">
               Европа
             </a>
           </li>
           <!--  -->
           <li class="countries-filter__item">
-            <a href="" class="countries-filter__link">
+            <a href="#" class="countries-filter__link" aria-label="Страны азии">
               Азия
             </a>
           </li>
           <!--  -->
           <li class="countries-filter__item">
-            <a href="" class="countries-filter__link">
+            <a href="#" class="countries-filter__link" aria-label="Страны америки">
               Америка
             </a>
           </li>
           <!--  -->
           <li class="countries-filter__item">
-            <a href="" class="countries-filter__link">
+            <a href="#" class="countries-filter__link" aria-label="Острова">
               Острова
             </a>
           </li>
@@ -181,73 +188,73 @@
         <!-- Алфавит -->
         <ul class="countries-filter__alphabet countries-filter__alphabet--active">
           <li class="countries-filter__letter-wrapper">
-            <a href="#" class="countries-filter__letter countries-filter__letter--active">
+            <a href="#" class="countries-filter__letter countries-filter__letter--active" aria-label="Страны на А">
               А
             </a>
             <!-- Страны на "А" -->
             <ul class="countries-filter__cities countries-filter__cities--active">
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="aus">
+                <a href="#" class="countries-filter__city" data-code="aus" aria-label="Австралия">
                   Австралия
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="aut">
+                <a href="#" class="countries-filter__city" data-code="aut" aria-label="Австрия">
                   Австрия
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="aze">
+                <a href="#" class="countries-filter__city" data-code="aze" aria-label="Азербайджан">
                   Азербайджан
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="alb">
+                <a href="#" class="countries-filter__city" data-code="alb" aria-label="Албания">
                   Албания
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="dza">
+                <a href="#" class="countries-filter__city" data-code="dza" aria-label="Алжир">
                   Алжир
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="ago">
+                <a href="#" class="countries-filter__city" data-code="ago" aria-label="Ангола">
                   Ангола
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="and">
+                <a href="#" class="countries-filter__city" data-code="and" aria-label="Андорра">
                   Андорра
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="atg">
+                <a href="#" class="countries-filter__city" data-code="atg" aria-label="Антигуа и Барбуда">
                   Антигуа и Барбуда
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="arg">
+                <a href="#" class="countries-filter__city" data-code="arg" aria-label="Аргентина">
                   Аргентина
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="arm">
+                <a href="#" class="countries-filter__city" data-code="arm" aria-label="Армения">
                   Армения
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="afg">
+                <a href="#" class="countries-filter__city" data-code="afg" aria-label="Афганистан">
                   Афганистан
                 </a>
               </li>
@@ -255,109 +262,109 @@
           </li>
           <!--  -->
           <li class="countries-filter__letter-wrapper">
-            <a href="#" class="countries-filter__letter">
+            <a href="#" class="countries-filter__letter" aria-label="Страны на Б">
               Б
             </a>
             <!-- Страны на "Б" -->
             <ul class="countries-filter__cities">
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="bhs">
+                <a href="#" class="countries-filter__city" data-code="bhs" aria-label="Багамские Острова">
                   Багамские Острова
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="bgd">
+                <a href="#" class="countries-filter__city" data-code="bgd" aria-label="Бангладеш">
                   Бангладеш
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="brb">
+                <a href="#" class="countries-filter__city" data-code="brb" aria-label="Барбадос">
                   Барбадос
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="bhr">
+                <a href="#" class="countries-filter__city" data-code="bhr" aria-label="Бахрейн">
                   Бахрейн
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="blr">
+                <a href="#" class="countries-filter__city" data-code="blr" aria-label="Белоруссия">
                   Белоруссия
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="blz">
+                <a href="#" class="countries-filter__city" data-code="blz" aria-label="Белиз">
                   Белиз
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="bel">
+                <a href="#" class="countries-filter__city" data-code="bel" aria-label="Бельгия">
                   Бельгия
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="ben">
+                <a href="#" class="countries-filter__city" data-code="ben" aria-label="Бенин">
                   Бенин
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="aut">
+                <a href="#" class="countries-filter__city" data-code="aut" aria-label="Болгария">
                   Болгария
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="bgr">
+                <a href="#" class="countries-filter__city" data-code="bgr" aria-label="Боливия">
                   Боливия
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="bih">
+                <a href="#" class="countries-filter__city" data-code="bih" aria-label="Босния и Герцеговина">
                   Босния и Герцеговина
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="bwa">
+                <a href="#" class="countries-filter__city" data-code="bwa" aria-label="Ботсвана">
                   Ботсвана
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="bra">
+                <a href="#" class="countries-filter__city" data-code="bra" aria-label="Бразилия">
                   Бразилия
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="brn">
+                <a href="#" class="countries-filter__city" data-code="brn" aria-label="Бруней">
                   Бруней
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="bfa">
+                <a href="#" class="countries-filter__city" data-code="bfa" aria-label="Буркина-Фасо">
                   Буркина-Фасо
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="bdi">
+                <a href="#" class="countries-filter__city" data-code="bdi" aria-label="Бурунди">
                   Бурунди
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="btn">
+                <a href="#" class="countries-filter__city" data-code="btn" aria-label="Бутан">
                   Бутан
                 </a>
               </li>
@@ -365,43 +372,43 @@
           </li>
           <!--  -->
           <li class="countries-filter__letter-wrapper">
-            <a href="#" class="countries-filter__letter">
+            <a href="#" class="countries-filter__letter" aria-label="Страны на В">
               В
             </a>
             <!-- Страны на "В" -->
             <ul class="countries-filter__cities">
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="vut">
+                <a href="#" class="countries-filter__city" data-code="vut" aria-label="Вануату">
                   Вануату
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="gbr">
+                <a href="#" class="countries-filter__city" data-code="gbr" aria-label="Великобритания">
                   Великобритания
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="hun">
+                <a href="#" class="countries-filter__city" data-code="hun" aria-label="Венгрия">
                   Венгрия
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="ven">
+                <a href="#" class="countries-filter__city" data-code="ven" aria-label="Венесуэла">
                   Венесуэла
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="tls">
+                <a href="#" class="countries-filter__city" data-code="tls" aria-label="Восточный Тимор">
                   Восточный Тимор
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="vnm">
+                <a href="#" class="countries-filter__city" data-code="vnm" aria-label="Вьетнам">
                   Вьетнам
                 </a>
               </li>
@@ -409,85 +416,85 @@
           </li>
           <!--  -->
           <li class="countries-filter__letter-wrapper">
-            <a href="#" class="countries-filter__letter">
+            <a href="#" class="countries-filter__letter" aria-label="Страны на Г">
               Г
             </a>
             <!-- Страны на "Г" -->
             <ul class="countries-filter__cities">
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="gab">
+                <a href="#" class="countries-filter__city" data-code="gab" aria-label="Габон">
                   Габон
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="hti">
+                <a href="#" class="countries-filter__city" data-code="hti" aria-label="Гаити">
                   Гаити
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="guy">
+                <a href="#" class="countries-filter__city" data-code="guy" aria-label="Гайана">
                   Гайана
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="gmb">
+                <a href="#" class="countries-filter__city" data-code="gmb" aria-label="Гамбия">
                   Гамбия
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="gha">
+                <a href="#" class="countries-filter__city" data-code="gha" aria-label="Гана">
                   Гана
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="gtm">
+                <a href="#" class="countries-filter__city" data-code="gtm" aria-label="Гватемала">
                   Гватемала
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="gin">
+                <a href="#" class="countries-filter__city" data-code="gin" aria-label="Гвинея">
                   Гвинея
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="gnb">
+                <a href="#" class="countries-filter__city" data-code="gnb" aria-label="Гвинея-Бисау">
                   Гвинея-Бисау
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="deu">
+                <a href="#" class="countries-filter__city" data-code="deu" aria-label="Германия">
                   Германия
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="hnd">
+                <a href="#" class="countries-filter__city" data-code="hnd" aria-label="Гондурас">
                   Гондурас
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="grd">
+                <a href="#" class="countries-filter__city" data-code="grd" aria-label="Гренада">
                   Гренада
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="grc">
+                <a href="#" class="countries-filter__city" data-code="grc" aria-label="Греция">
                   Греция
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="geo">
+                <a href="#" class="countries-filter__city" data-code="geo" aria-label="Грузия">
                   Грузия
                 </a>
               </li>
@@ -495,31 +502,31 @@
           </li>
           <!--  -->
           <li class="countries-filter__letter-wrapper">
-            <a href="#" class="countries-filter__letter">
+            <a href="#" class="countries-filter__letter" aria-label="Страны на Д">
               Д
             </a>
             <!-- Страны на "Д" -->
             <ul class="countries-filter__cities">
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="dnk">
+                <a href="#" class="countries-filter__city" data-code="dnk" aria-label="Дания">
                   Дания
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="dji">
+                <a href="#" class="countries-filter__city" data-code="dji" aria-label="Джибути">
                   Джибути
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="dma">
+                <a href="#" class="countries-filter__city" data-code="dma" aria-label="Доминика">
                   Доминика
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="dom">
+                <a href="#" class="countries-filter__city" data-code="dom" aria-label="Доминикана">
                   Доминикана
                 </a>
               </li>
@@ -527,13 +534,13 @@
           </li>
           <!--  -->
           <li class="countries-filter__letter-wrapper">
-            <a href="#" class="countries-filter__letter">
+            <a href="#" class="countries-filter__letter" aria-label="Страны на Е">
               Е
             </a>
             <!-- Страны на "Е" -->
             <ul class="countries-filter__cities">
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="egy">
+                <a href="#" class="countries-filter__city" data-code="egy" aria-label="Египет">
                   Египет
                 </a>
               </li>
@@ -541,19 +548,19 @@
           </li>
           <!--  -->
           <li class="countries-filter__letter-wrapper">
-            <a href="#" class="countries-filter__letter">
+            <a href="#" class="countries-filter__letter" aria-label="Страны на З">
               З
             </a>
             <!-- Страны на "З" -->
             <ul class="countries-filter__cities">
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="zmb">
+                <a href="#" class="countries-filter__city" data-code="zmb" aria-label="Замбия">
                   Замбия
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="zwe">
+                <a href="#" class="countries-filter__city" data-code="zwe" aria-label="Зимбабве">
                   Зимбабве
                 </a>
               </li>
@@ -561,67 +568,67 @@
           </li>
           <!--  -->
           <li class="countries-filter__letter-wrapper">
-            <a href="#" class="countries-filter__letter">
+            <a href="#" class="countries-filter__letter" aria-label="Страны на И">
               И
             </a>
             <!-- Страны на "И" -->
             <ul class="countries-filter__cities">
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="isr">
+                <a href="#" class="countries-filter__city" data-code="isr" aria-label="Израиль">
                   Израиль
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="ind">
+                <a href="#" class="countries-filter__city" data-code="ind" aria-label="Индия">
                   Индия
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="idn">
+                <a href="#" class="countries-filter__city" data-code="idn" aria-label="Индонезия">
                   Индонезия
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="jor">
+                <a href="#" class="countries-filter__city" data-code="jor" aria-label="Иордания">
                   Иордания
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="irq">
+                <a href="#" class="countries-filter__city" data-code="irq" aria-label="Ирак">
                   Ирак
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="irn">
+                <a href="#" class="countries-filter__city" data-code="irn" aria-label="Иран">
                   Иран
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="irl">
+                <a href="#" class="countries-filter__city" data-code="irl" aria-label="Ирландия">
                   Ирландия
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="isl">
+                <a href="#" class="countries-filter__city" data-code="isl" aria-label="Исландия">
                   Исландия
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="esp">
+                <a href="#" class="countries-filter__city" data-code="esp" aria-label="Испания">
                   Испания
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="ita">
+                <a href="#" class="countries-filter__city" data-code="ita" aria-label="Италия">
                   Италия
                 </a>
               </li>
@@ -629,79 +636,79 @@
           </li>
           <!--  -->
           <li class="countries-filter__letter-wrapper">
-            <a href="#" class="countries-filter__letter">
+            <a href="#" class="countries-filter__letter" aria-label="Страны на К">
               К
             </a>
             <!-- Страны на "К" -->
             <ul class="countries-filter__cities">
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="cpv">
+                <a href="#" class="countries-filter__city" data-code="cpv" aria-label="Кабо-Верде">
                   Кабо-Верде
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="kaz">
+                <a href="#" class="countries-filter__city" data-code="kaz" aria-label="Казахстан">
                   Казахстан
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="khm">
+                <a href="#" class="countries-filter__city" data-code="khm" aria-label="Камбоджа">
                   Камбоджа
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="cmr">
+                <a href="#" class="countries-filter__city" data-code="cmr" aria-label="Камерун">
                   Камерун
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="can">
+                <a href="#" class="countries-filter__city" data-code="can" aria-label="Канада">
                   Канада
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="qat">
+                <a href="#" class="countries-filter__city" data-code="qat" aria-label="Катар">
                   Катар
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="ken">
+                <a href="#" class="countries-filter__city" data-code="ken" aria-label="Кения">
                   Кения
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="cyp">
+                <a href="#" class="countries-filter__city" data-code="cyp" aria-label="Кипр">
                   Кипр
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="kgz">
+                <a href="#" class="countries-filter__city" data-code="kgz" aria-label="Киргизия">
                   Киргизия
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="kir">
+                <a href="#" class="countries-filter__city" data-code="kir" aria-label="Кирибати">
                   Кирибати
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="chn">
+                <a href="#" class="countries-filter__city" data-code="chn" aria-label="Китай">
                   Китай
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="col">
+                <a href="#" class="countries-filter__city" data-code="col" aria-label="Колумбия">
                   Колумбия
                 </a>
               </li>
@@ -709,61 +716,61 @@
           </li>
           <!--  -->
           <li class="countries-filter__letter-wrapper">
-            <a href="#" class="countries-filter__letter">
+            <a href="#" class="countries-filter__letter" aria-label="Страны на Л">
               Л
             </a>
             <!-- Страны на "Л" -->
             <ul class="countries-filter__cities">
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="aut">
+                <a href="#" class="countries-filter__city" data-code="aut" aria-label="Лаос">
                   Лаос
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="lao">
+                <a href="#" class="countries-filter__city" data-code="lao" aria-label="Латвия">
                   Латвия
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="lso">
+                <a href="#" class="countries-filter__city" data-code="lso" aria-label="Лесото">
                   Лесото
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="lbr">
+                <a href="#" class="countries-filter__city" data-code="lbr" aria-label="Либерия">
                   Либерия
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="lbn">
+                <a href="#" class="countries-filter__city" data-code="lbn" aria-label="Ливан">
                   Ливан
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="lby">
+                <a href="#" class="countries-filter__city" data-code="lby" aria-label="Ливия">
                   Ливия
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="ltu">
+                <a href="#" class="countries-filter__city" data-code="ltu" aria-label="Литва">
                   Литва
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="lie">
+                <a href="#" class="countries-filter__city" data-code="lie" aria-label="Лихтенштейн">
                   Лихтенштейн
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="lux">
+                <a href="#" class="countries-filter__city" data-code="lux" aria-label="Люксембург">
                   Люксембург
                 </a>
               </li>
@@ -771,61 +778,61 @@
           </li>
           <!--  -->
           <li class="countries-filter__letter-wrapper">
-            <a href="#" class="countries-filter__letter">
+            <a href="#" class="countries-filter__letter" aria-label="Страны на М">
               М
             </a>
             <!-- Страны на "М" -->
             <ul class="countries-filter__cities">
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="mus">
+                <a href="#" class="countries-filter__city" data-code="mus" aria-label="Маврикий">
                   Маврикий
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="mrt">
+                <a href="#" class="countries-filter__city" data-code="mrt" aria-label="Мавритания">
                   Мавритания
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="mdg">
+                <a href="#" class="countries-filter__city" data-code="mdg" aria-label="Мадагаскар">
                   Мадагаскар
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="mwi">
+                <a href="#" class="countries-filter__city" data-code="mwi" aria-label="Малави">
                   Малави
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="mys">
+                <a href="#" class="countries-filter__city" data-code="mys" aria-label="Малайзия">
                   Малайзия
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="mli">
+                <a href="#" class="countries-filter__city" data-code="mli" aria-label="Мали">
                   Мали
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="mdv">
+                <a href="#" class="countries-filter__city" data-code="mdv" aria-label="Мальдивы">
                   Мальдивы
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="mlt">
+                <a href="#" class="countries-filter__city" data-code="mlt" aria-label="Мальта">
                   Мальта
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="mar">
+                <a href="#" class="countries-filter__city" data-code="mar" aria-label="Марокко">
                   Марокко
                 </a>
               </li>
@@ -833,61 +840,61 @@
           </li>
           <!--  -->
           <li class="countries-filter__letter-wrapper">
-            <a href="#" class="countries-filter__letter">
+            <a href="#" class="countries-filter__letter" aria-label="Страны на Н">
               Н
             </a>
             <!-- Страны на "Н" -->
             <ul class="countries-filter__cities">
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="nam">
+                <a href="#" class="countries-filter__city" data-code="nam" aria-label="Намибия">
                   Намибия
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="nru">
+                <a href="#" class="countries-filter__city" data-code="nru" aria-label="Науру">
                   Науру
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="npl">
+                <a href="#" class="countries-filter__city" data-code="npl" aria-label="Непал">
                   Непал
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="ner">
+                <a href="#" class="countries-filter__city" data-code="ner" aria-label="Нигер">
                   Нигер
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="nga">
+                <a href="#" class="countries-filter__city" data-code="nga" aria-label="Нигерия">
                   Нигерия
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="nld">
+                <a href="#" class="countries-filter__city" data-code="nld" aria-label="Нидерланды">
                   Нидерланды
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="nic">
+                <a href="#" class="countries-filter__city" data-code="nic" aria-label="Никарагуа">
                   Никарагуа
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="nzl">
+                <a href="#" class="countries-filter__city" data-code="nzl" aria-label="Новая Зеландия">
                   Новая Зеландия
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="nor">
+                <a href="#" class="countries-filter__city" data-code="nor" aria-label="Норвегия">
                   Норвегия
                 </a>
               </li>
@@ -895,19 +902,19 @@
           </li>
           <!--  -->
           <li class="countries-filter__letter-wrapper">
-            <a href="#" class="countries-filter__letter">
+            <a href="#" class="countries-filter__letter" aria-label="Страны на О">
               О
             </a>
             <!-- Страны на "О" -->
             <ul class="countries-filter__cities">
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="are">
+                <a href="#" class="countries-filter__city" data-code="are" aria-label="ОАЭ">
                   ОАЭ
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="omn">
+                <a href="#" class="countries-filter__city" data-code="omn" aria-label="Оман">
                   Оман
                 </a>
               </li>
@@ -915,55 +922,55 @@
           </li>
           <!--  -->
           <li class="countries-filter__letter-wrapper">
-            <a href="#" class="countries-filter__letter">
+            <a href="#" class="countries-filter__letter" aria-label="Страны на П">
               П
             </a>
             <!-- Страны на "П" -->
             <ul class="countries-filter__cities">
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="pak">
+                <a href="#" class="countries-filter__city" data-code="pak" aria-label="Пакистан">
                   Пакистан
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="plw">
+                <a href="#" class="countries-filter__city" data-code="plw" aria-label="Палау">
                   Палау
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="pan">
+                <a href="#" class="countries-filter__city" data-code="pan" aria-label="Панама">
                   Панама
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="png">
+                <a href="#" class="countries-filter__city" data-code="png" aria-label="Папуа - Новая Гвинея">
                   Папуа - Новая Гвинея
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="pry">
+                <a href="#" class="countries-filter__city" data-code="pry" aria-label="Парагвай">
                   Парагвай
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="per">
+                <a href="#" class="countries-filter__city" data-code="per" aria-label="Перу">
                   Перу
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="pol">
+                <a href="#" class="countries-filter__city" data-code="pol" aria-label="Польша">
                   Польша
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="prt">
+                <a href="#" class="countries-filter__city" data-code="prt" aria-label="Португалия">
                   Португалия
                 </a>
               </li>
@@ -971,25 +978,25 @@
           </li>
           <!--  -->
           <li class="countries-filter__letter-wrapper">
-            <a href="#" class="countries-filter__letter">
+            <a href="#" class="countries-filter__letter" aria-label="Страны на Р">
               Р
             </a>
             <!-- Страны на "Р" -->
             <ul class="countries-filter__cities">
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="rwa">
+                <a href="#" class="countries-filter__city" data-code="rwa" aria-label="Руанда">
                   Руанда
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="rou">
+                <a href="#" class="countries-filter__city" data-code="rou" aria-label="Румыния">
                   Румыния
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="rus">
+                <a href="#" class="countries-filter__city" data-code="rus" aria-label="Россия">
                   Россия
                 </a>
               </li>
@@ -997,79 +1004,79 @@
           </li>
           <!--  -->
           <li class="countries-filter__letter-wrapper">
-            <a href="#" class="countries-filter__letter">
+            <a href="#" class="countries-filter__letter" aria-label="Страны на С">
               С
             </a>
             <!-- Страны на "С" -->
             <ul class="countries-filter__cities">
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="slv">
+                <a href="#" class="countries-filter__city" data-code="slv" aria-label="Сальвадор">
                   Сальвадор
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="wsm">
+                <a href="#" class="countries-filter__city" data-code="wsm" aria-label="Самоа">
                   Самоа
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="smr">
+                <a href="#" class="countries-filter__city" data-code="smr" aria-label="Сан-Марино">
                   Сан-Марино
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="sau">
+                <a href="#" class="countries-filter__city" data-code="sau" aria-label="Саудовская Аравия">
                   Саудовская Аравия
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="syc">
+                <a href="#" class="countries-filter__city" data-code="syc" aria-label="Сейшелы">
                   Сейшелы
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="sen">
+                <a href="#" class="countries-filter__city" data-code="sen" aria-label="Сенегал">
                   Сенегал
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="srb">
+                <a href="#" class="countries-filter__city" data-code="srb" aria-label="Сербия">
                   Сербия
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="sgp">
+                <a href="#" class="countries-filter__city" data-code="sgp" aria-label="Сингапур">
                   Сингапур
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="syr">
+                <a href="#" class="countries-filter__city" data-code="syr" aria-label="Сирия">
                   Сирия
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="svk">
+                <a href="#" class="countries-filter__city" data-code="svk" aria-label="Словакия">
                   Словакия
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="svn">
+                <a href="#" class="countries-filter__city" data-code="svn" aria-label="Словения">
                   Словения
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="usa">
+                <a href="#" class="countries-filter__city" data-code="usa" aria-label="США">
                   США
                 </a>
               </li>
@@ -1077,67 +1084,67 @@
           </li>
           <!--  -->
           <li class="countries-filter__letter-wrapper">
-            <a href="#" class="countries-filter__letter">
+            <a href="#" class="countries-filter__letter" aria-label="Страны на Т">
               Т
             </a>
             <!-- Страны на "Т" -->
             <ul class="countries-filter__cities">
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="tjk">
+                <a href="#" class="countries-filter__city" data-code="tjk" aria-label="Таджикистан">
                   Таджикистан
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="tha">
+                <a href="#" class="countries-filter__city" data-code="tha" aria-label="Таиланд">
                   Таиланд
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="tza">
+                <a href="#" class="countries-filter__city" data-code="tza" aria-label="Танзания">
                   Танзания
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="tgo">
+                <a href="#" class="countries-filter__city" data-code="tgo" aria-label="Того">
                   Того
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="ton">
+                <a href="#" class="countries-filter__city" data-code="ton" aria-label="Тонга">
                   Тонга
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="tto">
+                <a href="#" class="countries-filter__city" data-code="tto" aria-label="Тринидад и Тобаго">
                   Тринидад и Тобаго
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="tuv">
+                <a href="#" class="countries-filter__city" data-code="tuv" aria-label="Тувалу">
                   Тувалу
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="tun">
+                <a href="#" class="countries-filter__city" data-code="tun" aria-label="Тунис">
                   Тунис
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="tkm">
+                <a href="#" class="countries-filter__city" data-code="tkm" aria-label="Туркмения">
                   Туркмения
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="tur">
+                <a href="#" class="countries-filter__city" data-code="tur" aria-label="Турция">
                   Турция
                 </a>
               </li>
@@ -1145,31 +1152,31 @@
           </li>
           <!--  -->
           <li class="countries-filter__letter-wrapper">
-            <a href="#" class="countries-filter__letter">
+            <a href="#" class="countries-filter__letter" aria-label="Страны на У">
               У
             </a>
             <!-- Страны на "У" -->
             <ul class="countries-filter__cities">
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="uga">
+                <a href="#" class="countries-filter__city" data-code="uga" aria-label="Уганда">
                   Уганда
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="uzb">
+                <a href="#" class="countries-filter__city" data-code="uzb" aria-label="Узбекистан">
                   Узбекистан
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="ukr">
+                <a href="#" class="countries-filter__city" data-code="ukr" aria-label="Украина">
                   Украина
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="ury">
+                <a href="#" class="countries-filter__city" data-code="ury" aria-label="Уругвай">
                   Уругвай
                 </a>
               </li>
@@ -1177,31 +1184,31 @@
           </li>
           <!--  -->
           <li class="countries-filter__letter-wrapper">
-            <a href="#" class="countries-filter__letter">
+            <a href="#" class="countries-filter__letter" aria-label="Страны на Ф">
               Ф
             </a>
             <!-- Страны на "Ф" -->
             <ul class="countries-filter__cities">
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="fji">
+                <a href="#" class="countries-filter__city" data-code="fji" aria-label="Фиджи">
                   Фиджи
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="phl">
+                <a href="#" class="countries-filter__city" data-code="phl" aria-label="Филиппины">
                   Филиппины
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="fin">
+                <a href="#" class="countries-filter__city" data-code="fin" aria-label="Финляндия">
                   Финляндия
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="fra">
+                <a href="#" class="countries-filter__city" data-code="fra" aria-label="Франция">
                   Франция
                 </a>
               </li>
@@ -1209,13 +1216,13 @@
           </li>
           <!--  -->
           <li class="countries-filter__letter-wrapper">
-            <a href="#" class="countries-filter__letter">
+            <a href="#" class="countries-filter__letter" aria-label="Страны на Х">
               Х
             </a>
             <!-- Страны на "Х" -->
             <ul class="countries-filter__cities">
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="hrv">
+                <a href="#" class="countries-filter__city" data-code="hrv" aria-label="Хорватия">
                   Хорватия
                 </a>
               </li>
@@ -1223,31 +1230,31 @@
           </li>
           <!--  -->
           <li class="countries-filter__letter-wrapper">
-            <a href="#" class="countries-filter__letter">
+            <a href="#" class="countries-filter__letter" aria-label="Страны на Ч">
               Ч
             </a>
             <!-- Страны на "Ч" -->
             <ul class="countries-filter__cities">
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="tcd">
+                <a href="#" class="countries-filter__city" data-code="tcd" aria-label="Чад">
                   Чад
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="mne">
+                <a href="#" class="countries-filter__city" data-code="mne" aria-label="Черногория">
                   Черногория
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="cze">
+                <a href="#" class="countries-filter__city" data-code="cze" aria-label="Чехия">
                   Чехия
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="chl">
+                <a href="#" class="countries-filter__city" data-code="chl" aria-label="Чили">
                   Чили
                 </a>
               </li>
@@ -1255,25 +1262,25 @@
           </li>
           <!--  -->
           <li class="countries-filter__letter-wrapper">
-            <a href="#" class="countries-filter__letter">
+            <a href="#" class="countries-filter__letter" aria-label="Страны на Ш">
               Ш
             </a>
             <!-- Страны на "Ш" -->
             <ul class="countries-filter__cities">
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="che">
+                <a href="#" class="countries-filter__city" data-code="che" aria-label="Швейцария">
                   Швейцария
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="swe">
+                <a href="#" class="countries-filter__city" data-code="swe" aria-label="Швеция">
                   Швеция
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="lka">
+                <a href="#" class="countries-filter__city" data-code="lka" aria-label="Шри-Ланка">
                   Шри-Ланка
                 </a>
               </li>
@@ -1281,37 +1288,37 @@
           </li>
           <!--  -->
           <li class="countries-filter__letter-wrapper">
-            <a href="#" class="countries-filter__letter">
+            <a href="#" class="countries-filter__letter" aria-label="Страны на Э">
               Э
             </a>
             <!-- Страны на "Э" -->
             <ul class="countries-filter__cities">
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="ecu">
+                <a href="#" class="countries-filter__city" data-code="ecu" aria-label="Эквадор">
                   Эквадор
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="eri">
+                <a href="#" class="countries-filter__city" data-code="eri" aria-label="Эритрея">
                   Эритрея
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="swz">
+                <a href="#" class="countries-filter__city" data-code="swz" aria-label="Эсватини">
                   Эсватини
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="est">
+                <a href="#" class="countries-filter__city" data-code="est" aria-label="Эстония">
                   Эстония
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="eth">
+                <a href="#" class="countries-filter__city" data-code="eth" aria-label="Эфиопия">
                   Эфиопия
                 </a>
               </li>
@@ -1319,19 +1326,19 @@
           </li>
           <!--  -->
           <li class="countries-filter__letter-wrapper">
-            <a href="#" class="countries-filter__letter">
+            <a href="#" class="countries-filter__letter" aria-label="Страны на Ю">
               Ю
             </a>
             <!-- Страны на "Ю" -->
             <ul class="countries-filter__cities">
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="zaf">
+                <a href="#" class="countries-filter__city" data-code="zaf" aria-label="ЮАР">
                   ЮАР
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="south-sudan">
+                <a href="#" class="countries-filter__city" data-code="south-sudan" aria-label="Южный Судан">
                   Южный Судан
                 </a>
               </li>
@@ -1339,19 +1346,19 @@
           </li>
           <!--  -->
           <li class="countries-filter__letter-wrapper">
-            <a href="#" class="countries-filter__letter">
+            <a href="#" class="countries-filter__letter" aria-label="Страны на Я">
               Я
             </a>
             <!-- Страны на "Я" -->
             <ul class="countries-filter__cities">
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="jam">
+                <a href="#" class="countries-filter__city" data-code="jam" aria-label="Ямайка">
                   Ямайка
                 </a>
               </li>
               <!--  -->
               <li class="countries-filter__city-wrapper">
-                <a href="" class="countries-filter__city" data-code="jpn">
+                <a href="#" class="countries-filter__city" data-code="jpn" aria-label="Япония">
                   Япония
                 </a>
               </li>
@@ -1359,7 +1366,7 @@
           </li>
         </ul>
         <!--  -->
-        <button type="button" class="countries-filter__button" aria-label="Свернуть">Свернуть</button>
+        <button class="countries-filter__button" type="button" aria-label="Свернуть">Свернуть</button>
       </div>
     </section>
     <!--  -->
@@ -1367,9 +1374,10 @@
       <!-- Фильтры -->
       <section class="filter">
         <h2 class="filter__title">Подберите идеального попутчика</h2>
-        <form class="filter__form" action="https://echo.htmlacademy.ru" method="POST">
+        <!--  -->
+        <form class="filter__form" action="https://echo.htmlacademy.ru" method="POST" target="_blank">
           <fieldset class="filter__item">
-            <button type="button" class="filter__toggle">
+            <button class="filter__toggle" type="button" aria-label="Выбрать хобби">
               Хобби
               <span class="filter__colon">:</span>
             </button>
@@ -1378,9 +1386,11 @@
               <input class="filter__checkbox visually-hidden" type="checkbox" name="hobby" id="hobby-1"
                 value="Тяжелый рок" checked>
               <label class="filter__label filter__label--crutch" for="hobby-1">Спортзал</label>
+              <!--  -->
               <input class="filter__checkbox visually-hidden" type="checkbox" name="hobby" id="hobby-2"
                 value="Русский рэп">
               <label class="filter__label" for="hobby-2">Кальян</label>
+              <!--  -->
               <input class="filter__checkbox visually-hidden" type="checkbox" name="hobby" id="hobby-3"
                 value="Евроденс">
               <label class="filter__label" for="hobby-3">Диван</label>
@@ -1388,7 +1398,7 @@
           </fieldset>
           <!--  -->
           <fieldset class="filter__item">
-            <button type="button" class="filter__toggle filter__toggle--active">
+            <button class="filter__toggle filter__toggle--active" type="button" aria-label="Выбрать музыку">
               Музыка
               <span class="filter__colon">:</span>
             </button>
@@ -1397,9 +1407,11 @@
               <input class="filter__checkbox visually-hidden" type="checkbox" name="music" id="music-1"
                 value="Тяжелый рок" checked>
               <label class="filter__label" for="music-1">Тяжелый рок</label>
+              <!--  -->
               <input class="filter__checkbox visually-hidden" type="checkbox" name="music" id="music-2"
                 value="Русский рэп" checked>
               <label class="filter__label" for="music-2">Русский рэп</label>
+              <!--  -->
               <input class="filter__checkbox visually-hidden" type="checkbox" name="music" id="music-3"
                 value="Евроденс">
               <label class="filter__label" for="music-3">Евроденс</label>
@@ -1407,7 +1419,7 @@
           </fieldset>
           <!--  -->
           <fieldset class="filter__item">
-            <button type="button" class="filter__toggle">
+            <button class="filter__toggle" type="button" aria-label="Выбрать еду">
               Еда
               <span class="filter__colon">:</span>
             </button>
@@ -1416,16 +1428,18 @@
               <input class="filter__checkbox visually-hidden" type="checkbox" name="food" id="food-1"
                 value="Тяжелый рок" checked>
               <label class="filter__label" for="food-1">Мясоед</label>
+              <!--  -->
               <input class="filter__checkbox visually-hidden" type="checkbox" name="food" id="food-2"
                 value="Русский рэп">
               <label class="filter__label" for="food-2">Сидит на ПП</label>
+              <!--  -->
               <input class="filter__checkbox visually-hidden" type="checkbox" name="food" id="food-3" value="Евроденс">
               <label class="filter__label" for="food-3">Веган-сыроед</label>
             </div>
           </fieldset>
           <!--  -->
           <fieldset class="filter__item">
-            <button type="button" class="filter__toggle filter__toggle--active">
+            <button class="filter__toggle filter__toggle--active" type="button" aria-label="Выбрать транспорт">
               Транспорт
               <span class="filter__colon">:</span>
             </button>
@@ -1466,8 +1480,10 @@
           </fieldset>
           <!--  -->
           <fieldset class="filter__item">
-            <button type="button" class="filter__toggle filter__toggle--active">Левел<span
-                class="filter__colon">:</span></button>
+            <button class="filter__toggle filter__toggle--active" type="button" aria-label="Выбрать левел">Левел
+              <span class="filter__colon">:</span>
+            </button>
+            <!--  -->
             <div class="filter__category value-level filter__category--active">
               <div class="value-level__inputs">
                 <label class="value-level__label value-level__label--first" aria-label="Уровень от">
@@ -1482,22 +1498,25 @@
               </div>
               <!--  -->
               <div class="value-level__line">
-                <button class="value-level__pin value-level__pin--first" type="button"
-                  aria-label="Левая кнопка контроля"></button>
-                <button class="value-level__pin value-level__pin--second" type="button"
-                  aria-label="Правая кнопка контроля"></button>
+                <button class="value-level__pin value-level__pin--first" type="button">
+                  <span class="visually-hidden">Левая кнопка контроля диапазона</span>
+                </button>
+                <!--  -->
+                <button class="value-level__pin value-level__pin--second" type="button">
+                  <span class="visually-hidden">Правая кнопка контроля диапазона</span>
+                </button>
                 <div class="value-level__depth"></div>
               </div>
             </div>
           </fieldset>
-          <button class="filter__submit" type="submit">Показать</button>
+          <button class="filter__submit" type="submit" aria-label="Показать результат">Показать</button>
         </form>
       </section>
-
+      <!-- Каталог попутчиков -->
       <section class="users-catalog">
         <ul class="users-catalog__list">
           <li class="users-catalog__item catalog-user">
-            <a href="" class="catalog-user__pic-link">
+            <a href="#" class="catalog-user__pic-link" aria-label="Переход на страницу попутчика">
               <picture>
                 <source media="(min-width: 1440px)" type="image/webp"
                   srcset="img/firsova-desktop@1x.webp 1x, img/firsova-desktop@2x.webp 2x">
@@ -1511,56 +1530,74 @@
                   src="img/firsova-mobile@1x.jpg" alt="Таня Фирсова" width="70" height="70">
               </picture>
             </a>
-            <a class="catalog-user__name" href="#">Таня Фирсова</a>
+            <!--  -->
+            <a href="#" class="catalog-user__name" aria-label="Переход на страницу попутчика">Таня Фирсова</a>
+            <!--  -->
             <div class="catalog-user__likes-wrapper">
-              <button class="catalog-user__like catalog-user__like--active" aria-pressed="true"
-                aria-label="Добавить в избранное"></button>
+              <button class="catalog-user__like catalog-user__like--active" type="button" aria-pressed="true">
+                <span class="visually-hidden">Добавить лайк</span>
+              </button>
+              <!--  -->
               <span class="catalog-user__likes-count" data-count="1450001">1.5 М</span>
-              <!--1.5 М-->
             </div>
+            <!--  -->
             <p class="catalog-user__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+            <!--  -->
             <div class="catalog-user__countries">
               <h4 class="catalog-user__subtitle">Хочет посетить:</h4>
+              <!--  -->
               <ul class="catalog-user__list">
                 <li class="catalog-user__item catalog-user__item--lka">
                   <span class="catalog-user__item-lka-crutch">Шри-Ланка</span>
                 </li>
+                <!--  -->
                 <li class="catalog-user__item catalog-user__item--tha">
                   <span class="catalog-user__item-crutch">Таиланд</span>
                 </li>
+                <!--  -->
                 <li class="catalog-user__item catalog-user__item--syc">
                   Сейшелы
                 </li>
               </ul>
             </div>
+            <!--  -->
             <div class="catalog-user__transports">
               <h4 class="catalog-user__subtitle">Транспорт:</h4>
+              <!--  -->
               <ul class="catalog-user__transport transport">
                 <li class="transport__item transport__item--plane transport__item--active">
                   <span class="transport__name">Авиаперелет</span>
                 </li>
+                <!--  -->
                 <li class="transport__item transport__item--bus">
                   <span class="transport__name">Автотранспорт</span>
                 </li>
+                <!--  -->
                 <li class="transport__item transport__item--bicycle">
                   <span class="transport__name">Велосипед</span>
                 </li>
+                <!--  -->
                 <li class="transport__item transport__item--foot">
                   <span class="transport__name">Пешком</span>
                 </li>
               </ul>
             </div>
+            <!--  -->
             <div class="catalog-user__level-wrapper">
               <h4 class="catalog-user__subtitle">Левел:</h4>
+              <!--  -->
               <div class="catalog-user__level level level--99">
                 <span class="level__value">99</span>
+                <!--  -->
                 <span class="level__text">level</span>
               </div>
             </div>
-            <a href="" class="catalog-user__link">Позвать!</a>
+            <!--  -->
+            <a href="#" class="catalog-user__link" aria-label="Позвать">Позвать!</a>
           </li>
+          <!--  -->
           <li class="users-catalog__item catalog-user">
-            <a href="" class="catalog-user__pic-link">
+            <a href="#" class="catalog-user__pic-link" aria-label="Переход на страницу попутчика">
               <picture>
                 <source media="(min-width: 1440px)" type="image/webp"
                   srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x">
@@ -1573,51 +1610,70 @@
                   src="img/demin-mobile@1x.jpg" alt="Петя Демин" width="70" height="70">
               </picture>
             </a>
-            <a class="catalog-user__name" href="#">Петя Демин</a>
+            <!--  -->
+            <a href="#" class="catalog-user__name" aria-label="Переход на страницу попутчика">Петя Демин</a>
+            <!--  -->
             <div class="catalog-user__likes-wrapper">
-              <button class="catalog-user__like" aria-pressed="false" aria-label="Добавить в избранное"></button>
+              <button class="catalog-user__like" type="button" aria-pressed="false">
+                <span class="visually-hidden">Добавить лайк</span>
+              </button>
+              <!--  -->
               <span class="catalog-user__likes-count" data-count="1500">1500</span>
             </div>
+            <!--  -->
             <p class="catalog-user__tags">#бургер #бар #футбол #концерт #крафт</p>
+            <!--  -->
             <div class="catalog-user__countries">
               <h4 class="catalog-user__subtitle">Хочет посетить:</h4>
+              <!--  -->
               <ul class="catalog-user__list">
                 <li class="catalog-user__item catalog-user__item--bel">
                   <span class="catalog-user__item-crutch catalog-user__item-crutch-desk">Бельгия</span>
                 </li>
+                <!--  -->
                 <li class="catalog-user__item catalog-user__item--cze">
                   <span class="catalog-user__item-crutch catalog-user__item-crutch-desk">Чехия</span>
                 </li>
               </ul>
             </div>
+            <!--  -->
             <div class="catalog-user__transports">
               <h4 class="catalog-user__subtitle">Транспорт:</h4>
+              <!--  -->
               <ul class="catalog-user__transport transport">
                 <li class="transport__item transport__item--plane transport__item--active">
                   <span class="transport__name">Авиаперелет</span>
                 </li>
+                <!--  -->
                 <li class="transport__item transport__item--bus transport__item--active">
                   <span class="transport__name">Автотранспорт</span>
                 </li>
+                <!--  -->
                 <li class="transport__item transport__item--bicycle">
                   <span class="transport__name">Велосипед</span>
                 </li>
+                <!--  -->
                 <li class="transport__item transport__item--foot transport__item--active">
                   <span class="transport__name">Пешком</span>
                 </li>
               </ul>
             </div>
+            <!--  -->
             <div class="catalog-user__level-wrapper">
               <h4 class="catalog-user__subtitle">Левел:</h4>
+              <!--  -->
               <div class="catalog-user__level level level--80">
                 <span class="level__value">80</span>
+                <!--  -->
                 <span class="level__text">level</span>
               </div>
             </div>
-            <a href="" class="catalog-user__link">Позвать!</a>
+            <!--  -->
+            <a href="#" class="catalog-user__link" aria-label="Позвать">Позвать!</a>
           </li>
+          <!--  -->
           <li class="users-catalog__item catalog-user">
-            <a href="" class="catalog-user__pic-link">
+            <a href="#" class="catalog-user__pic-link" aria-label="Переход на страницу попутчика">
               <picture>
                 <source media="(min-width: 1440px)" type="image/webp"
                   srcset="img/smolov-desktop@1x.webp 1x, img/smolov-desktop@2x.webp 2x">
@@ -1630,55 +1686,74 @@
                   src="img/smolov-mobile@1x.jpg" alt="Марк Смолов" width="70" height="70">
               </picture>
             </a>
-            <a class="catalog-user__name" href="#">Марк Смолов</a>
+            <!--  -->
+            <a href="#" class="catalog-user__name" aria-label="Переход на страницу попутчика">Марк Смолов</a>
+            <!--  -->
             <div class="catalog-user__likes-wrapper">
-              <button class="catalog-user__like" aria-pressed="false" aria-pressed="false"
-                aria-label="Добавить в избранное"></button>
+              <button class="catalog-user__like" type="button" aria-pressed="false">
+                <span class="visually-hidden">Добавить лайк</span>
+              </button>
+              <!--  -->
               <span class="catalog-user__likes-count" data-count="170">170</span>
             </div>
+            <!--  -->
             <p class="catalog-user__tags">#рэп #тату #хайпбист #кроссовки #суприм</p>
+            <!--  -->
             <div class="catalog-user__countries">
               <h4 class="catalog-user__subtitle">Хочет посетить:</h4>
+              <!--  -->
               <ul class="catalog-user__list">
                 <li class="catalog-user__item catalog-user__item--usa">
                   <span class="catalog-user__item-crutch catalog-user__item-crutch-desk">США</span>
                 </li>
+                <!--  -->
                 <li class="catalog-user__item catalog-user__item--aus">
                   <span class="catalog-user__item-crutch">Австралия</span>
                 </li>
+                <!--  -->
                 <li class="catalog-user__item catalog-user__item--dma">
                   <span class="catalog-user__item-crutch-dma-desk">Доминика</span>
                 </li>
               </ul>
             </div>
+            <!--  -->
             <div class="catalog-user__transports">
               <h4 class="catalog-user__subtitle">Транспорт:</h4>
+              <!--  -->
               <ul class="catalog-user__transport transport">
                 <li class="transport__item transport__item--plane transport__item--active">
                   <span class="transport__name">Авиаперелет</span>
                 </li>
+                <!--  -->
                 <li class="transport__item transport__item--bus">
                   <span class="transport__name">Автотранспорт</span>
                 </li>
+                <!--  -->
                 <li class="transport__item transport__item--bicycle transport__item--active">
                   <span class="transport__name">Велосипед</span>
                 </li>
+                <!--  -->
                 <li class="transport__item transport__item--foot">
                   <span class="transport__name">Пешком</span>
                 </li>
               </ul>
             </div>
+            <!--  -->
             <div class="catalog-user__level-wrapper">
               <h4 class="catalog-user__subtitle">Левел:</h4>
+              <!--  -->
               <div class="catalog-user__level level level--25">
                 <span class="level__value">25</span>
+                <!--  -->
                 <span class="level__text">level</span>
               </div>
             </div>
-            <a href="" class="catalog-user__link">Позвать!</a>
+            <!--  -->
+            <a href="#" class="catalog-user__link" aria-label="Позвать">Позвать!</a>
           </li>
+          <!--  -->
           <li class="users-catalog__item catalog-user">
-            <a href="" class="catalog-user__pic-link">
+            <a href="#" class="catalog-user__pic-link" aria-label="Переход на страницу попутчика">
               <picture>
                 <source media="(min-width: 1440px)" type="image/webp"
                   srcset="img/rogovaya-desktop@1x.webp 1x, img/rogovaya-desktop@2x.webp 2x">
@@ -1693,68 +1768,94 @@
                   src="img/rogovaya-mobile@1x.jpg" alt="Лариса Роговая" width="70" height="70">
               </picture>
             </a>
-            <a class="catalog-user__name catalog-user__name--online" href="#">Лариса Роговая</a>
+            <!--  -->
+            <a href="#" class="catalog-user__name catalog-user__name--online"
+              aria-label="Переход на страницу попутчика">Лариса Роговая</a>
+            <!--  -->
             <div class="catalog-user__likes-wrapper">
-              <button class="catalog-user__like" aria-pressed="false" aria-label="Добавить в избранное"></button>
+              <button class="catalog-user__like" type="button" aria-pressed="false">
+                <span class="visually-hidden">Добавить лайк</span>
+              </button>
+              <!--  -->
               <span class="catalog-user__likes-count" data-count="23">23</span>
             </div>
+            <!--  -->
             <p class="catalog-user__tags">#образование #карьера #учеба #линкедин</p>
+            <!--  -->
             <div class="catalog-user__countries">
               <h4 class="catalog-user__subtitle">Хочет посетить:</h4>
+              <!--  -->
               <ul class="catalog-user__list">
                 <li class="catalog-user__item catalog-user__item--gbr">
                   <span class="catalog-user__item-crutch catalog-user__item-crutch-desk">Великобритания</span>
                 </li>
+                <!--  -->
                 <li class="catalog-user__item catalog-user__item--deu">
                   <span class="catalog-user__item-crutch catalog-user__item-crutch-desk">Германия</span>
                 </li>
               </ul>
             </div>
+            <!--  -->
             <div class="catalog-user__transports">
               <h4 class="catalog-user__subtitle">Транспорт:</h4>
+              <!--  -->
               <ul class="catalog-user__transport transport">
                 <li class="transport__item transport__item--plane transport__item--active">
                   <span class="transport__name">Авиаперелет</span>
                 </li>
+                <!--  -->
                 <li class="transport__item transport__item--bus transport__item--active">
                   <span class="transport__name">Автотранспорт</span>
                 </li>
+                <!--  -->
                 <li class="transport__item transport__item--bicycle">
                   <span class="transport__name">Велосипед</span>
                 </li>
+                <!--  -->
                 <li class="transport__item transport__item--foot">
                   <span class="transport__name">Пешком</span>
                 </li>
               </ul>
             </div>
+            <!--  -->
             <div class="catalog-user__level-wrapper">
               <h4 class="catalog-user__subtitle">Левел:</h4>
+              <!--  -->
               <div class="catalog-user__level level level--50">
                 <span class="level__value">50</span>
+                <!--  -->
                 <span class="level__text">level</span>
               </div>
             </div>
-            <a href="" class="catalog-user__link">Позвать!</a>
+            <!--  -->
+            <a href="#" class="catalog-user__link" aria-label="Позвать">Позвать!</a>
           </li>
         </ul>
-        <a href="" class="users-catalog__more" aria-label="Показать больше попутчиков">Показать еще</a>
+        <!--  -->
+        <a href="#" class="users-catalog__more" aria-label="Показать больше попутчиков">Показать еще</a>
+        <!--  -->
         <div class="users-catalog__pagination pagination">
           <ul class="pagination__list">
             <li class="pagination__item">
-              <a href="" class="pagination__link pagination__link--active">1</a>
+              <a href="#" class="pagination__link pagination__link--active" aria-label="Первая страница">1</a>
             </li>
+            <!--  -->
             <li class="pagination__item">
-              <a href="" class="pagination__link">2</a>
+              <a href="#" class="pagination__link" aria-label="Вторая страница">2</a>
             </li>
+            <!--  -->
             <li class="pagination__item">
-              <a href="" class="pagination__link">3</a>
+              <a href="#" class="pagination__link" aria-label="Третья страница">3</a>
             </li>
+            <!--  -->
             <li class="pagination__item">
-              <a href="" class="pagination__link">4</a>
+              <a href="#" class="pagination__link" aria-label="Четвертая страница">4</a>
             </li>
           </ul>
-          <a href="" class="pagination__prev" aria-label="Следующие попутчики"></a>
-          <a href="" class="pagination__next" aria-label="Предыдущие попутчики"></a>
+          <!--  -->
+          <a href="#" class="pagination__prev pagination__prev--inactive"
+            aria-label="Предыдущая страница попутчиков"></a>
+          <a href="#" class="pagination__next" aria-label="Следующие страница попутчиков"></a>
         </div>
       </section>
     </div>
@@ -1764,7 +1865,7 @@
   <!-- ====== -->
   <footer class="footer">
     <div class="container">
-      <a href="index.html" class="footer__logo logo">
+      <a href="index.html" class="footer__logo logo" aria-label="Переход на главную страницу">
         <picture>
           <source media="(min-width: 1440px)" type="image/webp"
             srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x">
@@ -1777,25 +1878,35 @@
             src="img/logo-mobile-blue@1x.png" alt="Логотип Погнали" width="100" height="19">
         </picture>
       </a>
+      <!--  -->
       <ul class="footer__socials socials">
         <li class="socials__item">
-          <a href="" class="socials__link socials__link--fb">
+          <a href="https://www.facebook.com" class="socials__link socials__link--fb"
+            aria-label="Переход на страницу Facebook" target="_blank">
             Facebook
           </a>
         </li>
+        <!--  -->
         <li class="socials__item">
-          <a href="" class="socials__link socials__link--vk">
+          <a href="https://vk.com" class="socials__link socials__link--vk" aria-label="Переход на страницу Vkontakte"
+            target="_blank">
             Vkontakte
           </a>
         </li>
+        <!--  -->
         <li class="socials__item">
-          <a href="" class="socials__link socials__link--inst">
+          <a href="https://www.instagram.com" class="socials__link socials__link--inst"
+            aria-label="Переход на страницу Instagram" target="_blank">
             Instagram
           </a>
         </li>
       </ul>
-      <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__link">Разработано <img
-          src="img/htmlacademy.svg" alt="Логотип HTML Academy" class="footer__in-link-logo" width="27" height="33"></a>
+      <!--  -->
+      <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__link"
+        aria-label="Переход на страницу разработчика">
+        Разработано
+        <img src="img/htmlacademy.svg" alt="Логотип HTML Academy" class="footer__in-link-logo" width="27" height="34">
+      </a>
     </div>
   </footer>
 
@@ -1805,7 +1916,6 @@
   <script src="js/filter-toggle.js"></script>
   <script src="js/dropdown-menu.js"></script>
   <script src="js/like.js"></script>
-  <script src="js/continent.js"></script>
 </body>
 
 </html>

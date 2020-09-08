@@ -114,11 +114,11 @@
 
 .input-countrie:nth-of-type(2)::after {
   @media (min-width: $tablet-width) {
-    top: 25px
+    top: 25px;
   }
 
   @media (min-width: $desktop-width) {
-    top: 26px
+    top: 26px;
   }
 }
 
@@ -133,7 +133,7 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 18px;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 
   color: $basic-blue--dark;
@@ -160,6 +160,18 @@
 
   &:hover {
     border-color: $special-grey--border;
+  }
+}
+
+.step__input-countrie:first-of-type .input-countrie__input {
+  @media (max-width: $mobile-width-only) {
+    letter-spacing: 0.09em;
+  }
+}
+
+.step__input-countrie:nth-of-type(3) .input-countrie__input {
+  @media (max-width: $mobile-width-only) {
+    padding-left: 10px;
   }
 }
 

@@ -11,19 +11,28 @@
 
   &--active {
     width: 100%;
-    // position: fixed;
+    position: fixed;
     // position: relative;
-    // top: 73px;
+    top: 72px;
 
     @media (min-width: $tablet-width) {
-      // top: 132px;
+      top: 132px;
+    }
+  }
+
+  &--catalog-active,
+  &--form-active {
+    top: 65px;
+
+    @media (min-width: $tablet-width) {
+      top: 130px;
     }
   }
 
   &--no-js {
     display: flex;
-    // position: relative;
-    // top: 0;
+    position: relative;
+    top: 0;
   }
 }
 

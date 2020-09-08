@@ -1,24 +1,32 @@
 .main {
   background-color: $basic-blue--light;
 
-  //   &--active {
-  //     margin-top: 65px;
+  &--active {
+    margin-top: 65px;
 
-  //     @media (min-width: $tablet-width) {
-  //       margin-top: 132px;
-  //     }
+    @media (min-width: $tablet-width) {
+      margin-top: 130px;
+    }
 
-  //     @media (min-width: $desktop-width) {
-  //       margin-top: 110px;
-  //     }
-  //   }
+    @media (min-width: $desktop-width) {
+      margin-top: 111px;
+    }
+  }
 }
 
-// .main--main-page.main--active {
-//   @media (max-width: $mobile-width-only) {
-//     margin-top: 73px;
-//   }
-// }
+.main--main-page.main--active {
+  @media (max-width: $mobile-width-only) {
+    margin-top: 72px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: 132px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 111px;
+  }
+}
 
 .main__title-wrapper {
   position: relative;
@@ -53,17 +61,20 @@
 
   @media (min-width: $desktop-width) {
     width: 1440px;
-    padding: 108px 125px 72px 125px;
+    margin-top: -1px;
+    padding: 109px 123px 71px 126px;
   }
 
   &--form-page {
+    padding: 27px 25px 15px;
+
     @media (min-width: $tablet-width) {
-      padding: 90px 74px 71px;
+      padding: 90px 75px 71px;
     }
 
     @media (min-width: $desktop-width) {
       width: 1440px;
-      padding: 108px 125px 73px 125px;
+      padding: 109px 125px 72px;
     }
   }
 }
@@ -104,7 +115,7 @@
 
 .main__button {
   float: right;
-  margin-top: 25px;
+  margin-top: 24px;
 
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
@@ -115,6 +126,8 @@
   text-transform: uppercase;
 
   color: $basic-white;
+
+  outline-offset: 3px;
 
   &::after {
     content: "";
@@ -129,7 +142,7 @@
     background-size: 30px 19px;
 
     @media (min-width: $desktop-width) {
-      margin-left: 28px;
+      margin-left: 30px;
     }
   }
 

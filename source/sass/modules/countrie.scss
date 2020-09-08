@@ -91,6 +91,27 @@
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
   }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 270px;
+    height: 110px;
+    padding-left: 35%;
+    background-color: $special-grey--photo-button;
+    border-top-right-radius: 10px;
+
+    @media (max-width: $mobile-width-only) {
+      border-top-left-radius: 10px;
+    }
+
+    @media (min-width: $tablet-width) {
+      width: 186px;
+      height: 140px;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+  }
 }
 
 .countrie__desc {

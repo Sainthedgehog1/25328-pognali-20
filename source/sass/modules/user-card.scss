@@ -58,6 +58,20 @@
     width: 285px;
     height: 285px;
   }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 270px;
+    height: 270px;
+    padding-left: 35%;
+    background-color: $special-grey--photo-button;
+
+    @media (min-width: $tablet-width) {
+      width: 285px;
+      height: 285px;
+    }
+  }
 }
 
 .user-card__level {
@@ -185,7 +199,7 @@
   }
 }
 
-.user-card__tags--crutch>.user-card__tags-add {
+.user-card__tags--crutch > .user-card__tags-add {
   margin-left: 17px;
 
   @media (min-width: $tablet-width) {

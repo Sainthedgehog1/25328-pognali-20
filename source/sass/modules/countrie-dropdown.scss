@@ -200,6 +200,12 @@
       margin-right: 16px;
     }
 
+    &:nth-child(7) {
+      margin-top: 14px;
+      margin-left: 0;
+      margin-right: 15px;
+    }
+
     &:nth-child(8),
     &:nth-child(9),
     &:nth-child(10) {
@@ -277,7 +283,7 @@
 
   @media (min-width: $tablet-width) {
     // box-shadow: 6px 0 8px 0 rgba(54, 80, 148, 0.18);
-    box-shadow: 0px 8px 16px rgba($special-blue--shadow, 0.18);
+    box-shadow: 0 8px 16px rgba($special-blue--shadow, 0.18);
   }
 
   @media (min-width: $desktop-width) {
@@ -295,8 +301,8 @@
 
 .countrie-dropdown__cities {
   padding-top: 12px;
-  padding-bottom: 17px;
-  padding-left: 19px;
+  padding-bottom: 18px;
+  padding-left: 18px;
 
   list-style: none;
 
@@ -336,8 +342,8 @@
       content: "";
       display: block;
       top: 0;
-      left: -16px;
-      width: 15px;
+      left: -18px;
+      width: 17px;
       height: 100%;
       background-color: white;
     }
@@ -361,14 +367,96 @@
 }
 
 .countrie-dropdown__city-wrapper:first-of-type {
+  margin-top: 6px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 9px;
+  }
+
   @media (min-width: $desktop-width) {
     margin-top: 10px;
   }
 }
 
-.countrie-dropdown__city-wrapper:nth-of-type(2n-1) {
+.countrie-dropdown__city-wrapper:nth-of-type(3) {
+  margin-top: 5px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 9px;
+  }
+}
+
+.countrie-dropdown__city-wrapper:nth-of-type(4) {
+  margin-top: 5px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 8px;
+  }
+
   @media (min-width: $desktop-width) {
+    margin-top: 9px;
+  }
+}
+
+.countrie-dropdown__city-wrapper:nth-of-type(5) {
+  @media (min-width: $tablet-width) {
+    margin-top: 9px;
+  }
+}
+
+.countrie-dropdown__city-wrapper:nth-of-type(6) {
+  margin-top: 3px;
+
+  @media (min-width: $tablet-width) {
     margin-top: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 9px;
+  }
+}
+
+.countrie-dropdown__city-wrapper:nth-of-type(7) {
+  margin-top: 3px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 8px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 9px;
+  }
+}
+
+.countrie-dropdown__city-wrapper:nth-of-type(8) {
+  margin-top: 3px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 9px;
+  }
+}
+
+.countrie-dropdown__city-wrapper:nth-of-type(9) {
+  margin-top: 3px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 9px;
+  }
+}
+
+.countrie-dropdown__city-wrapper:nth-of-type(10) {
+  margin-top: 3px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 8px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 9px;
   }
 }
 

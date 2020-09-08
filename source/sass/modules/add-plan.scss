@@ -22,17 +22,11 @@
   background-color: $special-grey--dark;
 
   @media (min-width: $tablet-width) {
-    padding-top: 51px;
-    padding-bottom: 130px;
-    padding-left: 75px;
-    padding-right: 75px;
+    padding: 50px 75px 130px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 52px;
-    padding-bottom: 167px;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding: 52px 60px 167px;
   }
 }
 
@@ -61,8 +55,8 @@
       min-width: 6px;
       width: 6px;
       height: 6px;
-
-      margin-right: 68px;
+      margin-top: 1px;
+      margin-right: 67px;
     }
 
     @media (min-width: $desktop-width) {

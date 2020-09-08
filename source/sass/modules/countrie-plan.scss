@@ -7,7 +7,7 @@
 
   @media (min-width: $tablet-width) {
     align-self: flex-start;
-    margin-top: 48px;
+    margin-top: 49px;
   }
 
   @media (min-width: $desktop-width) {
@@ -65,7 +65,7 @@
     background-color: $basic-blue--dark;
 
     @media (max-width: $mobile-width-only) {
-      left: -14px;
+      left: -16px;
 
       border: 2px solid $basic-blue--dark;
       border-right: 0;
@@ -103,7 +103,7 @@
   color: $basic-blue--dark;
 
   @media (max-width: $mobile-width-only) {
-    margin-left: 11px;
+    margin-left: 9px;
   }
 
   @media (min-width: $tablet-width) {
@@ -136,7 +136,7 @@
     @media (min-width: $tablet-width) {
       width: 14px;
       height: 14px;
-      top: 12px;
+      top: 11px;
       right: -33px;
     }
 
@@ -165,7 +165,7 @@
     @media (min-width: $tablet-width) {
       width: 70px;
       height: 47px;
-      top: -6px;
+      top: -7px;
       right: 1px;
     }
 
@@ -199,7 +199,7 @@
 .step__countrie-plan:nth-of-type(2) .countrie-plan__countrie {
   &::before {
     @media (min-width: $tablet-width) {
-      top: 11px;
+      top: 10px;
       right: -34px;
     }
 
@@ -228,7 +228,7 @@
   height: 220px;
   padding: 8px 13px;
   margin-top: 17px;
-
+  margin-left: -2px;
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -244,7 +244,7 @@
     width: 500px;
     height: 142px;
     padding: 15px 17px;
-    margin-top: 41px;
+    margin-top: 40px;
     margin-left: 2px;
 
     font-size: 20px;
@@ -267,7 +267,12 @@
   }
 }
 
+
 .step__countrie-plan:nth-of-type(2) .countrie-plan__plan {
+  @media (min-width: $tablet-width) {
+    margin-left: 1px;
+  }
+
   @media (min-width: $desktop-width) {
     height: 141px;
     margin-left: 1px;

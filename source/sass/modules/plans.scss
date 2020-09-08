@@ -17,17 +17,11 @@
   padding-bottom: 60px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 54px;
-    padding-bottom: 106px;
-    padding-left: 75px;
-    padding-right: 75px;
+    padding: 54px 75px 106px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 52px;
-    padding-bottom: 125px;
-    padding-left: 124px;
-    padding-right: 58px;
+    padding: 51px 58px 125px 124px;
   }
 }
 
@@ -45,6 +39,10 @@
 
   @media (min-width: $tablet-width) {
     margin-top: 51px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 52px;
   }
 }
 
@@ -120,7 +118,7 @@
 
   @media (min-width: $desktop-width) {
     max-width: 480px;
-    margin-left: 62px;
+    margin-left: 63px;
   }
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
@@ -173,7 +171,8 @@
 
   @media (min-width: $desktop-width) {
     min-width: 160px;
-    margin-right: 18px;
+    margin-right: 17px;
+    letter-spacing: 0.09em;
   }
 }
 
@@ -184,6 +183,7 @@
 
   @media (min-width: $desktop-width) {
     margin-right: 17px;
+    letter-spacing: 0.1em;
   }
 }
 
@@ -227,6 +227,14 @@
       position: static;
       margin-right: 30px;
     }
+  }
+}
+
+.plans__item:nth-of-type(1) .plans__countries {
+  margin-left: -1px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 3px;
   }
 }
 

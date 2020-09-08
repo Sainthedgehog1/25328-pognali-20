@@ -21,6 +21,13 @@
     position: static;
   }
 
+  &--catalog-page {
+    @media (min-width: $tablet-width) {
+      border-bottom-left-radius: 56px;
+      border-bottom-right-radius: 56px;
+    }
+  }
+
   &--no-js {
     position: static;
   }
@@ -104,6 +111,7 @@
 
   color: $special-blue--dark;
   background-color: transparent;
+  outline-offset: 3px;
   cursor: pointer;
 
   @media (max-width: $mobile-width-only) {
@@ -342,12 +350,13 @@
   @media (min-width: $tablet-width) {
     width: 38px;
     margin-right: 39px;
-    margin-bottom: 22px;
+    margin-bottom: 23px;
   }
 
   @media (min-width: $desktop-width) {
     width: 240px;
     margin-right: 10px;
+    margin-bottom: 22px;
 
     &:nth-child(6),
     &:nth-child(7),
@@ -455,11 +464,324 @@
   }
 }
 
+.countries-filter__letter-wrapper:nth-of-type(1) .countries-filter__letter {
+  @media (min-width: $tablet-width) {
+    padding-left: 1px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+  }
+}
+
+.countries-filter__letter-wrapper:nth-of-type(2) .countries-filter__letter {
+  @media (min-width: $tablet-width) {
+    padding-left: 3px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+  }
+}
+
+.countries-filter__letter-wrapper:nth-of-type(4) .countries-filter__letter {
+  @media (min-width: $tablet-width) {
+    padding-left: 7px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 1px;
+  }
+}
+
+.countries-filter__letter-wrapper:nth-of-type(5) .countries-filter__letter {
+  @media (min-width: $tablet-width) {
+    padding-left: 3px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 1px;
+  }
+}
+
+.countries-filter__letter-wrapper:nth-of-type(6) .countries-filter__letter {
+  @media (min-width: $tablet-width) {
+    padding-top: 3px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: -2px;
+    padding-top: 0;
+  }
+}
+
+.countries-filter__letter-wrapper:nth-of-type(7) .countries-filter__letter {
+  @media (min-width: $tablet-width) {
+    padding-top: 3px;
+    padding-left: 6px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 1px;
+    padding-left: 0;
+  }
+}
+
+.countries-filter__letter-wrapper:nth-of-type(8) .countries-filter__letter {
+  @media (min-width: $tablet-width) {
+    padding-top: 3px;
+    padding-left: 3px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 1px;
+    padding-left: 1px;
+  }
+}
+
+.countries-filter__letter-wrapper:nth-of-type(9) .countries-filter__letter {
+  @media (min-width: $tablet-width) {
+    padding-top: 3px;
+    padding-left: 8px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 1px;
+    padding-left: 2px;
+  }
+}
+
+.countries-filter__letter-wrapper:nth-of-type(10) .countries-filter__letter {
+  @media (min-width: $tablet-width) {
+    padding-top: 3px;
+    padding-left: 3px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: -1px;
+    padding-top: 1px;
+    padding-left: 0;
+  }
+}
+
+.countries-filter__letter-wrapper:nth-of-type(6),
+.countries-filter__letter-wrapper:nth-of-type(7),
+.countries-filter__letter-wrapper:nth-of-type(8),
+.countries-filter__letter-wrapper:nth-of-type(9),
+.countries-filter__letter-wrapper:nth-of-type(10) {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 17px;
+  }
+}
+
+.countries-filter__letter-wrapper:nth-of-type(11) .countries-filter__letter {
+  @media (min-width: $tablet-width) {
+    padding-left: 7px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: -1px;
+    padding-top: 1px;
+    padding-left: 0;
+  }
+}
+
+.countries-filter__letter-wrapper:nth-of-type(12) .countries-filter__letter {
+  @media (min-width: $tablet-width) {
+    padding-left: 8px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+    padding-top: 1px;
+    padding-left: 1px;
+  }
+}
+
+.countries-filter__letter-wrapper:nth-of-type(13) .countries-filter__letter {
+  @media (min-width: $tablet-width) {
+    padding-left: 3px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 1px;
+    padding-left: 2px;
+  }
+}
+
+.countries-filter__letter-wrapper:nth-of-type(14) .countries-filter__letter {
+  @media (min-width: $tablet-width) {
+    padding-left: 8px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 1px;
+    padding-left: 3px;
+  }
+}
+
+.countries-filter__letter-wrapper:nth-of-type(15) .countries-filter__letter {
+  @media (min-width: $tablet-width) {
+    margin-left: -3px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 1px;
+    padding-left: 3px;
+  }
+}
+
+.countries-filter__letter-wrapper:nth-of-type(11),
+.countries-filter__letter-wrapper:nth-of-type(12),
+.countries-filter__letter-wrapper:nth-of-type(13),
+.countries-filter__letter-wrapper:nth-of-type(14),
+.countries-filter__letter-wrapper:nth-of-type(15) {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 56px;
+  }
+}
+
+.countries-filter__letter-wrapper:nth-of-type(16) .countries-filter__letter {
+  @media (min-width: $tablet-width) {
+    padding-left: 6px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: -1px;
+    padding-top: 1px;
+    padding-left: 0;
+  }
+}
+
+.countries-filter__letter-wrapper:nth-of-type(17) .countries-filter__letter {
+  @media (min-width: $tablet-width) {
+    padding-left: 6px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 1px;
+    padding-left: 1px;
+  }
+}
+
+.countries-filter__letter-wrapper:nth-of-type(18) .countries-filter__letter {
+  @media (min-width: $tablet-width) {
+    padding-left: 6px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 1px;
+    padding-left: 2px;
+  }
+}
+
+.countries-filter__letter-wrapper:nth-of-type(19) .countries-filter__letter {
+  @media (min-width: $tablet-width) {
+    padding-left: 9px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 1px;
+    padding-left: 3px;
+  }
+}
+
+.countries-filter__letter-wrapper:nth-of-type(20) .countries-filter__letter {
+  @media (min-width: $tablet-width) {
+    margin-left: -1px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 1px;
+    padding-left: 1px;
+  }
+}
+
+.countries-filter__letter-wrapper:nth-of-type(16),
+.countries-filter__letter-wrapper:nth-of-type(17),
+.countries-filter__letter-wrapper:nth-of-type(18),
+.countries-filter__letter-wrapper:nth-of-type(19),
+.countries-filter__letter-wrapper:nth-of-type(20) {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 26px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 16px;
+  }
+}
+
+.countries-filter__letter-wrapper:nth-of-type(21) .countries-filter__letter {
+  @media (min-width: $tablet-width) {
+    padding-left: 4px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: -2px;
+    padding-top: 1px;
+    padding-left: 0;
+  }
+}
+
+.countries-filter__letter-wrapper:nth-of-type(22) .countries-filter__letter {
+  @media (min-width: $tablet-width) {
+    padding-left: 9px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+  }
+}
+
+.countries-filter__letter-wrapper:nth-of-type(23) .countries-filter__letter {
+  @media (min-width: $tablet-width) {
+    margin-top: -1px;
+    padding-left: 1px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 1px;
+    padding-left: 1px;
+  }
+}
+
+.countries-filter__letter-wrapper:nth-of-type(24) .countries-filter__letter {
+  @media (min-width: $tablet-width) {
+    margin-top: -1px;
+    padding-left: 9px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 1px;
+    padding-left: 2px;
+  }
+}
+
+.countries-filter__letter-wrapper:nth-of-type(25) .countries-filter__letter {
+  @media (min-width: $tablet-width) {
+    margin-top: -3px;
+    margin-left: -1px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 7px;
+    padding-left: 0;
+  }
+}
+
 .countries-filter__cities {
   display: none;
   width: 220px;
   position: absolute;
-  top: 216px;
+  top: 217px;
   left: 2px;
 
   list-style: none;
@@ -701,7 +1023,7 @@
 .countries-filter__letter-wrapper:nth-of-type(23) .countries-filter__cities {
   @media (min-width: $desktop-width) {
     & {
-      margin-top: 47px;
+      margin-top: 48px;
       margin-left: 5px;
     }
   }
@@ -711,7 +1033,7 @@
 .countries-filter__letter-wrapper:nth-of-type(24) .countries-filter__cities {
   @media (min-width: $desktop-width) {
     & {
-      margin-top: 45px;
+      margin-top: 46px;
       margin-left: 8px;
     }
   }
@@ -721,7 +1043,7 @@
 .countries-filter__letter-wrapper:nth-of-type(25) .countries-filter__cities {
   @media (min-width: $desktop-width) {
     & {
-      margin-top: 44px;
+      margin-top: 47px;
       margin-left: 6px;
     }
   }
@@ -765,7 +1087,7 @@
   width: 270px;
   margin-top: 13px;
   margin-bottom: 12px;
-  padding: 10px 0 9px 1px;
+  padding: 11px 0 8px 1px;
 
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
@@ -780,6 +1102,7 @@
 
   color: $special-blue--dark;
   background-color: $special-grey--button;
+  outline-offset: 3px;
 
   &::before {
     content: "";
@@ -808,7 +1131,7 @@
     width: 615px;
     padding-top: 40px;
     padding-bottom: 40px;
-    margin: 50px 0 18px 4px;
+    margin: 43px 0 18px 4px;
 
     font-size: 20px;
     line-height: 20px;

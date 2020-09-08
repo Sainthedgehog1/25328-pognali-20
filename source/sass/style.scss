@@ -1,89 +1,91 @@
-// --- Global styles -----------------------------------
-@import "../sass/variables.scss";
-@import "../sass/fonts.scss";
-@import "../sass/global.scss";
-// Шапка
-@import "../sass/blocks/header.scss";
-@import "../sass/elements/logo.scss";
-@import "../sass/blocks/main-nav.scss";
-@import "../sass/blocks/contacts.scss";
-@import "../sass/blocks/socials.scss";
-@import "../sass/elements/tel.scss";
-@import "../sass/elements/email.scss";
-
+/* ======= */
+/* Helpers */
+/* ======= */
+@import "helpers/variables";
+/* ====== */
+/* Common */
+/* ====== */
+@import "common/fonts";
+@import "common/global";
+/* ========== */
+/* Components */
+/* ========== */
+@import "components/desc";
+@import "components/email";
+@import "components/logo";
+@import "components/show-all-button";
+@import "components/tel";
+@import "components/title";
+/* ======= */
+/* Modules */
+/* ======= */
+/* ---------------- */
+/* Главная страница */
+/* ---------------- */
+@import "modules/contacts";
+@import "modules/header";
+@import "modules/main-nav";
+@import "modules/socials";
 // main
-@import "../sass/blocks/main.scss";
-@import "../sass/blocks/promo.scss";
-@import "../sass/blocks/guide.scss";
+@import "modules/main";
+@import "modules/promo";
+@import "modules/review";
+@import "modules/guide";
 // О сервисе
-@import "../sass/elements/show-all-button.scss";
-@import "../sass/title.scss";
-@import "../sass/desc.scss";
-@import "../sass/blocks/about.scss";
+@import "modules/about";
 // Направления
-@import "../sass/blocks/countries.scss";
-@import "../sass/blocks/countrie.scss";
+@import "modules/countries";
+@import "modules/countrie";
 // Попутчики
-@import "../sass/blocks/users.scss";
-@import "../sass/blocks/user-card.scss";
-@import "../sass/blocks/transport.scss";
+@import "modules/users";
+@import "modules/user-card";
+@import "modules/flags";
+@import "modules/level";
+@import "modules/transport";
 // Свой профиль
-@import "../sass/blocks/services.scss";
-@import "../sass/blocks/regular-service.scss";
+@import "modules/services";
+@import "modules/regular-service";
 //  Заинтересовались
-@import "../sass/blocks/feedback.scss";
+@import "modules/feedback";
 // Карта
-@import "../sass/blocks/map.scss";
+@import "modules/map";
 // Подвал
-@import "../sass/blocks/footer.scss";
+@import "modules/footer";
 // Модальное окно
-@import "../sass/blocks/busines-service.scss";
+@import "modules/busines-service";
 /* ------------------ */
 /* Страница попутчики */
 /* ------------------ */
 // Фильтр стран
-@import "../sass/blocks/countries-filter.scss";
+@import "modules/countries-filter";
 // Фильтры
-@import "../sass/blocks/filter.scss";
-@import "../sass/blocks/users-catalog.scss";
+@import "modules/filter";
+@import "modules/users-catalog";
 // Двойной слайдер
-@import "../sass/blocks/value-level.scss";
+@import "modules/value-level";
 // Катало пользователей
-@import "../sass/blocks/catalog-user.scss";
+@import "modules/catalog-user";
 // Пагинация
-@import "../sass/blocks/pagination.scss";
+@import "modules/pagination";
 /* -------------------- */
 /* Страница направления */
 /* -------------------- */
 // Профиль
-@import "../sass/blocks/profile.scss";
-@import "../sass/blocks/profile-level.scss";
+@import "modules/profile";
+@import "modules/profile-level";
 // Мои планы
-@import "../sass/blocks/plans.scss";
+@import "modules/plans";
 // Добавить план
-@import "../sass/blocks/step.scss";
+@import "modules/step";
 // Форма плана
-@import "../sass/blocks/add-plan.scss";
-@import "../sass/blocks/input-area.scss";
+@import "modules/add-plan";
+@import "modules/input-area";
 // Календарь
-@import "../sass/blocks/calendar.scss";
+@import "modules/calendar";
 // Маршрут
-@import "../sass/blocks/input-countrie.scss";
+@import "modules/input-countrie";
 // Добавить страну
-@import "../sass/blocks/new-countrie.scss";
+@import "modules/new-countrie";
 // Выбор страны по алфавиту
-@import "../sass/blocks/countrie-dropdown.scss";
-@import "../sass/blocks/countrie-plan.scss";
-
-
-// --- Blocks ------------------------------------------
-
-
-// --- Main -----------------------------------
-@import "../sass/blocks/level.scss";
-@import "../sass/blocks/flags.scss";
-@import "../sass/blocks/review.scss";
-// --- Level 3 --------------------------------------
-// --- Catalog --------------------------------
-@import "../sass/blocks/filter.scss";
-@import "../sass/blocks/users-catalog.scss";
+@import "modules/countrie-dropdown";
+@import "modules/countrie-plan";

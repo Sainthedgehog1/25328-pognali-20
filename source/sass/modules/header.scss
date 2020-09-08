@@ -11,8 +11,8 @@
 
   &--active {
     width: 100%;
-    // position: fixed;
-    position: relative;
+    position: fixed;
+    // position: relative;
     z-index: 11;
     top: 0;
 
@@ -45,13 +45,6 @@
   }
 }
 
-.header--active .header__container {
-  // padding-top: 18px;
-  // padding-bottom: 17px;
-
-  transition: padding 0.3s ease;
-}
-
 .header__wrapper {
   background-color: $special-blue--dark;
 
@@ -69,8 +62,8 @@
 
   &--active {
     width: 100%;
-    // position: fixed;
-    position: relative;
+    position: fixed;
+    // position: relative;
     z-index: 11;
     top: 0;
 
@@ -103,6 +96,14 @@
   @media (max-width: $mobile-width-only) {
     padding-top: 24px;
   }
+}
+
+
+.header--active .header__container {
+  // padding-top: 18px;
+  // padding-bottom: 17px;
+
+  transition: padding 0.3s ease;
 }
 
 .header__wrapper--no-js .container {
@@ -228,6 +229,4 @@
     padding-top: 40px;
     padding-bottom: 40px;
   }
-
-  @media (min-width: $desktop-width) {}
 }

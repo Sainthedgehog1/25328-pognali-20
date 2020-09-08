@@ -30,15 +30,15 @@
 
   @media (min-width: $tablet-width) {
     width: 532px;
-    padding: 21px 17px 23px;
+    padding: 22px 17px 22px;
     margin-bottom: 39px;
   }
 
   @media (min-width: $desktop-width) {
     width: 1000px;
     padding-left: 0;
-    padding-top: 22px;
-    padding-bottom: 22px;
+    padding-top: 23px;
+    padding-bottom: 21px;
     margin-bottom: 16px;
   }
 }
@@ -157,12 +157,16 @@
 .calendar__table {
   border-collapse: collapse;
 
-  @media (max-width: $mobile-width-only) {
-    margin-left: 1px;
+  // @media (max-width: $mobile-width-only) {
+  //   margin-left: 1px;
+  // }
+
+  @media (min-width: $tablet-width) {
+    margin-left: -1px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: 1px;
+    margin-left: 0;
   }
 }
 
