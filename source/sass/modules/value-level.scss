@@ -10,19 +10,18 @@
   &::after {
     content: "";
     z-index: 2;
-    display: block;
-    width: 16px;
-    height: 1px;
     position: absolute;
     top: 15.5px;
     left: 102px;
-
+    display: block;
+    width: 16px;
+    height: 1px;
     background-color: $special-grey--light;
 
     @media (min-width: $tablet-width) {
-      width: 21px;
       top: 22px;
       left: 63px;
+      width: 21px;
     }
 
     @media (min-width: $desktop-width) {
@@ -34,20 +33,19 @@
   &::before {
     content: "";
     z-index: 2;
-    display: block;
-    width: 16px;
-    height: 11px;
     position: absolute;
     top: 12px;
     left: 102px;
-
+    display: block;
+    width: 16px;
+    height: 11px;
     background-color: $basic-white;
 
     @media (min-width: $tablet-width) {
-      width: 21px;
-      height: 15px;
       top: 15px;
       left: 63px;
+      width: 21px;
+      height: 15px;
     }
 
     @media (min-width: $desktop-width) {
@@ -62,25 +60,21 @@
   width: 110px;
   padding-top: 10px;
   padding-bottom: 7px;
-
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 13px;
   text-align: center;
-
-  border: 1px solid $special-grey--light;
-
-  background-color: $basic-white;
   color: $basic-blue--dark;
+  background-color: $basic-white;
+  border: 1px solid $special-grey--light;
   letter-spacing: 0.07em;
 
   @media (min-width: $tablet-width) {
     width: 74px;
     padding-top: 10px;
     padding-bottom: 10px;
-
     font-size: 20px;
     line-height: 20px;
     letter-spacing: 0.06em;
@@ -94,7 +88,6 @@
 
   &--first {
     width: 110.5px;
-
     border-right-width: 0.5px;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
@@ -135,7 +128,6 @@
   position: relative;
   width: 220px;
   height: 2px;
-
   background-color: rgba($basic-blue--dark, 0.2);
 
   @media (max-width: $mobile-width-only) {
@@ -160,15 +152,13 @@
 
 .value-level__pin {
   position: absolute;
+  top: -4px;
   z-index: 1;
   width: 10px;
   height: 10px;
-  top: -4px;
-
+  background-color: $basic-blue--dark;
   border: 0;
   border-radius: 50%;
-
-  background-color: $basic-blue--dark;
   cursor: pointer;
 
   @media (min-width: $tablet-width) {
@@ -213,18 +203,17 @@
 }
 
 .value-level__depth {
-  height: 2px;
   position: absolute;
   left: 67px + 5px;
   right: 10px - 5px;
-
+  height: 2px;
   background-color: $basic-blue--dark;
 
   @media (min-width: $tablet-width) {
     bottom: 0;
-    height: 3px;
     left: 68px + 6.5px;
     right: 13px - 6.5px;
+    height: 3px;
   }
 
   @media (min-width: $desktop-width) {

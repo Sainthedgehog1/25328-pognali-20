@@ -21,29 +21,25 @@
 
   &--invalid::before {
     content: "Это поле должно быть заполнено";
-    display: block;
-    width: 216px;
-    padding: 8px 13px;
     position: absolute;
     bottom: 2px;
     left: 2px;
-
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-
+    display: block;
+    width: 216px;
+    padding: 8px 13px;
     font-family: "Blogger Sans", "Arial", sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 22px;
-
     color: $basic-red;
     background-color: $basic-red-light;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
 
     @media (min-width: $tablet-width) {
       width: 496px;
       padding: 15px 17px;
-
       font-size: 20px;
       line-height: 23px;
     }
@@ -56,28 +52,25 @@
 
   &::after {
     content: "";
+    position: absolute;
+    top: -272px;
     display: block;
     width: 11px;
     height: 283px;
-    top: -272px;
-    position: absolute;
-
     background-color: $basic-blue--dark;
 
     @media (max-width: $mobile-width-only) {
       left: -16px;
-
+      background-color: transparent;
       border: 2px solid $basic-blue--dark;
       border-right: 0;
-
-      background-color: transparent;
     }
 
     @media (min-width: $tablet-width) {
-      width: 2px;
-      height: 248px;
-      top: -235px;
+      top: -236px;
       right: -28px;
+      width: 2px;
+      height: 246px;
     }
 
     @media (min-width: $desktop-width) {
@@ -99,7 +92,6 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 18px;
-
   color: $basic-blue--dark;
 
   @media (max-width: $mobile-width-only) {
@@ -119,25 +111,23 @@
 
   &::before {
     content: "";
+    position: absolute;
+    top: 7px;
     display: block;
     width: 6px;
     height: 6px;
-    position: absolute;
-    top: 7px;
-
-    border-radius: 50%;
-
     background-color: $basic-blue--dark;
+    border-radius: 50%;
 
     @media (max-width: $mobile-width-only) {
       left: -14px;
     }
 
     @media (min-width: $tablet-width) {
-      width: 14px;
-      height: 14px;
       top: 11px;
       right: -33px;
+      width: 14px;
+      height: 14px;
     }
 
     @media (min-width: $desktop-width) {
@@ -148,13 +138,12 @@
 
   &::after {
     content: "";
-    display: block;
-    width: 78px;
-    height: 24px;
     position: absolute;
     top: -3px;
     right: 0;
-
+    display: block;
+    width: 78px;
+    height: 24px;
     background-repeat: no-repeat, no-repeat;
     background-position: right, center;
 
@@ -163,10 +152,10 @@
     }
 
     @media (min-width: $tablet-width) {
-      width: 70px;
-      height: 47px;
       top: -7px;
       right: 1px;
+      width: 70px;
+      height: 47px;
     }
 
     @media (min-width: $desktop-width) {
@@ -222,31 +211,27 @@
 }
 
 .countrie-plan__plan {
-  resize: none;
-
   width: 220px;
   height: 220px;
-  padding: 8px 13px;
   margin-top: 17px;
   margin-left: -2px;
+  padding: 8px 13px;
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 22px;
-
+  color: $special-grey;
   border: 1px solid $special-grey--light;
   border-radius: 4px;
-
-  color: $special-grey;
+  resize: none;
 
   @media (min-width: $tablet-width) {
     width: 500px;
     height: 142px;
-    padding: 15px 17px;
     margin-top: 40px;
     margin-left: 2px;
-
+    padding: 15px 17px;
     font-size: 20px;
     line-height: 23px;
   }

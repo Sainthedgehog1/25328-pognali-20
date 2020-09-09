@@ -76,7 +76,7 @@
         <div class="container">
           <ul class="main-nav__list">
             <li class="main-nav__item">
-              <a href="#about" class="main-nav__link" data-hover="О сервисе" data-active="О сервисе"
+              <a href="index.html#about" class="main-nav__link" data-hover="О сервисе" data-active="О сервисе"
                 aria-label="О сервисе ">
                 О сервисе
               </a>
@@ -90,7 +90,7 @@
             </li>
             <!--  -->
             <li class="main-nav__item">
-              <a href="#" class="main-nav__link" data-hover="Попутчики" data-active="Попутчики"
+              <a class="main-nav__link" data-hover="Попутчики" data-active="Попутчики"
                 aria-label="Переход на страницу попутчики">
                 Попутчики
               </a>
@@ -1377,12 +1377,12 @@
         <!--  -->
         <form class="filter__form" action="https://echo.htmlacademy.ru" method="POST" target="_blank">
           <fieldset class="filter__item">
-            <button class="filter__toggle" type="button" aria-label="Выбрать хобби">
+            <button class="filter__toggle filter__toggle--active" type="button" aria-label="Выбрать хобби">
               Хобби
               <span class="filter__colon">:</span>
             </button>
             <!--  -->
-            <div class="filter__category">
+            <div class="filter__category filter__category--active">
               <input class="filter__checkbox visually-hidden" type="checkbox" name="hobby" id="hobby-1"
                 value="Тяжелый рок" checked>
               <label class="filter__label filter__label--crutch" for="hobby-1">Спортзал</label>
@@ -1419,12 +1419,12 @@
           </fieldset>
           <!--  -->
           <fieldset class="filter__item">
-            <button class="filter__toggle" type="button" aria-label="Выбрать еду">
+            <button class="filter__toggle filter__toggle--active" type="button" aria-label="Выбрать еду">
               Еда
               <span class="filter__colon">:</span>
             </button>
             <!--  -->
-            <div class="filter__category">
+            <div class="filter__category filter__category--active">
               <input class="filter__checkbox visually-hidden" type="checkbox" name="food" id="food-1"
                 value="Тяжелый рок" checked>
               <label class="filter__label" for="food-1">Мясоед</label>
@@ -1863,7 +1863,7 @@
   <!-- ====== -->
   <!-- Подвал -->
   <!-- ====== -->
-  <footer class="footer">
+  <footer class="footer footer--catalog-page">
     <div class="container">
       <a href="index.html" class="footer__logo logo" aria-label="Переход на главную страницу">
         <picture>

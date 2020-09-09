@@ -1,6 +1,5 @@
 .step {
   display: none;
-
   border: none;
 
   &:first-of-type {
@@ -65,12 +64,11 @@
   display: contents;
 
   &::before {
+    position: relative;
+    top: -42px;
     display: block;
     width: 532px;
     height: 1px;
-    position: relative;
-    top: -42px;
-
     background-color: $special-grey--underline;
 
     @media (min-width: $tablet-width) {
@@ -78,8 +76,8 @@
     }
 
     @media (min-width: $desktop-width) {
-      width: 998px;
       top: -62px;
+      width: 998px;
     }
   }
 }
@@ -91,11 +89,8 @@
   margin-top: 31px;
   padding-top: 22px;
   padding-bottom: 23px;
-
-
-  border-radius: 10px;
-
   background-color: $basic-white;
+  border-radius: 10px;
 
   @media (min-width: $tablet-width) {
     margin-top: 59px;
@@ -106,13 +101,8 @@
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-
-    padding-top: 98px;
-    padding-bottom: 106px;
-    padding-left: 160px;
-    padding-right: 43px;
     margin-top: 57px;
-
+    padding: 98px 43px 106px 160px;
     border-radius: 60px;
   }
 }
@@ -162,14 +152,11 @@
   padding-left: 25px;
   font-size: 20px;
   line-height: 20px;
-
   color: $basic-blue--dark;
 
   @media (min-width: $tablet-width) {
     max-width: 250px;
-
     padding-left: 0;
-
     font-size: 36px;
     line-height: 36px;
   }
@@ -199,13 +186,11 @@
 }
 
 .step__list {
-  display: none;
   position: absolute;
   top: 105px;
   right: 204px;
-
+  display: none;
   list-style: none;
-
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -227,7 +212,6 @@
 
 .step__item {
   margin-top: 20px;
-
   color: rgba($basic-black, 0.6);
 
   &:first-child {
@@ -237,14 +221,12 @@
   &::before {
     content: "";
     display: inline-block;
-    vertical-align: middle;
     width: 6px;
     height: 6px;
     margin-right: 36px;
-
-    border-radius: 50%;
-
+    vertical-align: middle;
     background-color: $basic-blue--dark;
+    border-radius: 50%;
     opacity: 0.3;
   }
 
@@ -270,10 +252,9 @@
 
   @media (min-width: $tablet-width) {
     max-width: 525px;
-    padding-left: 0;
     margin-top: 36px;
     margin-left: 2px;
-
+    padding-left: 0;
     font-size: 20px;
     line-height: 24px;
   }
@@ -322,13 +303,12 @@
 
     &::before {
       content: "";
-      display: block;
-      width: 532px;
-      height: 1px;
       position: relative;
       top: -34px;
       left: 1px;
-
+      display: block;
+      width: 532px;
+      height: 1px;
       background-color: $special-grey--underline;
     }
   }
@@ -336,10 +316,10 @@
   @media (min-width: $desktop-width) {
     &::before {
       content: "";
-      width: 1000px;
       position: relative;
       top: -78px;
       left: -2px;
+      width: 1000px;
     }
   }
 }
@@ -351,15 +331,14 @@
     margin-top: 20px;
 
     @media (min-width: $tablet-width) {
-      order: 2;
-
       position: relative;
+      order: 2;
       margin-top: 64px;
 
       &::before {
         content: "";
-        width: 100%;
         top: -25px;
+        width: 100%;
       }
     }
 
@@ -368,8 +347,8 @@
 
       &::before {
         content: "";
-        width: 998px;
         top: -31px;
+        width: 998px;
       }
     }
   }
@@ -378,15 +357,14 @@
     margin-top: 20px;
 
     @media (min-width: $tablet-width) {
-      order: 4;
-
       position: relative;
+      order: 4;
       margin-top: 50px;
 
       &::before {
         content: "";
-        width: 100%;
         top: -24px;
+        width: 100%;
       }
     }
 
@@ -407,17 +385,12 @@
     }
   }
 
-  // @media (max-width: $mobile-width-only) {
-  //   margin-top: 20px;
-  // }
-
   @media (min-width: $tablet-width) {
     &::before {
-      display: block;
-      height: 1px;
       position: absolute;
       left: 0;
-
+      display: block;
+      height: 1px;
       background-color: $special-grey--underline;
     }
   }
@@ -431,22 +404,18 @@
   position: relative;
   margin-top: 20px;
   margin-left: 25px;
-
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
   line-height: 15px;
-
   color: $basic-blue--dark;
   cursor: pointer;
 
   @media (min-width: $tablet-width) {
     order: 3;
-
     margin-top: 25px;
     margin-left: 2px;
-
     font-size: 20px;
     line-height: 20px;
     letter-spacing: 0.12em;
@@ -456,28 +425,24 @@
   @media (min-width: $desktop-width) {
     align-self: flex-end;
     justify-self: flex-end;
-    margin-top: 0;
-    margin-bottom: 17px;
-    margin-left: 0;
-    margin-right: 115px;
+    margin: 0 115px 17px 0;
   }
 
   &::before {
     content: "";
     display: inline-block;
-    vertical-align: -7px;
     width: 26px;
     height: 26px;
     margin-right: 13px;
-
+    vertical-align: -7px;
     border: 1px solid $special-grey--light;
     border-radius: 4px;
 
     @media (min-width: $tablet-width) {
-      vertical-align: middle;
       width: 36px;
       height: 36px;
       margin-right: 22px;
+      vertical-align: middle;
     }
 
     @media (min-width: $desktop-width) {
@@ -487,11 +452,10 @@
 
   &::after {
     content: "";
-    width: 8px;
-    height: 8px;
     position: absolute;
     left: 0;
-
+    width: 8px;
+    height: 8px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 8px 8px;
@@ -505,7 +469,6 @@
     @media (min-width: $tablet-width) {
       width: 36px;
       height: 36px;
-
       background-size: 11px 11px;
     }
   }
@@ -542,7 +505,6 @@
 
   @media (min-width: $tablet-width) {
     order: 5;
-
     margin-top: 59px;
   }
 
@@ -558,11 +520,6 @@
   width: 229px;
   margin-top: 22px;
   padding: 5px 0 5px 3px;
-
-
-  border: none;
-  border-radius: 50px;
-
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -570,13 +527,13 @@
   line-height: 30px;
   text-decoration: none;
   text-align: left;
-
   color: $basic-blue;
   background-color: $basic-yellow;
+  border: none;
+  border-radius: 50px;
 
   @media (max-width: $mobile-width-only) {
     align-self: center;
-
     text-align: center;
     text-transform: uppercase;
   }
@@ -586,16 +543,13 @@
     margin-top: 47px;
     margin-left: 2px;
     padding: 27px 60px 29px 34px;
-
-    border-radius: 20px;
-
     font-size: 24px;
     line-height: 24px;
+    border-radius: 20px;
   }
 
   @media (min-width: $desktop-width) {
     width: 286px;
-
     margin-top: 57px;
     margin-left: 0;
   }
@@ -606,7 +560,6 @@
     display: block;
     width: 14px;
     height: 14px;
-
     border: 7px solid transparent;
     border-right: 0;
     border-left: 10px solid #1d2e5b;
@@ -684,8 +637,6 @@
   display: block;
   width: 229px;
   padding-right: 2px;
-  border: none;
-
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -693,14 +644,13 @@
   line-height: 30px;
   text-decoration: none;
   text-align: right;
-
   color: $basic-blue--dark;
+  border: none;
   outline-offset: 3px;
 
   @media (max-width: $mobile-width-only) {
     align-self: center;
     margin-top: 11px;
-
     letter-spacing: 0.01em;
     text-align: center;
     text-transform: uppercase;
@@ -717,7 +667,6 @@
     content: "";
     position: absolute;
     display: block;
-
     border: 7px solid transparent;
     border-right: 10px solid #1d2e5b;
     border-left: 0;

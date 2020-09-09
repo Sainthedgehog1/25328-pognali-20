@@ -1,14 +1,12 @@
 .services {
   position: relative;
-  counter-reset: service-iterator;
-
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
   line-height: 16px;
-
   color: $special-grey;
+  counter-reset: service-iterator;
 
   @media (min-width: $tablet-width) {
     font-size: 28px;
@@ -17,20 +15,18 @@
 
   &::before {
     content: "";
-    display: block;
-    width: 200px;
-    height: 1px;
     position: absolute;
     top: -13px;
     left: 0;
-
+    display: block;
+    width: 200px;
+    height: 1px;
     background-color: $special-grey--underline;
 
     @media (min-width: $tablet-width) {
-      width: 562px;
-
       top: 2px;
       left: 92px;
+      width: 562px;
     }
 
     @media (min-width: $desktop-width) {
@@ -40,11 +36,11 @@
 }
 
 .services__wrapper {
-  counter-increment: service-iterator;
   position: relative;
   display: flex;
   width: 246px;
   padding-right: 40px;
+  counter-increment: service-iterator;
 
   @media (max-width: $mobile-width-only) {
     flex-direction: column;
@@ -83,47 +79,42 @@
 
   &::after {
     content: counter(service-iterator);
+    position: absolute;
+    top: -10px;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 34px;
     height: 34px;
-    position: absolute;
-    top: -10px;
-
-    border-radius: 50%;
-
     color: $basic-white;
+    border-radius: 50%;
 
     @media (max-width: $mobile-width-only) {
       right: 0;
     }
 
     @media (min-width: $tablet-width) {
-      width: 68px;
-      height: 68px;
-
       top: 0;
       left: 0;
+      width: 68px;
+      height: 68px;
     }
   }
 
   &::before {
     content: "";
-    display: block;
-    width: 200px;
-    height: 1px;
     position: absolute;
     bottom: -15px;
     left: 0;
-
+    display: block;
+    width: 200px;
+    height: 1px;
     background-color: $special-grey--underline;
 
     @media (min-width: $tablet-width) {
-      width: 562px;
-
       bottom: -1px;
       left: 92px;
+      width: 562px;
     }
 
     @media (min-width: $desktop-width) {
@@ -185,10 +176,6 @@
   }
 }
 
-// .services__price {
-//   padding-right: 40px;
-// }
-
 .services__price {
   @media (max-width: $mobile-width-only) {
     margin-top: 6px;
@@ -209,7 +196,6 @@
 
 .services__wrapper:nth-of-type(3) .services__price {
   @media (min-width: $desktop-width) {
-    // margin-right: -1px;
     padding-top: 2px;
     padding-right: 1px;
   }

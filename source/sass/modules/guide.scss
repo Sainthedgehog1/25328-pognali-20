@@ -1,18 +1,10 @@
 .guide {
-  // display: flex;
   display: grid;
   grid-template-columns: 1fr;
-
   list-style: none;
-
   counter-reset: countrie-iterator;
 
-  // @media (max-width: $mobile-width-only) {
-  //   flex-direction: column;
-  // }
-
   @media (min-width: $tablet-width) {
-    // flex-wrap: wrap;
     grid-template-columns: 1fr 1fr;
   }
 
@@ -26,18 +18,15 @@
 .guide__item {
   position: relative;
   width: 270px;
-  padding: 21px 96px 33px 24px;
   margin-top: -10px;
-
-  counter-increment: countrie-iterator;
-
+  padding: 21px 96px 33px 24px;
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 18px;
-
   color: $basic-blue;
+  counter-increment: countrie-iterator;
 
   &:nth-child(4n + 1) {
     background-color: $special-orange;
@@ -60,14 +49,12 @@
     position: absolute;
     top: 21px;
     left: 239px;
-
     color: $basic-white;
 
     @media (min-width: $tablet-width) {
       top: unset;
       bottom: 23px;
       left: 34px;
-
       font-size: 30px;
       line-height: 30px;
     }
@@ -76,7 +63,6 @@
       top: 27px;
       bottom: unset;
       left: 300px;
-
       font-size: 24px;
       line-height: 24px;
     }
@@ -92,16 +78,14 @@
 
     &:last-child {
       padding-bottom: 23px;
-
       border-radius: 10px;
     }
   }
 
   @media (min-width: $tablet-width) {
     width: 365px;
-    padding: 29px 140px 63px 33px;
     margin-top: 0;
-
+    padding: 29px 140px 63px 33px;
     font-size: 24px;
     line-height: 24px;
 
@@ -139,7 +123,6 @@
     padding-top: 28px;
     padding-bottom: 31px;
     padding-left: 31px;
-
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 

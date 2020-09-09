@@ -4,19 +4,18 @@
   grid-template-columns: min-content 1fr min-content;
   align-items: center;
   width: 220px;
+  margin-bottom: 21px;
   padding-top: 10px;
   padding-bottom: 10px;
-  margin-bottom: 21px;
 
   &::after,
   &::before {
     content: "";
+    position: absolute;
+    left: 0;
     display: block;
     width: 100%;
     height: 1px;
-    position: absolute;
-    left: 0;
-
     background-color: $special-grey--calendar;
   }
 
@@ -30,29 +29,28 @@
 
   @media (min-width: $tablet-width) {
     width: 532px;
-    padding: 22px 17px 22px;
     margin-bottom: 39px;
+    padding: 22px 17px 22px;
   }
 
   @media (min-width: $desktop-width) {
     width: 1000px;
+    margin-bottom: 16px;
     padding-left: 0;
     padding-top: 23px;
     padding-bottom: 21px;
-    margin-bottom: 16px;
+
   }
 }
 
 .calendar__button {
   width: 9px;
   height: 18px;
-
-  border: none;
   background-size: 9px 18px;
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: center;
-
+  border: none;
   opacity: 0.3;
   outline-offset: 3px;
   cursor: pointer;
@@ -68,14 +66,12 @@
   @media (min-width: $tablet-width) {
     width: 19px;
     height: 34px;
-
     background-size: 19px 34px;
   }
 
   @media (min-width: $desktop-width) {
     width: 16px;
     height: 34px;
-
     background-size: 16px 28px;
   }
 
@@ -90,11 +86,8 @@
 }
 
 .calendar__date {
-  vertical-align: bottom;
   width: 194px;
   margin-left: 4px;
-  border: none;
-
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -102,13 +95,13 @@
   line-height: 20px;
   text-align: center;
   text-transform: capitalize;
-
+  vertical-align: bottom;
   color: $basic-blue--dark;
   background-color: transparent;
+  border: none;
 
   @media (min-width: $tablet-width) {
     width: 452px;
-
     font-size: 36px;
     line-height: 36px;
   }
@@ -124,13 +117,11 @@
 
 .calendar__day {
   padding-bottom: 8px;
-
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 18px;
-
   color: $special-grey;
 
   &--day-off {
@@ -157,10 +148,6 @@
 .calendar__table {
   border-collapse: collapse;
 
-  // @media (max-width: $mobile-width-only) {
-  //   margin-left: 1px;
-  // }
-
   @media (min-width: $tablet-width) {
     margin-left: -1px;
   }
@@ -172,7 +159,6 @@
 
 .calendar__number {
   height: 31px;
-
   border: 1px solid $special-grey--calendar;
 
   @media (max-width: $mobile-width-only) {
@@ -213,14 +199,12 @@
   justify-content: center;
   align-items: center;
   height: 100%;
-
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
   text-decoration: none;
-
   color: $basic-blue--dark;
   background-color: $basic-blue--light;
 
@@ -232,7 +216,6 @@
   @media (min-width: $desktop-width) {
     justify-content: flex-start;
     align-items: flex-start;
-
     padding-top: 13px;
     padding-left: 16px;
   }
@@ -246,7 +229,6 @@
     color: $special-grey;
     background-color: transparent;
     opacity: 0.3;
-
     pointer-events: none;
   }
 
@@ -257,9 +239,9 @@
 
   &--check-in::after,
   &--check-out::after {
-    display: none;
     left: 15px;
     bottom: 13px;
+    display: none;
 
     @media (min-width: $desktop-width) {
       display: block;
@@ -277,11 +259,10 @@
   }
 
   &:hover {
-    outline: 4px solid $special-red--calendar;
-    outline-offset: -3px;
-
     color: $basic-white;
     background-color: $basic-blue--dark;
+    outline: 4px solid $special-red--calendar;
+    outline-offset: -3px;
   }
 }
 

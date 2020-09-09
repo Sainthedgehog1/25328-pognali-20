@@ -1,14 +1,13 @@
 .tel {
   position: relative;
-  // min-height: 68px;
   padding-left: 61px;
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
   line-height: 18px;
-  text-transform: uppercase;
   text-decoration: none;
+  text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
     padding-left: 91px;
@@ -28,10 +27,8 @@
   width: 45px;
   height: 45px;
   margin-right: 11px;
-
-  border-radius: 50%;
-
   background-color: $special-blue--buble;
+  border-radius: 50%;
 
   @media (min-width: $tablet-width) {
     top: -22px;

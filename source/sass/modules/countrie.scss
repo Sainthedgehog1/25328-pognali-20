@@ -1,6 +1,6 @@
 .countrie {
-  display: flex;
   position: relative;
+  display: flex;
 
   @media (max-width: $mobile-width-only) {
     flex-direction: column;
@@ -8,12 +8,11 @@
 
   &::before {
     content: "";
+    position: absolute;
+    top: 86px;
     display: block;
     width: 35px;
     height: 24px;
-    position: absolute;
-    top: 86px;
-
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -22,10 +21,10 @@
     }
 
     @media (min-width: $tablet-width) {
-      width: 70px;
-      height: 47px;
       top: 18px;
       right: 150px;
+      width: 70px;
+      height: 47px;
     }
 
     @media (min-width: $desktop-width) {
@@ -74,10 +73,9 @@
 }
 
 .countrie__img {
-  vertical-align: top;
   width: 270px;
   height: 110px;
-
+  vertical-align: top;
   border-top-right-radius: 10px;
 
   @media (max-width: $mobile-width-only) {
@@ -87,7 +85,6 @@
   @media (min-width: $tablet-width) {
     width: 186px;
     height: 140px;
-
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
   }
@@ -122,51 +119,38 @@
   padding-bottom: 5px;
   padding-left: 24px;
   padding-right: 24px;
-
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
-
-  background-color: $basic-white;
   color: rgba($special-grey, 0.3);
+  background-color: $basic-white;
 
   @media (max-width: $mobile-width-only) {
     display: grid;
     grid-template-columns: 159px 1fr;
     grid-template-rows: min-content min-content;
-
     margin-top: -11px;
-
     border-radius: 10px;
   }
 
   @media (min-width: $tablet-width) {
     flex-direction: column;
     width: 431px;
-    padding-top: 28px;
-    padding-bottom: 19px;
-    padding-left: 29px;
-    padding-right: 29px;
-
+    padding: 28px 29px 19px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
   }
 
   @media (min-width: $desktop-width) {
     width: 374px;
-    padding-top: 22px;
-    padding-bottom: 19px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 22px 30px 19px;
   }
 }
 
 .countrie__name {
   max-width: 80px;
-
   font-size: 21px;
   line-height: 21px;
-
   color: $basic-black;
 
   @media (max-width: $mobile-width-only) {
@@ -175,7 +159,6 @@
 
   @media (min-width: $tablet-width) {
     max-width: 300px;
-
     font-size: 24px;
     line-height: 24px;
   }
@@ -198,7 +181,6 @@
 .countrie__slogan {
   max-width: 160px;
   margin-top: 2px;
-
   font-size: 16px;
   line-height: 18px;
   letter-spacing: -0.3px;
@@ -210,7 +192,6 @@
   @media (min-width: $tablet-width) {
     max-width: 300px;
     margin-top: 5px;
-
     font-size: 20px;
     line-height: 20px;
     letter-spacing: -0.5px;
@@ -248,7 +229,6 @@
     height: 14px;
     margin-right: 5px;
     vertical-align: middle;
-
     background-image: url("../img/user.svg");
     background-size: 11px 12px;
     background-repeat: no-repeat;
@@ -259,7 +239,6 @@
       width: 24px;
       height: 24px;
       margin-right: 8px;
-
       background-size: 18px 20px;
     }
 
@@ -275,11 +254,9 @@
 
   @media (min-width: $tablet-width) {
     order: 1;
-
     max-width: 300px;
     margin-top: 20px;
     margin-left: -3px;
-
     font-size: 20px;
     line-height: 20px;
   }

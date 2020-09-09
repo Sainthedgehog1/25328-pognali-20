@@ -7,32 +7,27 @@
   height: 42px;
   padding-left: 11px;
   padding-right: 15px;
-
-  border-radius: 4px;
-
   background-color: $basic-blue--light;
+  border-radius: 4px;
 
   &::after {
     content: "";
+    position: absolute;
+    top: 17px;
+    right: 49px;
+    z-index: 2;
     display: block;
     width: 8px;
     height: 8px;
-    position: absolute;
-    z-index: 2;
-    top: 17px;
-    right: 49px;
-
+    background-color: $basic-blue--light;
     border-radius: 50%;
     border: 1px solid $special-grey--light;
 
-    background-color: $basic-blue--light;
-
     @media (min-width: $tablet-width) {
-      width: 14px;
-      height: 14px;
-
       top: 27px;
       right: -33px;
+      width: 14px;
+      height: 14px;
     }
 
     @media (min-width: $desktop-width) {
@@ -42,13 +37,12 @@
   }
 
   &::before {
-    display: block;
-    width: 1px;
-    height: 154px;
     position: absolute;
     top: -45px;
     right: -27px;
-
+    display: block;
+    width: 1px;
+    height: 154px;
     background-image: linear-gradient(to bottom, $special-grey--underline 60%, $basic-white 100%);
 
     @media (min-width: $tablet-width) {
@@ -58,7 +52,6 @@
     @media (min-width: $desktop-width) {
       height: 268px;
       right: -45px;
-
       background-color: $special-grey--underline;
       background-image: none;
     }
@@ -98,7 +91,6 @@
   line-height: 18px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-
   color: $basic-blue--dark;
 
   @media (min-width: $tablet-width) {
@@ -115,14 +107,11 @@
 .new-countrie__add-button {
   width: 14px;
   height: 14px;
-
-  border: none;
-
   background-color: transparent;
   background-image: url("../img/show-more-plus.svg");
   background-repeat: no-repeat;
   background-position: center;
-
+  border: none;
   opacity: 0.2;
   outline-offset: 3px;
   cursor: pointer;

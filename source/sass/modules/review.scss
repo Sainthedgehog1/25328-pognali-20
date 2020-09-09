@@ -1,8 +1,6 @@
 .review {
   max-width: 160px;
-
   font-family: "Blogger Sans", "Arial", sans-serif;
-
   color: $basic-white;
 
   @media (min-width: $tablet-width) {
@@ -13,7 +11,6 @@
 .review__text {
   max-width: 150px;
   margin-bottom: 18px;
-
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
@@ -21,9 +18,7 @@
 
   @media (min-width: $tablet-width) {
     max-width: 265px;
-
     margin-bottom: 45px;
-
     font-size: 28px;
     line-height: 33px;
   }
@@ -35,7 +30,6 @@
 
 .review__author {
   max-width: 160px;
-
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -43,7 +37,6 @@
 
   @media (min-width: $tablet-width) {
     max-width: 250px;
-
     font-size: 21px;
     line-height: 25px;
   }

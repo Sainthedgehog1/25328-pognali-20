@@ -1,12 +1,10 @@
 .countries {
   position: relative;
   z-index: 6;
-  overflow: hidden;
-
+  background-color: $basic-blue--light;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
-
-  background-color: $basic-blue--light;
+  overflow: hidden;
 
   @media (min-width: $tablet-width) {
     border-bottom-left-radius: 60px;
@@ -20,7 +18,6 @@
 }
 
 .countries .container {
-  // align-items: center;
   margin-top: -30px;
   padding-top: 99px;
   padding-bottom: 34px;
@@ -31,7 +28,6 @@
     margin-top: -60px;
     padding-top: 129px;
     padding-bottom: 80px;
-
     background-repeat: no-repeat;
     background-position: 40px 466px, 440px 140px;
     background-size: 141px 141px, 288px 574px;
@@ -51,10 +47,8 @@
     grid-template-rows: min-content auto auto;
     column-gap: 60px;
     row-gap: 39px;
-
     padding-top: 221px;
     padding-bottom: 138px;
-
     background-position: 60px 150px, 1093px 148px;
     background-size: 140px 140px, 287px 575px;
   }
@@ -80,18 +74,15 @@
   color: $special-grey;
 
   @media (min-width: $tablet-width) {
+    align-self: flex-start;
     max-width: 415px;
     margin-top: 59px;
-
-    align-self: flex-start;
-
     line-height: 33px;
   }
 
   @media (min-width: $desktop-width) {
     max-width: 492px;
     margin-top: 21px;
-
     padding-left: 112px;
   }
 }
@@ -109,20 +100,18 @@
     grid-row: 1 / -1;
     justify-self: flex-end;
     align-self: baseline;
-
     margin-top: 0;
   }
 
   &::after {
     @media (min-width: $tablet-width) {
       content: "";
-      display: block;
-      width: 100%;
-      height: 140px;
       position: absolute;
       bottom: 0;
       left: 0;
-
+      display: block;
+      width: 100%;
+      height: 140px;
       background-image: linear-gradient(transparent 50%, $basic-blue--light 90%);
     }
   }

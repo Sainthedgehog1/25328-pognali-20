@@ -1,18 +1,14 @@
 .map__header {
   position: relative;
   z-index: 2;
-  overflow: hidden;
-
   margin-top: -30px;
-
+  background-color: $basic-yellow;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
-
-  background-color: $basic-yellow;
+  overflow: hidden;
 
   @media (min-width: $tablet-width) {
     margin-top: -60px;
-
     border-bottom-left-radius: 56px;
     border-bottom-right-radius: 56px;
   }
@@ -47,7 +43,6 @@
   grid-template-columns: min-content 1fr;
   column-gap: 16px;
   align-items: center;
-
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -55,20 +50,17 @@
   line-height: 22px;
   text-transform: uppercase;
   text-decoration: none;
-
   color: $basic-blue--dark;
 
   @media (min-width: $tablet-width) {
     column-gap: 26px;
     margin-right: 95px;
-
     font-size: 28px;
     line-height: 28px;
   }
 
   @media (min-width: $desktop-width) {
     column-gap: 31px;
-
     margin: 0 148px;
   }
 
@@ -77,19 +69,16 @@
     display: block;
     width: 45px;
     height: 45px;
-
-    border-radius: 50%;
-
     background-color: $special-blue--buble;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 21px 21px;
     background-image: url("../img/location.svg");
+    border-radius: 50%;
 
     @media (min-width: $tablet-width) {
       width: 68px;
       height: 68px;
-
       background-size: 32px 32px;
     }
 
@@ -123,13 +112,13 @@
 }
 
 .map__wrapper {
-  overflow: hidden;
   position: relative;
   z-index: 1;
   height: 424px;
   margin-left: auto;
   margin-right: auto;
   margin-top: -65px;
+  overflow: hidden;
 
   @media (min-width: $tablet-width) {
     height: 581px;
@@ -138,16 +127,15 @@
 
   @media (min-width: $desktop-width) {
     height: 584px;
-
     margin-top: -93px;
   }
 }
 
 .map__img {
   display: block;
-  margin: 0 auto;
   width: 320px;
   height: 424px;
+  margin: 0 auto;
 
   @media (min-width: $tablet-width) {
     width: 768px;

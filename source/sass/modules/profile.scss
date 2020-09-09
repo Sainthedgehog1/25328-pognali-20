@@ -28,9 +28,9 @@
 
   @media (min-width: $desktop-width) {
     position: absolute;
-    z-index: 9;
     top: -148px;
     right: 389px;
+    z-index: 9;
   }
 }
 
@@ -41,11 +41,11 @@
   }
 
   @media (min-width: $desktop-width) {
-    display: block;
     position: absolute;
     z-index: 9;
     top: -190px;
     right: 155px;
+    display: block;
     margin-top: 0;
   }
 }
@@ -53,22 +53,19 @@
 .profile__avatar {
   width: 100px;
   height: 100px;
-  object-fit: cover;
   vertical-align: top;
-
   border-radius: 50%;
+  object-fit: cover;
 
   @media (min-width: $tablet-width) {
     width: 94px;
     height: 94px;
-
     border-radius: 5px;
   }
 
   @media (min-width: $desktop-width) {
     width: 190px;
     height: 190px;
-
     border-radius: 10px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
@@ -103,21 +100,17 @@
   display: none;
   padding-top: 15px;
   padding-bottom: 14px;
-
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 18px;
-
   text-align: center;
   text-transform: uppercase;
-
   color: $basic-blue;
   background-color: $special-blue--light;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   cursor: pointer;
 
   @media (min-width: $desktop-width) {
@@ -139,10 +132,9 @@
 .profile__change-button {
   display: block;
   width: 270px;
+  margin-top: 18px;
   padding-top: 10px;
   padding-bottom: 12px;
-  margin-top: 18px;
-
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -150,24 +142,20 @@
   line-height: 18px;
   text-align: center;
   text-transform: uppercase;
-
-  border-radius: 40px;
-
   color: $basic-blue;
   background-color: $special-blue--light;
+  border-radius: 40px;
 
   @media (min-width: $tablet-width) {
     order: 3;
     width: 618px;
+    margin-top: 51px;
     padding-top: 20px;
     padding-bottom: 22px;
     padding-right: 1px;
-    margin-top: 51px;
-
-    border-radius: 10px;
-
     font-size: 20px;
     line-height: 18px;
+    border-radius: 10px;
     letter-spacing: 0.09em;
   }
 
@@ -189,15 +177,14 @@
   display: flex;
   justify-content: center;
   width: 270px;
-
   border: 1px solid $special-grey--light;
   border-radius: 10px;
 
   &--tags {
     @media (max-width: $mobile-width-only) {
+      margin-top: 33px;
       padding-top: 25px;
       padding-bottom: 26px;
-      margin-top: 33px;
     }
 
     @media (min-width: $tablet-width) {
@@ -210,10 +197,10 @@
 
     @media (min-width: $desktop-width) {
       order: 0;
-      width: 732px;
-      padding-left: 38px;
-      margin-top: 0;
       justify-content: left;
+      width: 732px;
+      margin-top: 0;
+      padding-left: 38px;
     }
   }
 
@@ -259,25 +246,19 @@
 }
 
 .profile__tags {
-  resize: none;
-
   width: 220px;
-
-
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 18px;
-
-  border: none;
-
   color: rgba($special-grey, 0.6);
   background-color: transparent;
+  border: none;
+  resize: none;
 
   @media (min-width: $tablet-width) {
     width: 538px;
-
     font-size: 20px;
     line-height: 22px;
   }
@@ -294,17 +275,14 @@
 
 .profile__subtitle {
   position: absolute;
-
   width: min-content;
   padding: 0 17px;
-
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-
   color: $basic-blue--dark;
   background-color: $basic-blue--light;
 
@@ -317,7 +295,6 @@
     padding: 0 16px;
     font-size: 20px;
     line-height: 20px;
-
     letter-spacing: 0.08em;
   }
 

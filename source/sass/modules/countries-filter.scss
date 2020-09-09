@@ -1,18 +1,15 @@
 .countries-filter {
-  width: 100%;
   position: absolute;
   z-index: 3;
-  overflow: hidden;
+  width: 100%;
   margin-top: -20px;
-
+  background-color: $special-grey--filter;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-
-  background-color: $special-grey--filter;
+  overflow: hidden;
 
   @media (min-width: $tablet-width) {
     margin-top: -60px;
-
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
   }
@@ -36,7 +33,6 @@
 .countries-filter .container {
   padding-top: 40px;
   padding-bottom: 16px;
-
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -52,11 +48,9 @@
 
 .countries-filter__title {
   display: inline;
-
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-
   color: $special-blue--dark;
 
   @media (min-width: $tablet-width) {
@@ -66,7 +60,6 @@
   @media (min-width: $desktop-width) {
     display: inline;
     margin-left: 23px;
-
     font-size: 20px;
     line-height: 20px;
   }
@@ -78,7 +71,6 @@
     height: 10px;
     margin-right: 12px;
     vertical-align: revert;
-
     background-image: url("../img/filter.svg");
     background-size: 15px 10px;
     background-repeat: no-repeat;
@@ -88,7 +80,6 @@
       width: 23px;
       height: 15px;
       margin-right: 22px;
-
       background-size: 23px 15px;
     }
   }
@@ -96,21 +87,18 @@
 
 .countries-filter__toggle {
   position: relative;
+  float: right;
   height: 18px;
   vertical-align: bottom;
-  float: right;
-
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 0;
   line-height: 20px;
   text-transform: uppercase;
-
-  border: none;
-
   color: $special-blue--dark;
   background-color: transparent;
+  border: none;
   outline-offset: 3px;
   cursor: pointer;
 
@@ -122,7 +110,6 @@
   @media (min-width: $tablet-width) {
     height: 20px;
     padding-right: 56px;
-
     font-size: 20px;
   }
 
@@ -142,29 +129,24 @@
 
   &::after {
     content: "";
-    display: block;
-    width: 3px;
-    height: 3px;
     position: absolute;
     left: 3px;
     top: 7.5px;
-
+    display: block;
+    width: 3px;
+    height: 3px;
+    background-color: $special-blue--dark;
     border-radius: 50%;
-
     box-shadow:
       7px 0 0 0 $special-blue--dark,
       14px 0 0 0 $special-blue--dark;
-
-    background-color: $special-blue--dark;
-
     transition: 0.3s ease all;
 
     @media (min-width: $tablet-width) {
-      width: 6px;
-      height: 6px;
       right: 24px;
       left: unset;
-
+      width: 6px;
+      height: 6px;
       box-shadow:
         12px 0 0 0 $special-blue--dark,
         24px 0 0 0 $special-blue--dark;
@@ -190,26 +172,23 @@
     &::after,
     &::before {
       content: "";
-      display: block;
-      width: 19px;
-      height: 2px;
       position: absolute;
       top: 7px;
       left: unset;
       right: 0;
-
+      display: block;
+      width: 19px;
+      height: 2px;
+      background-color: $special-blue--dark;
       border-radius: 2px;
       box-shadow: none;
-
-      background-color: $special-blue--dark;
-
       transition: 0.3s ease transform;
 
       @media (min-width: $tablet-width) {
-        width: 26px;
-        height: 2px;
         right: 0;
         top: 9px;
+        width: 26px;
+        height: 2px;
       }
 
       @media (min-width: $desktop-width) {
@@ -259,7 +238,6 @@
   line-height: 18px;
   text-transform: uppercase;
   text-decoration: none;
-
   color: rgba($special-blue--dark, 0.3);
 
   @media (min-width: $tablet-width) {
@@ -302,20 +280,18 @@
 
 .countries-filter__alphabet {
   position: relative;
+  flex-wrap: wrap;
   display: none;
   width: 220px;
   margin-top: 23px;
-  flex-wrap: wrap;
-
   list-style: none;
 
   @media (max-width: $mobile-width-only) {
     margin-left: auto;
     margin-right: auto;
-    background-clip: content-box;
     padding-bottom: 271px;
-
     background-color: $basic-white;
+    background-clip: content-box;
   }
 
   @media (min-width: $tablet-width) {
@@ -394,7 +370,6 @@
   align-items: center;
   justify-content: center;
   height: 100%;
-
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -403,9 +378,7 @@
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-
   color: $basic-blue--dark;
-  // outline: none;
 
   @media (max-width: $mobile-width-only) {
     border: 1px solid $special-grey--light;
@@ -413,29 +386,27 @@
     &:hover,
     &:focus {
       z-index: 1;
-
       border-color: $special-grey--border;
     }
 
     &:active {
-      border-color: $basic-blue--dark;
-      background-color: $basic-blue--dark;
       color: $basic-white;
+      background-color: $basic-blue--dark;
+      border-color: $basic-blue--dark;
     }
 
     &--active {
-      pointer-events: none;
+      z-index: 2;
       color: $basic-white;
       background-color: $basic-blue--dark;
       border-color: $basic-blue--dark;
-      z-index: 2;
+      pointer-events: none;
     }
   }
 
   @media (min-width: $tablet-width) {
     font-size: 60px;
     line-height: 60px;
-
     color: rgba($basic-blue--dark, 0.3);
 
     &:hover,
@@ -448,19 +419,16 @@
     }
 
     &--active {
-      pointer-events: none;
-
       color: $basic-blue--dark;
+      pointer-events: none;
     }
   }
 
   @media (min-width: $desktop-width) {
-    pointer-events: none;
-
     width: min-content;
     height: 60px;
-
     color: $basic-blue--dark;
+    pointer-events: none;
   }
 }
 
@@ -778,12 +746,11 @@
 }
 
 .countries-filter__cities {
-  display: none;
-  width: 220px;
   position: absolute;
   top: 217px;
   left: 2px;
-
+  display: none;
+  width: 220px;
   list-style: none;
 
   @media (min-width: $tablet-width) {
@@ -795,7 +762,6 @@
   @media (min-width: $desktop-width) {
     position: static;
     display: block;
-
     margin-top: 37px;
     margin-bottom: 31px;
   }
@@ -805,8 +771,8 @@
   }
 
   &--scroll {
-    overflow-y: scroll;
     max-height: 242px;
+    overflow-y: scroll;
 
     @media (min-width: $tablet-width) {
       max-height: 330px;
@@ -819,14 +785,6 @@
     & {
       margin-left: -2px;
     }
-
-    // &:nth-of-type(2) {
-    //   margin-left: 1px;
-    // }
-
-    // &:nth-of-type(2) {
-    //   margin-left: 5px;
-    // }
   }
 }
 
@@ -835,10 +793,6 @@
     & {
       margin-left: 1px;
     }
-
-    // &:nth-of-type(2) {
-    //   margin-left: 5px;
-    // }
   }
 }
 
@@ -1029,7 +983,6 @@
   }
 }
 
-
 .countries-filter__letter-wrapper:nth-of-type(24) .countries-filter__cities {
   @media (min-width: $desktop-width) {
     & {
@@ -1038,7 +991,6 @@
     }
   }
 }
-
 
 .countries-filter__letter-wrapper:nth-of-type(25) .countries-filter__cities {
   @media (min-width: $desktop-width) {
@@ -1064,7 +1016,6 @@
   font-size: 16px;
   line-height: 22px;
   text-decoration: none;
-
   color: $special-grey;
 
   @media (min-width: $tablet-width) {
@@ -1088,31 +1039,26 @@
   margin-top: 13px;
   margin-bottom: 12px;
   padding: 11px 0 8px 1px;
-
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
   line-height: 20px;
-
-  border: none;
-  border-radius: 20px;
-
   text-transform: uppercase;
-
   color: $special-blue--dark;
   background-color: $special-grey--button;
+  border: none;
+  border-radius: 20px;
   outline-offset: 3px;
 
   &::before {
     content: "";
     display: inline-block;
-    vertical-align: middle;
     width: 13px;
     height: 13px;
     margin-top: -3px;
     margin-right: 12px;
-
+    vertical-align: middle;
     background-image: url("../img/close.svg");
     background-repeat: no-repeat;
 
@@ -1129,10 +1075,9 @@
 
   @media (min-width: $tablet-width) {
     width: 615px;
+    margin: 43px 0 18px 4px;
     padding-top: 40px;
     padding-bottom: 40px;
-    margin: 43px 0 18px 4px;
-
     font-size: 20px;
     line-height: 20px;
   }

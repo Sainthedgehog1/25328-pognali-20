@@ -39,9 +39,9 @@ var isLonely = function () {
   }
 }
 
-var openDropdown = function (element) {
-  dropdown.style.left = element.parentNode.parentNode.offsetLeft + element.offsetLeft + "px";
-  dropdown.style.top = element.parentNode.parentNode.offsetTop + element.offsetTop + "px";
+var openDropdown = function (element, callback) {
+  callback();
+
   dropdown.classList.add("countrie-dropdown--active");
 
   currentInput.parent = element;
@@ -62,20 +62,30 @@ var closeDropdown = function () {
 var addNewCountrie = function () {
   var element = countriesElements.template.cloneNode(true);
 
+  function onWindowResize(){
+    dropdown.style.left = element.parentNode.parentNode.offsetLeft + element.offsetLeft + "px";
+    dropdown.style.top = element.parentNode.parentNode.offsetTop + element.offsetTop + "px";
+  }
+
   element.querySelector(".input-countrie__delete-button").addEventListener("click", function (evt) {
     evt.preventDefault();
 
     element.remove();
+
+    window.removeEventListener("resize", onWindowResize);
+
     isLonely();
   })
 
   element.querySelector(".input-countrie__dropdown-button").addEventListener("click", function (evt) {
     evt.preventDefault();
 
-    openDropdown(element);
+    openDropdown(element, onWindowResize);
   })
 
   countries.appendChild(element);
+
+  window.addEventListener("resize", onWindowResize);
 }
 
 var addNewTextarea = function (countrie, index, flag) {

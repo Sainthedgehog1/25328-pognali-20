@@ -1,29 +1,23 @@
 .pagination {
-  display: flex;
   position: relative;
-
+  display: flex;
   border-radius: 20px;
 
   @media (max-width: $mobile-width-only) {
     &::before {
       content: "";
+      position: absolute;
+      left: 135px;
+      z-index: 0;
       width: 1px;
       height: 51px;
-      position: absolute;
-      z-index: 0;
-      left: 135px;
-
       background-color: $basic-blue--light;
     }
   }
 
   @media (min-width: $tablet-width) {
     width: 688px;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    padding-left: 28px;
-    padding-right: 35px;
-
+    padding: 25px 35px 25px 28px;
     background-color: $basic-white;
   }
 
@@ -47,20 +41,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
   text-decoration: none;
-
   color: $basic-blue--dark;
-
   border-radius: 50%;
 
   @media (min-width: $tablet-width) {
     width: 50px;
     height: 50px;
-
     font-size: 20px;
     line-height: 20px;
   }
@@ -91,7 +81,6 @@
   @media (max-width: $mobile-width-only) {
     width: 135px;
     height: 51px;
-
     background-color: $basic-white;
   }
 
@@ -162,7 +151,6 @@
 
   &--inactive {
     pointer-events: none;
-    // opacity: 0.1;
   }
 }
 
@@ -182,9 +170,10 @@
 
   &::before {
     margin-left: -1px;
+    vertical-align: -20px;
     border-left: 10px solid $basic-blue--dark;
     border-right: 0;
-    vertical-align: -20px;
+
 
     @media (min-width: $tablet-width) {
       vertical-align: -4px;
@@ -218,6 +207,5 @@
 
   &--inactive {
     pointer-events: none;
-    // opacity: 0.1;
   }
 }

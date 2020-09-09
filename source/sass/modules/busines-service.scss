@@ -1,25 +1,17 @@
 .busines-service {
   position: fixed;
-  top: 50%;
+  top: 135px;
   left: 50%;
-  transform: translate(-50%, -50%);
+  z-index: 10;
   display: none;
-  width: 270px;
-  // top: 3692px;
-  padding-top: 32px;
   flex-direction: column;
   align-items: center;
-  // position: absolute;
-  z-index: 10;
-  // left: 0;
-  // right: 0;
-  // margin-left: auto;
-  // margin-right: auto;
-
-  border-radius: 20px;
-
+  width: 270px;
+  padding-top: 32px;
   background-color: $basic-white;
+  border-radius: 20px;
   box-shadow: 0 2px 8px rgba($basic-blue--dark, 0.14);
+  transform: translate(-50%, 0);
 
   @media (min-width: $tablet-width) {
     width: 688px;
@@ -46,13 +38,11 @@
 .busines-service__table {
   position: relative;
   margin-top: 40px;
-
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
   line-height: 22px;
-
   color: $special-grey;
 
   @media (max-width: $mobile-width-only) {
@@ -74,19 +64,17 @@
   &::before {
     content: "";
     position: absolute;
+    top: -11px;
+    left: 0;
     display: block;
     width: 219px;
     height: 1px;
-    top: -11px;
-    left: 0;
-
     background-color: rgba($basic-black, 0.05);
 
     @media (min-width: $tablet-width) {
-      width: 506px;
-
       top: -14px;
       left: 0;
+      width: 506px;
     }
 
     @media (min-width: $desktop-width) {
@@ -105,10 +93,10 @@
   }
 
   @media (min-width: $tablet-width) {
-    text-align: center;
-    width: 505px;
     justify-content: space-between;
+    width: 505px;
     margin-top: 27px;
+    text-align: center;
   }
 
   @media (min-width: $desktop-width) {
@@ -122,19 +110,17 @@
   &::before {
     content: "";
     position: absolute;
+    bottom: -12px;
+    left: 0;
     display: block;
     width: 219px;
     height: 1px;
-    bottom: -12px;
-    left: 0;
-
     background-color: rgba($basic-black, 0.05);
 
     @media (min-width: $tablet-width) {
-      width: 506px;
-
       bottom: -14px;
       left: 0;
+      width: 506px;
     }
 
     @media (min-width: $desktop-width) {
@@ -158,22 +144,19 @@
 
 .busines-service__close-button {
   width: 100%;
+  margin-top: 46px;
   padding-top: 20px;
   padding-bottom: 15px;
-  margin-top: 46px;
-
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
   line-height: 24px;
-
+  color: $basic-blue--dark;
+  background-color: $basic-grey--button;
   border: none;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-
-  color: $basic-blue--dark;
-  background-color: $basic-grey--button;
 
   @media (max-width: $mobile-width-only) {
     text-transform: uppercase;
@@ -184,7 +167,6 @@
     padding-top: 39px;
     padding-bottom: 45px;
     padding-right: 3px;
-
     font-size: 24px;
     line-height: 24px;
   }

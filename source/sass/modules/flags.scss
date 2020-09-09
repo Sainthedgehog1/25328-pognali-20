@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   width: 100%;
-
   list-style: none;
 }
 
@@ -11,7 +10,6 @@
   width: 35px;
   height: 25px;
   margin-right: 20px;
-
   background-repeat: no-repeat;
   background-size: 35px 25px;
 
@@ -45,41 +43,35 @@
 }
 
 .flags__name {
+  position: absolute;
+  bottom: -65px;
+  left: 50%;
+  z-index: 1;
   display: none;
   width: max-content;
   padding: 18px 25px;
-
-  position: absolute;
-  z-index: 1;
-  bottom: -65px;
-  left: 50%;
-  transform: translate(-50%);
-
-  border-radius: 4px;
-
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
   line-height: 20px;
   text-align: center;
-
-  background-color: $special-blue--pop-up;
   color: $basic-white;
+  background-color: $special-blue--pop-up;
+  border-radius: 4px;
+  transform: translate(-50%);
 
   &::before {
     content: "";
-    display: block;
-    width: 14px;
-    height: 8px;
-
     position: absolute;
     top: -8px;
     left: 50%;
-    transform: translate(-50%);
-
+    display: block;
+    width: 14px;
+    height: 8px;
     border: 7px solid transparent;
     border-top: 0;
     border-bottom: 8px solid $special-blue--pop-up;
+    transform: translate(-50%);
   }
 }

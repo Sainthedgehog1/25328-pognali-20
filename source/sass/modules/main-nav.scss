@@ -1,7 +1,6 @@
 .main-nav {
   position: relative;
   z-index: 11;
-
   background-color: $basic-white;
 
   @media (min-width: $desktop-width) {
@@ -10,10 +9,9 @@
   }
 
   &--active {
-    width: 100%;
     position: fixed;
-    // position: relative;
     top: 72px;
+    width: 100%;
 
     @media (min-width: $tablet-width) {
       top: 132px;
@@ -30,15 +28,15 @@
   }
 
   &--no-js {
-    display: flex;
     position: relative;
     top: 0;
+    display: flex;
   }
 }
 
 .main-nav .container {
-  display: none;
   flex-direction: column;
+  display: none;
   padding-top: 43px;
   padding-bottom: 29px;
 
@@ -53,20 +51,18 @@
     display: block;
     width: 100%;
     height: 20px;
-    padding: 2px 0 0 105px;
     margin-left: 40px;
-
+    padding: 2px 0 0 105px;
     background-color: transparent;
 
     &::before {
       content: "";
-      display: block;
-      width: 60px;
-      height: 2px;
       position: absolute;
       top: 55%;
       left: 0;
-
+      display: block;
+      width: 60px;
+      height: 2px;
       background-color: $basic-white;
     }
   }
@@ -79,9 +75,7 @@
 .main-nav__list {
   display: flex;
   flex-direction: column;
-
   width: 100%;
-
   list-style: none;
 
   @media (max-width: $mobile-width-only) {
@@ -93,9 +87,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: 0;
-
     flex-direction: row;
+    margin-left: 0;
   }
 }
 
@@ -105,21 +98,17 @@
 
 .main-nav__link {
   position: relative;
-  // display: flex;
-  // flex-direction: column;
   display: block;
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 30px;
   line-height: 35px;
-  text-transform: uppercase;
   text-decoration: none;
-
+  text-transform: uppercase;
   color: $special-blue--dark;
-  outline: none;
-
   transition: transform 0.3s;
+  outline: none;
 
   @media (max-width: $mobile-width-only) {
     align-items: center;
@@ -132,10 +121,8 @@
 
   @media (min-width: $desktop-width) {
     margin-right: 34px;
-
     font-size: 20px;
     line-height: 20px;
-
     color: $basic-white;
   }
 
@@ -143,9 +130,7 @@
     content: attr(data-hover);
     position: absolute;
     top: 100%;
-
     color: $basic-yellow;
-
     transform: translate3d(0, 0, 0);
   }
 
@@ -154,9 +139,7 @@
     position: absolute;
     top: 200%;
     left: 0;
-
     color: rgba($basic-yellow, 0.3);
-
     transform: translate3d(0, 0, 0);
   }
 
@@ -170,22 +153,24 @@
   }
 }
 
+.main-nav__link:not([href]) {
+  pointer-events: none;
+}
+
 .main-nav__auth {
   display: block;
   width: 270px;
-  padding: 10px 13px 10px 10px;
   margin-top: 54px;
+  padding: 10px 13px 10px 10px;
   border-radius: 25px;
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 17px;
   line-height: 30px;
-
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-
   color: $basic-blue;
   background-color: $basic-yellow;
   outline: none;

@@ -1,25 +1,20 @@
 .footer {
   position: relative;
   z-index: 2;
-  overflow: hidden;
-
   margin-top: -97px;
-
+  background-color: $basic-white;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
-
-  background-color: $basic-white;
+  overflow: hidden;
 
   @media (min-width: $tablet-width) {
     margin-top: -67px;
-
     border-top-left-radius: 56px;
     border-top-right-radius: 56px;
   }
 
   @media (min-width: $desktop-width) {
     margin-top: -95px;
-
     border-top-left-radius: 56px;
     border-top-right-radius: 56px;
   }
@@ -34,22 +29,33 @@
   @media (min-width: $tablet-width) {
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: start;
-    padding: 45px 41px 31px 37px; //главная страница
-    // padding: 45px 40px 31px 38px;
+    padding: 45px 41px 31px 37px;
   }
 
   @media (min-width: $desktop-width) {
     padding: 46px 60px 43px 58px;
   }
+}
 
-  &--form-page {
-    @media (min-width: $tablet-width) {
-      padding: 45px 41px 31px 37px;
-    }
+.footer--catalog-page {
+  @media (min-width: $tablet-width) {
+    border-top-left-radius: 58px;
+    border-top-right-radius: 54px;
+  }
 
-    @media (min-width: $desktop-width) {
-      padding: 46px 60px 43px 58px;
-    }
+  @media (min-width: $desktop-width) {
+    border-top-left-radius: 56px;
+    border-top-right-radius: 56px;
+  }
+}
+
+.footer--catalog-page .container {
+  @media (min-width: $tablet-width) {
+    padding: 45px 40px 31px 38px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 46px 60px 43px 58px;
   }
 }
 
@@ -61,14 +67,12 @@
 
     &::before {
       content: "";
-      display: block;
-      width: 270px;
-      height: 1px;
-
       position: absolute;
       bottom: -37px;
       left: -67px;
-
+      display: block;
+      width: 270px;
+      height: 1px;
       background-color: $special-grey--upperline;
     }
   }
@@ -97,7 +101,6 @@
 
   &:hover {
     opacity: 1;
-
     background-color: $basic-yellow--dark;
   }
 
@@ -146,18 +149,14 @@
   display: flex;
   align-items: center;
   width: 270px;
-
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 16px;
-
   text-decoration: none;
-
   color: $special-grey;
   outline-offset: 3px;
-  // outline: none;
 
   @media (max-width: $mobile-width-only) {
     margin-top: 47px;
@@ -180,20 +179,12 @@
   &:hover,
   &:focus {
     opacity: 0.6;
-    // color: rgba($special-grey, 0.6)
   }
 
   &:active {
     opacity: 0.3;
-    // color: rgba($special-grey, 0.3)
   }
 }
-
-// .footer__link-svg {
-//   width: 27px;
-//   height: 34px;
-//   fill: currentColor;
-// }
 
 .footer__in-link-logo {
   width: 27px;

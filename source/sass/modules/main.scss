@@ -31,11 +31,9 @@
 .main__title-wrapper {
   position: relative;
   z-index: 8;
-
+  background-color: $special-blue--dark;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-
-  background-color: $special-blue--dark;
 
   @media (min-width: $tablet-width) {
     border-bottom-left-radius: 60px;
@@ -50,9 +48,9 @@
 
 .main__title-container {
   width: 320px;
-  padding: 28px 25px 14px;
   margin-left: auto;
   margin-right: auto;
+  padding: 28px 25px 14px;
 
   @media (min-width: $tablet-width) {
     width: 768px;
@@ -96,7 +94,6 @@
     justify-content: center;
     grid-template-columns: 949px 285px;
     grid-column-gap: 84px;
-    // margin-top: 215px;
     margin: 48px 0 172px -2px;
   }
 
@@ -116,7 +113,6 @@
 .main__button {
   float: right;
   margin-top: 24px;
-
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -124,19 +120,16 @@
   line-height: 20px;
   text-decoration: none;
   text-transform: uppercase;
-
   color: $basic-white;
-
   outline-offset: 3px;
 
   &::after {
     content: "";
     display: inline-block;
-    vertical-align: middle;
     width: 30px;
     height: 21px;
     margin-left: 30px;
-
+    vertical-align: middle;
     background-image: url("../img/return.svg");
     background-repeat: no-repeat;
     background-size: 30px 19px;

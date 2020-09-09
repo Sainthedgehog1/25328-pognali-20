@@ -5,25 +5,20 @@
   flex-direction: column;
   width: 270px;
   padding-bottom: 18px;
-
-  border-radius: 10px;
-
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
-
   background-color: $basic-white;
+  border-radius: 10px;
 
   @media (min-width: $tablet-width) {
     width: 285px;
     padding-bottom: 22px;
-
     border-radius: 20px;
   }
 
   &:hover,
   &:focus {
     box-shadow: 0 4px 9px rgba(0, 0, 0, 0.16);
-    // filter: drop-shadow(0px 4px 9px rgba(0, 0, 0, 0.16));
   }
 
   &:hover .user-card__avatar,
@@ -38,10 +33,9 @@
 
 .user-card__img {
   display: block;
-  overflow: hidden;
-
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  overflow: hidden;
 
   @media (min-width: $tablet-width) {
     border-top-left-radius: 20px;
@@ -50,9 +44,9 @@
 }
 
 .user-card__avatar {
-  vertical-align: top;
   width: 270px;
   height: 270px;
+  vertical-align: top;
 
   @media (min-width: $tablet-width) {
     width: 285px;
@@ -75,16 +69,14 @@
 }
 
 .user-card__level {
-  width: 60px;
-  height: 60px;
   position: absolute;
   top: 17px;
   left: 17px;
-
-  border-radius: 50%;
-
+  width: 60px;
+  height: 60px;
   background-color: rgba($basic-black, 0.6);
   color: $basic-white;
+  border-radius: 50%;
 
   @media (min-width: $tablet-width) {
     top: 20px;
@@ -111,15 +103,12 @@
 .user-card__name {
   position: relative;
   margin-top: 11px;
-
   font-weight: bold;
   font-size: 21px;
   line-height: 21px;
   text-align: center;
   text-decoration: none;
-
   color: $basic-blue--dark;
-  // outline: none;
 
   @media (min-width: $tablet-width) {
     align-self: start;
@@ -131,21 +120,18 @@
 
   &::before {
     content: "";
-    width: 6px;
-    height: 6px;
     position: absolute;
     top: 9px;
     left: -16px;
-
+    width: 6px;
+    height: 6px;
+    background-color: $special-red--offline;
     border-radius: 50%;
 
-    background-color: $special-red--offline;
-
     @media (min-width: $tablet-width) {
+      left: 46px;
       width: 8px;
       height: 8px;
-
-      left: 46px;
     }
   }
 
@@ -166,18 +152,15 @@
 .user-card__tags {
   max-width: 190px;
   margin-top: 16px;
-
   font-weight: normal;
   font-size: 16px;
   line-height: 18px;
   text-align: center;
-
   color: $special-grey;
 
   @media (min-width: $tablet-width) {
     max-width: 225px;
     margin-top: 24px;
-
     font-size: 20px;
     line-height: 23px;
   }
