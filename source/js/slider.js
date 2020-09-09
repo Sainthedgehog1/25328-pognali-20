@@ -2,31 +2,32 @@
 
 var depth = document.querySelector(".value-level__depth");
 var line = document.querySelector(".value-level__line");
-
-var firstPin = {
-  pin: document.querySelector(".value-level__pin--first"),
-  value: document.querySelector(".value-level__value--first"),
-  label: document.querySelector(".value-level__label--first"),
-  getX: function (x) {
-          if (x < MIN) {
-            x = MIN;
-          }
-          if (x > MAX) {
-            x = MAX;
-          }
-          if (x > secondPin.pin.offsetLeft) {
-            x = secondPin.pin.offsetLeft;
-          }
-          this.pin.style.left = x + "px";
-          depth.style.left = x + "px";
-          return x; }
+if (firstPin) {
+  var firstPin = {
+    pin: document.querySelector(".value-level__pin--first"),
+    value: document.querySelector(".value-level__value--first"),
+    label: document.querySelector(".value-level__label--first"),
+    getX: function (x) {
+            if (x < MIN) {
+              x = MIN;
+            }
+            if (x > MAX) {
+              x = MAX;
+            }
+            if (x > secondPin.pin.offsetLeft) {
+              x = secondPin.pin.offsetLeft;
+            }
+            this.pin.style.left = x + "px";
+            depth.style.left = x + "px";
+            return x; }
+  }
 }
-
+var mx = 0;
 var secondPin = {
   pin: document.querySelector(".value-level__pin--second"),
   value: document.querySelector(".value-level__value--second"),
   label: document.querySelector(".value-level__label--second"),
-  getX: function (x, mx = 0) {
+  getX: function (x, mx) {
           if (x < MIN) {
             x = MIN;
           }
@@ -47,9 +48,12 @@ var secondPin = {
 }
 
 var MIN = 0;
-var MAX = line.offsetWidth - firstPin.pin.offsetWidth;
+if (line) {
+  var MAX = line.offsetWidth - firstPin.pin.offsetWidth;
+}
+if (firstPin) {
 var maxValue = firstPin.value.getAttribute("data-max");
-
+}
 var toValue = function (pin) {
   if (pin.classList.contains('value-level__pin--first')) {
     return firstPin.value;
@@ -135,13 +139,13 @@ var numberChange = function (index) {
     }
   }
 };
-
-var initSlider = function () {
-  MAX = line.offsetWidth - firstPin.pin.offsetWidth;
-  firstPin.getX(firstPin.value.value * MAX / maxValue);
-  secondPin.getX(secondPin.value.value * MAX / maxValue);
+if (initSlider) {
+  var initSlider = function () {
+    MAX = line.offsetWidth - firstPin.pin.offsetWidth;
+    firstPin.getX(firstPin.value.value * MAX / maxValue);
+    secondPin.getX(secondPin.value.value * MAX / maxValue);
+  }
 }
-
 document.querySelectorAll(".value-level__value").forEach(function (value, index) {
   value.addEventListener("change", function () { numberChange(index); })
 })
@@ -174,5 +178,6 @@ window.addEventListener("resize", function () {
     }
   }
 })
-
-initSlider();
+if (initSlider) {
+  initSlider();
+}

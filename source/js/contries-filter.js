@@ -1,15 +1,15 @@
 "use strict";
-
-var filter = document.querySelector(".countries-filter");
-var filterElements = {
-  toggle: filter.querySelector(".countries-filter__toggle"),
-  parts: filter.querySelector(".countries-filter__list"),
-  partsList: filter.querySelectorAll(".countries-filter__link"),
-  alphabet: filter.querySelector(".countries-filter__alphabet"),
-  letters: filter.querySelector(".countries-filter__letter"),
-  rollUpButton: filter.querySelector(".countries-filter__button")
+if (filter, filterElements) {
+  var filter = document.querySelector(".countries-filter");
+  var filterElements = {
+    toggle: filter.querySelector(".countries-filter__toggle"),
+    parts: filter.querySelector(".countries-filter__list"),
+    partsList: filter.querySelectorAll(".countries-filter__link"),
+    alphabet: filter.querySelector(".countries-filter__alphabet"),
+    letters: filter.querySelector(".countries-filter__letter"),
+    rollUpButton: filter.querySelector(".countries-filter__button")
+  }
 }
-
 var getDevice = function () {
   if (window.matchMedia("(max-width: 767px)").matches) {
     return "mobile";
@@ -35,60 +35,70 @@ var closeFilter = function () {
   filterElements.alphabet.classList.remove("countries-filter__alphabet--active");
   filterElements.rollUpButton.classList.remove("countries-filter__button--active");
 }
+if (initFilter) {
+  var initFilter = function () {
+    filter.classList.remove("countries-filter--no-js");
+    document.querySelector(".main__catalog-wrapper").classList.remove("main__catalog-wrapper--no-js");
+    filterElements.toggle.classList.remove("countries-filter__toggle--no-js");
 
-var initFilter = function () {
-  filter.classList.remove("countries-filter--no-js");
-  document.querySelector(".main__catalog-wrapper").classList.remove("main__catalog-wrapper--no-js");
-  filterElements.toggle.classList.remove("countries-filter__toggle--no-js");
-
-  closeFilter();
-}
-
-filterElements.toggle.addEventListener("click", function (evt) {
-  evt.preventDefault();
-
-  if (filterElements.toggle.classList.contains("countries-filter__toggle--active")) {
     closeFilter();
   }
-  else {
-    openFilter();
-  }
-})
+}
 
-filterElements.rollUpButton.addEventListener("click", function (evt) {
-  evt.preventDefault();
-
-  closeFilter();
-})
-
-filterElements.partsList.forEach(function (part) {
-  part.addEventListener("click", function (evt) {
+if (filterElements) {
+  filterElements.toggle.addEventListener("click", function (evt) {
     evt.preventDefault();
 
-    filterElements.parts.querySelector(".countries-filter__link--active").classList.remove("countries-filter__link--active");
-    part.classList.add("countries-filter__link--active");
-  })
-});
-
-filterElements.alphabet.addEventListener("click", function (evt) {
-  evt.preventDefault()
-  evt.stopPropagation();
-
-  if (evt.target.classList.contains("countries-filter__letter")) {
-    var oldLetter = filterElements.alphabet.querySelector(".countries-filter__letter--active");
-    var oldCities = oldLetter.nextElementSibling;
-    var newLetter = evt.target;
-    var newCities = newLetter.nextElementSibling;
-
-    oldLetter.classList.remove("countries-filter__letter--active");
-    oldCities.classList.remove("countries-filter__cities--scroll");
-    oldCities.classList.remove("countries-filter__cities--active");
-    newLetter.classList.add("countries-filter__letter--active");
-    if (newCities.children.length > 11) {
-      newCities.classList.add("countries-filter__cities--scroll");
+    if (filterElements.toggle.classList.contains("countries-filter__toggle--active")) {
+      closeFilter();
     }
-    newCities.classList.add("countries-filter__cities--active");
-  }
-})
+    else {
+      openFilter();
+    }
+  })
+}
 
-initFilter();
+if (filterElements) {
+  filterElements.rollUpButton.addEventListener("click", function (evt) {
+    evt.preventDefault();
+
+    closeFilter();
+  })
+}
+
+if (filterElements) {
+  filterElements.partsList.forEach(function (part) {
+    part.addEventListener("click", function (evt) {
+      evt.preventDefault();
+
+      filterElements.parts.querySelector(".countries-filter__link--active").classList.remove("countries-filter__link--active");
+      part.classList.add("countries-filter__link--active");
+    })
+  });
+}
+
+if (filterElements) {
+  filterElements.alphabet.addEventListener("click", function (evt) {
+    evt.preventDefault()
+    evt.stopPropagation();
+
+    if (evt.target.classList.contains("countries-filter__letter")) {
+      var oldLetter = filterElements.alphabet.querySelector(".countries-filter__letter--active");
+      var oldCities = oldLetter.nextElementSibling;
+      var newLetter = evt.target;
+      var newCities = newLetter.nextElementSibling;
+
+      oldLetter.classList.remove("countries-filter__letter--active");
+      oldCities.classList.remove("countries-filter__cities--scroll");
+      oldCities.classList.remove("countries-filter__cities--active");
+      newLetter.classList.add("countries-filter__letter--active");
+      if (newCities.children.length > 11) {
+        newCities.classList.add("countries-filter__cities--scroll");
+      }
+      newCities.classList.add("countries-filter__cities--active");
+    }
+  })
+}
+if (initFilter) {
+  initFilter();
+}

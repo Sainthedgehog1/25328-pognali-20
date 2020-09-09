@@ -19,6 +19,24 @@ const htmlmin = require('gulp-htmlmin');
 const uglify = require('gulp-uglify');
 const minify = require("gulp-minify");
 const concat = require("gulp-concat");
+const terser = require("gulp-terser");
+
+
+// Js-copy
+const js = () => {
+  return gulp.src("source/js/**/*.js")
+    // .pipe(uglify())
+    // .pipe(minify())
+    // .pipe(gulp.dest("build/js"));
+    // .pipe(terser())
+    // .pipe(uglify())
+    .pipe(concat("script.js"))
+    // .pipe(rename({suffix: ".min"}))
+    // .pipe(minify())
+    .pipe(rename("script.min.js"))
+    .pipe(gulp.dest("build/js"))
+}
+exports.js = js;
 
 // Server
 const server = (done) => {
@@ -59,7 +77,6 @@ exports.clean = clean;
 const copy = () => {
   return gulp.src([
     "source/fonts/*.{woff,woff2}",
-    "source/js/*.js",
     "source/*.png"
   ], {
     base: "source"
@@ -67,20 +84,6 @@ const copy = () => {
     .pipe(gulp.dest("build"));
 }
 exports.copy = copy;
-
-// Js-copy
-const js = () => {
-  return gulp.src("source/js/*.js")
-    // .pipe(uglify())
-    .pipe(minify())
-    .pipe(gulp.dest("build/js"));
-
-    // .pipe(concat("all.js"))
-    // .pipe(uglify())
-    // .pipe(rename("script.min.js"))
-    // .pipe(gulp.dest("build/js"))
-}
-exports.js = js;
 
 // CSS
 const css = () => {
@@ -152,7 +155,7 @@ const webpConv = () => {
 }
 exports.webp = webpConv;
 
-const build = gulp.series(clean, copy, css, js, sprite,/* images, webpConv,*/ html, htmlMinify);
+const build = gulp.series(clean, copy, css, js, sprite, images, webpConv, html, htmlMinify);
 exports.build = build;
 exports.default = gulp.series(
   build, server, watcher

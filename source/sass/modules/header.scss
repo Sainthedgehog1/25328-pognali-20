@@ -69,6 +69,7 @@
 .header__wrapper .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
   padding-top: 19px;
   padding-bottom: 23px;
 

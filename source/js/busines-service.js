@@ -5,15 +5,19 @@ var popup = document.querySelector(".busines-service");
 var openButton = document.querySelector(".regular-service__link");
 var closeButton = document.querySelector(".busines-service__close-button");
 
-openButton.addEventListener("click", function (evt) {
-  evt.preventDefault();
+if (openButton) {
+  openButton.addEventListener("click", function (evt) {
+    evt.preventDefault();
 
-  popup.classList.add("busines-service--active");
-})
+    popup.classList.add("busines-service--active");
+  })
+}
 
-closeButton.addEventListener("click", function () {
-  popup.classList.remove("busines-service--active");
-})
+if (closeButton) {
+  closeButton.addEventListener("click", function () {
+    popup.classList.remove("busines-service--active");
+  })
+}
 
 /* Закрытие модального окна по нажатию на Esc */
 window.addEventListener("keydown", function (evt) {

@@ -10,8 +10,10 @@ toggles.forEach(function (toggle) {
   toggle.classList.remove("filter__toggle--active");
   getCategory(toggle).classList.remove("filter__category--active");
 
-  toggle.addEventListener("click", function (evt) {
-    toggle.classList.toggle("filter__toggle--active");
-    getCategory(toggle).classList.toggle("filter__category--active");
-  })
+  if (toggle) {
+    toggle.addEventListener("click", function (evt) {
+      toggle.classList.toggle("filter__toggle--active");
+      getCategory(toggle).classList.toggle("filter__category--active");
+    })
+  }
 })

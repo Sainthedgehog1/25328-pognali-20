@@ -21,13 +21,9 @@ Array.from(hearts).forEach(function (heart) {
 
 var converNumberToString = function (num) {
   var million = 1000000;
-  // var thouthand =1000;
   if (num >= million) {
     return (num / million).toFixed(1) + ' M';
   }
-  // if (num >= thouthand){
-  //   return (num/thouthand).toFixed(1) + 'K';
-  // }
 
   return String(num);
 }
@@ -51,18 +47,6 @@ btns.forEach(btnTabindex)
 
 var letter = document.querySelectorAll(".countries-filter__letter--active");
 
-// function actLetTabindex(letter) {
-//   if (window.screen.width >= 320) {
-//     letter.setAttribute("tabindex", "-1");
-//   } else {
-//     letter.setAttribute("tabindex", "0");
-//   }
-// };
-// window.addEventListener("resize", function () {
-//   letters.forEach(actLetTabindex)
-// });
-// letters.forEach(actLetTabindex)
-
 function actLetTabindex(letter) {
   letter.setAttribute("tabindex", "-1");
 };
@@ -70,11 +54,13 @@ letter.forEach(actLetTabindex)
 
 // фокус пагинации
 
-var number = document.querySelector(".pagination__link--active");
-var prev = document.querySelector(".pagination__prev--inactive");
+if (number, prev) {
+  var number = document.querySelector(".pagination__link--active");
+  var prev = document.querySelector(".pagination__prev--inactive");
 
-function tabindex(number, prev) {
-  number.setAttribute("tabindex", "-1");
-  prev.setAttribute("tabindex", "-1");
-};
-tabindex(number, prev)
+  function tabindex(number, prev) {
+    number.setAttribute("tabindex", "-1");
+    prev.setAttribute("tabindex", "-1");
+  };
+  tabindex(number, prev)
+}
