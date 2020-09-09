@@ -76,7 +76,7 @@ exports.copy = copy;
 // Js-copy
 const js = () => {
   return gulp.src("source/js/*.js")
-    // .pipe(uglify())
+    .pipe(uglify())
     .pipe(minify(), options)
     .pipe(uglify())
     .pipe(rename({suffix: ".min"}))
@@ -155,7 +155,7 @@ const webpConv = () => {
 }
 exports.webp = webpConv;
 
-const build = gulp.series(clean, copy, css, js, sprite, images, webpConv, html, htmlMinify);
+const build = gulp.series(clean, copy, css, js, sprite,/* images, webpConv,*/ html, htmlMinify);
 exports.build = build;
 exports.default = gulp.series(
   build, server, watcher

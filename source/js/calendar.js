@@ -38,7 +38,7 @@ var renderCalendar = function (year, month) {
   calendar.dateArea.value = renderedMonth + " " + renderedYear;
   iterDate.setDate(iterDate.getDate() - iterDate.getDay() + 1);
 
-  for (let i = 0; i < calendar.days.length; i++) {
+  for (var i = 0; i < calendar.days.length; i++) {
     if (iterDate.getDate() === 1) {
       var monthName = iterDate.toLocaleString("ru", { month: "short" }).replace(".", "");
 

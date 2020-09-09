@@ -96,7 +96,7 @@ var prevStep = function (i) {
 }
 
 var initForm = function () {
-  for (let i = 1; i < steps.length; i++) {
+  for (var i = 1; i < steps.length; i++) {
     steps[i].classList.remove("step--active");
   }
 }

@@ -22,29 +22,29 @@ var firstPin = {
           return x; }
 }
 
-var secondPin = {
-  pin: document.querySelector(".value-level__pin--second"),
-  value: document.querySelector(".value-level__value--second"),
-  label: document.querySelector(".value-level__label--second"),
-  getX: function (x, mx = 0) {
-          if (x < MIN) {
-            x = MIN;
-          }
-          if (x > MAX) {
-            x = MAX;
-          }
-          if (x < firstPin.pin.offsetLeft) {
-            x = firstPin.pin.offsetLeft;
-          }
-          if (firstPin.pin.offsetLeft === secondPin.pin.offsetLeft && (secondPin.pin.offsetLeft - x) > -1 && mx != 0) {
-            x = firstPin.pin.offsetLeft + mx;
-            x = firstPin.getX(x);
-            firstPin.value.value = Math.floor(x / MAX * maxValue);
-          }
-          this.pin.style.left = x + "px";
-          depth.style.right = (MAX - x) + "px";
-          return x; }
-}
+// var secondPin = {
+//   pin: document.querySelector(".value-level__pin--second"),
+//   value: document.querySelector(".value-level__value--second"),
+//   label: document.querySelector(".value-level__label--second"),
+//   getX: function (x, mx = 0) {
+//           if (x < MIN) {
+//             x = MIN;
+//           }
+//           if (x > MAX) {
+//             x = MAX;
+//           }
+//           if (x < firstPin.pin.offsetLeft) {
+//             x = firstPin.pin.offsetLeft;
+//           }
+//           if (firstPin.pin.offsetLeft === secondPin.pin.offsetLeft && (secondPin.pin.offsetLeft - x) > -1 && mx != 0) {
+//             x = firstPin.pin.offsetLeft + mx;
+//             x = firstPin.getX(x);
+//             firstPin.value.value = Math.floor(x / MAX * maxValue);
+//           }
+//           this.pin.style.left = x + "px";
+//           depth.style.right = (MAX - x) + "px";
+//           return x; }
+// }
 
 var MIN = 0;
 var MAX = line.offsetWidth - firstPin.pin.offsetWidth;
