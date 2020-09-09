@@ -15,15 +15,10 @@ const imagemin = require("gulp-imagemin");
 const del = require("del");
 const posthtml = require("gulp-posthtml");
 const include = require("posthtml-include");
-const minify = require("gulp-minify");
-const options = {
-  html: {
-      removeAttributeQuotes: true,
-      removeOptionalTags: true
-  },
-};
 const htmlmin = require('gulp-htmlmin');
 const uglify = require('gulp-uglify');
+const minify = require("gulp-minify");
+const concat = require("gulp-concat");
 
 // Server
 const server = (done) => {
@@ -76,12 +71,14 @@ exports.copy = copy;
 // Js-copy
 const js = () => {
   return gulp.src("source/js/*.js")
-    .pipe(uglify())
-    .pipe(minify(), options)
-    .pipe(uglify())
-    .pipe(rename({suffix: ".min"}))
-    .pipe(sourcemap.write("."))
+    // .pipe(uglify())
+    .pipe(minify())
     .pipe(gulp.dest("build/js"));
+
+    // .pipe(concat("all.js"))
+    // .pipe(uglify())
+    // .pipe(rename("script.min.js"))
+    // .pipe(gulp.dest("build/js"))
 }
 exports.js = js;
 
