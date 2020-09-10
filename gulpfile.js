@@ -111,28 +111,16 @@ exports.htmlMinify = htmlMinify;
 // SVG sprite
 const sprite = () => {
   let svgs = gulp.src("source/img/contacts-*.svg")
-  .pipe(svgstore({ inlineSvg: true }))
-  .pipe(svgmin({
-    plugins: [{
-        removeStyleElement: true
-      },
-      {
-        removeAttrs: {
-          attrs: [
-            "fill",
-            "class",
-            "stroke"
-          ]
-        }
-      }
-    ]
-  }));
+    .pipe(svgstore({ inlineSvg: true }))
+    .pipe(svgmin({plugins: [{removeStyleElement: true},
+       {removeAttrs: {attrs: ["fill", "class", "stroke"]}}]
+    }));
 
   let fileContents = (filePath, file) => file.contents.toString();
 
   return gulp.src("build/*.html")
-  .pipe(inject(svgs, { transform: fileContents }))
-  .pipe(gulp.dest("build/"));
+    .pipe(inject(svgs, { transform: fileContents }))
+    .pipe(gulp.dest("build/"));
 }
 exports.sprite = sprite;
 
@@ -155,7 +143,7 @@ const webpConv = () => {
 }
 exports.webp = webpConv;
 
-const build = gulp.series(clean, copy, css, js, sprite, images, webpConv, html, htmlMinify);
+const build = gulp.series(clean, copy, css, js, images, webpConv, html, htmlMinify, sprite);
 exports.build = build;
 exports.default = gulp.series(
   build, server, watcher
