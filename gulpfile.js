@@ -16,24 +16,12 @@ const del = require("del");
 const posthtml = require("gulp-posthtml");
 const include = require("posthtml-include");
 const htmlmin = require('gulp-htmlmin');
-const uglify = require('gulp-uglify');
 const minify = require("gulp-minify");
-const concat = require("gulp-concat");
-const terser = require("gulp-terser");
-
 
 // Js-copy
 const js = () => {
   return gulp.src("source/js/**/*.js")
-    // .pipe(uglify())
-    // .pipe(minify())
-    // .pipe(gulp.dest("build/js"));
-    // .pipe(terser())
-    // .pipe(uglify())
-    .pipe(concat("script.js"))
-    // .pipe(rename({suffix: ".min"}))
-    // .pipe(minify())
-    .pipe(rename("script.min.js"))
+    .pipe(minify())
     .pipe(gulp.dest("build/js"))
 }
 exports.js = js;
@@ -93,6 +81,7 @@ const css = () => {
     .pipe(sass())
     .pipe(postcss([autoprefixer()]))
     .pipe(csso())
+    .pipe(gulp.dest("build/css"))
     .pipe(rename({suffix: ".min"}))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
@@ -113,8 +102,7 @@ exports.html = html;
 const htmlMinify = () => {
   return gulp.src("build/*.html")
     .pipe(htmlmin({
-      collapseWhitespace: true,
-      removeComments: true
+      collapseWhitespace: true
     }))
     .pipe(gulp.dest('build'));
 }
@@ -123,16 +111,28 @@ exports.htmlMinify = htmlMinify;
 // SVG sprite
 const sprite = () => {
   let svgs = gulp.src("source/img/contacts-*.svg")
-    .pipe(svgstore({ inlineSvg: true }))
-    .pipe(svgmin({plugins: [{removeStyleElement: true},
-       {removeAttrs: {attrs: ["fill", "class", "stroke"]}}]
-    }));
+  .pipe(svgstore({ inlineSvg: true }))
+  .pipe(svgmin({
+    plugins: [{
+        removeStyleElement: true
+      },
+      {
+        removeAttrs: {
+          attrs: [
+            "fill",
+            "class",
+            "stroke"
+          ]
+        }
+      }
+    ]
+  }));
 
   let fileContents = (filePath, file) => file.contents.toString();
 
   return gulp.src("build/*.html")
-    .pipe(inject(svgs, { transform: fileContents }))
-    .pipe(gulp.dest("build/"));
+  .pipe(inject(svgs, { transform: fileContents }))
+  .pipe(gulp.dest("build/"));
 }
 exports.sprite = sprite;
 
