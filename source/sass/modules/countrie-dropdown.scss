@@ -321,11 +321,24 @@
       display: block;
       width: 17px;
       height: 100%;
-      background-color: white;
+      background-color: $basic-white;
     }
 
     @media (min-width: $desktop-width) {
       left: -8px;
+    }
+  }
+
+  &::after {
+    @media (min-width: $desktop-width) {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -26px;
+      display: block;
+      width: 17px;
+      height: 100%;
+      background-color: $basic-white;
     }
   }
 }

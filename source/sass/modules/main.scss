@@ -53,6 +53,8 @@
   padding: 28px 25px 14px;
 
   @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: min-content 1fr;
     width: 768px;
     padding: 88px 74px 72px 74px;
   }
@@ -111,7 +113,7 @@
 }
 
 .main__button {
-  float: right;
+  justify-self: end;
   margin-top: 24px;
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
