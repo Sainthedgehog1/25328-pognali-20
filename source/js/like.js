@@ -22,7 +22,7 @@ Array.from(hearts).forEach(function (heart) {
 var converNumberToString = function (num) {
   var million = 1000000;
   if (num >= million) {
-    return (num / million).toFixed(1) + ' M';
+    return (num / million).toFixed(1) + " M";
   }
 
   return String(num);

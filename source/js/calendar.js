@@ -42,7 +42,7 @@ var renderCalendar = function (year, month) {
     if (iterDate.getDate() === 1) {
       var monthName = iterDate.toLocaleString("ru", { month: "short" }).replace(".", "");
 
-      calendar.days[i].innerHTML = '1<span class="calendar__first-day">' + monthName + '</span>';
+      calendar.days[i].innerHTML = "1<span class=calendar__first-day>" + monthName + "</span>";
     }
     else {
       calendar.days[i].textContent = iterDate.getDate();

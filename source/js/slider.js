@@ -52,7 +52,7 @@ var MAX = line.offsetWidth - firstPin.pin.offsetWidth;
 var maxValue = firstPin.value.getAttribute("data-max");
 
 var toValue = function (pin) {
-  if (pin.classList.contains('value-level__pin--first')) {
+  if (pin.classList.contains("value-level__pin--first")) {
     return firstPin.value;
   }
   else {
@@ -66,7 +66,7 @@ var sliderHandler = function (evt) {
   var mouseMoveHandler = function (em) {
     em.preventDefault();
 
-    if (evt.target.classList.contains('value-level__pin--first')) {
+    if (evt.target.classList.contains("value-level__pin--first")) {
       var x = firstPin.pin.offsetLeft + em.movementX;
       x = firstPin.getX(x);
       firstPin.value.value = Math.floor(x / MAX * maxValue);
@@ -95,7 +95,7 @@ var mobileSliderHandler = function (evt) {
 
   var touchMoveHandler = function (tm) {
     var touchCurrent = tm.changedTouches[0].pageX - touchStart;
-    if (evt.target.classList.contains('value-level__pin--first')) {
+    if (evt.target.classList.contains("value-level__pin--first")) {
       var x = firstPin.pin.offsetLeft + touchCurrent;
       x = firstPin.getX(x);
       firstPin.value.value = Math.floor(x / MAX * maxValue);
