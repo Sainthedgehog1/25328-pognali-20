@@ -1,0 +1,1 @@
+"use strict";function initMap(){var e={url:"img/map-marker.svg",scaledSize:new google.maps.Size(54,54)};window.matchMedia("(max-width: 767px)").matches&&(e.scaledSize=new google.maps.Size(41,41));var a={lat:59.9387192,lng:30.3208587},i=new google.maps.Map(document.getElementById("map"),{zoom:15,center:a,disableDefaultUI:!0});new google.maps.Marker({position:a,map:i,icon:e})}
