@@ -5,7 +5,7 @@
 
 ---
 
-**Обратите внимание, для запуска проекта, необходимо склонировать или сохранить (git@github.com:Sainthedgehog1/25328-mishka-20.git).**
+**Обратите внимание, для запуска проекта, необходимо склонировать или сохранить (git@github.com:Saint-Hedgehog/pognali.git).**
 
 - Установить Node Modules с проверкой последних обновлений с помощью команды <strong>npm i -g npm-check-updates</strong>
 - Проверить наличие обновлений модулей <strong>ncu</strong>
